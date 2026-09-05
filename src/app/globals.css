@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  --color-canopy: var(--dosel-canopy);
+  --color-understory: var(--dosel-understory);
+  --color-moss: var(--dosel-moss);
+  --color-fern: var(--dosel-fern);
+  --color-bark: var(--dosel-bark);
+  --color-cream: var(--dosel-cream);
+  --color-paper: var(--dosel-paper);
+  --color-ink: var(--dosel-ink);
+  --color-rule: var(--dosel-rule);
+  --color-accent: var(--dosel-accent);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --text-xs: var(--step--1);
+  --text-base: var(--step-0);
+  --text-lg: var(--step-1);
+  --text-xl: var(--step-2);
+  --text-2xl: var(--step-3);
+  --text-3xl: var(--step-4);
+  --text-4xl: var(--step-5);
+  --text-5xl: var(--step-6);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-display), Georgia, serif;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+/* Foco visible en todo el sitio, no solo donde nos acordemos (CLAUDE.md §8). */
+:focus-visible {
+  outline: 2px solid var(--dosel-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Variedades y nombres científicos, en cursiva como en una guía de campo. */
+.taxon {
+  font-style: italic;
+}
+
+/* Deriva lenta del follaje del hero. Es el único movimiento no provocado del sitio. */
+@keyframes canopy-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-2.5%, 1.2%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

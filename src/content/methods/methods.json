@@ -1,0 +1,42 @@
+[
+  {
+    "id": "v60",
+    "slug": "v60",
+    "name": "V60",
+    "origin": "Japón, 2004. Hario, una fábrica de vidrio de Tokio fundada en 1921, le puso ese nombre por el ángulo del cono: 60 grados.",
+    "usedFor": "Filtrado por goteo, taza a taza. Es el método que más control le da a quien prepara: el agua cae donde uno la pone.",
+    "description": "El cono de 60° y las estrías en espiral dejan que el aire escape mientras el agua baja. El resultado es una taza limpia, sin sedimento, donde los aromas se separan y se pueden nombrar uno por uno. Es el método que usamos cuando queremos que un café se explique solo.",
+    "bestFor": ["Acidez cítrica alta", "Perfiles florales", "Lavados de altura"],
+    "images": [{ "src": "/images/methods/v60.svg", "alt": "Cafetera V60 en preparación", "width": 800, "height": 800 }]
+  },
+  {
+    "id": "chemex",
+    "slug": "chemex",
+    "name": "Chemex",
+    "origin": "Estados Unidos, 1941. La inventó Peter Schlumbohm, un químico alemán, inspirado en un embudo de laboratorio y un matraz Erlenmeyer.",
+    "usedFor": "Filtrado por goteo para varias tazas. El filtro es hasta 30% más grueso que uno común.",
+    "description": "Ese filtro grueso retiene más aceites y sólidos que cualquier otro método de papel. Lo que queda es una taza casi transparente, de textura ligera y dulzor muy definido. Si un café tiene un defecto, la Chemex lo muestra; si es limpio, lo vuelve elegante.",
+    "bestFor": ["Cafés delicados", "Notas de té", "Compartir en mesa"],
+    "images": [{ "src": "/images/methods/chemex.svg", "alt": "Chemex de vidrio con collar de madera", "width": 800, "height": 800 }]
+  },
+  {
+    "id": "prensa-francesa",
+    "slug": "prensa-francesa",
+    "name": "Prensa francesa",
+    "origin": "Disputada entre Francia e Italia. La patente que más se cita es italiana: Attilio Calimani, 1929.",
+    "usedFor": "Inmersión total. El café y el agua conviven cuatro minutos antes de separarse.",
+    "description": "Al no haber papel, los aceites del café pasan enteros a la taza. Eso da cuerpo, peso y una sensación redonda en la boca, a cambio de algo de sedimento en el fondo. Es el método más indulgente: perdona errores de molienda y no exige técnica.",
+    "bestFor": ["Cuerpo alto", "Notas a chocolate y nuez", "Tuestes medios y oscuros"],
+    "images": [{ "src": "/images/methods/prensa-francesa.svg", "alt": "Prensa francesa con café recién preparado", "width": 800, "height": 800 }]
+  },
+  {
+    "id": "aeropress",
+    "slug": "aeropress",
+    "name": "Aeropress",
+    "origin": "Estados Unidos, 2005. La diseñó Alan Adler, ingeniero de Stanford, que antes era conocido por fabricar frisbees de precisión.",
+    "usedFor": "Inmersión corta con presión manual. Un minuto y medio de principio a fin.",
+    "description": "Se empuja el agua a través del café con la mano, lo que acorta la extracción sin dejarla incompleta. Da una taza concentrada, de acidez suave y mucha claridad. Es el método más versátil que existe: cambiando molienda y tiempo, el mismo café puede saber a tres cosas distintas.",
+    "bestFor": ["Concentrados", "Acidez suave", "Experimentar recetas"],
+    "images": [{ "src": "/images/methods/aeropress.svg", "alt": "Aeropress sobre una taza", "width": 800, "height": 800 }]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "cafe-aguas-claras",
+  "slug": "aguas-claras",
+  "name": "Aguas Claras",
+  "origin": {
+    "regionId": "CO-ANT",
+    "municipio": "Salgar",
+    "finca": "Finca Aguas Claras",
+    "lat": 5.9642,
+    "lng": -75.9772,
+    "altitudeMasl": 1620
+  },
+  "variety": "Caturra",
+  "process": "Honey",
+  "roastLevel": "Medio-oscuro",
+  "profile": {
+    "description": "El suroeste antioqueño en su versión más reconocible: cuerpo redondo, dulzor de chocolate y un final largo. El proceso honey deja parte del mucílago en el grano al secar, y ese azúcar se queda en la taza.",
+    "aromas": ["Cacao", "Nuez tostada", "Caramelo"],
+    "tasting": ["Chocolate oscuro", "Almendra", "Ciruela"],
+    "body": "Alto, cremoso",
+    "acidity": "Media, malica"
+  },
+  "recommendedMethods": ["prensa-francesa", "aeropress"],
+  "story": "Salgar está en la cuenca del río Barroso, en la vertiente occidental de la cordillera Central. Las fincas de la zona son minifundios de ladera: casi todo se recoge a mano porque una máquina no sube esa pendiente.",
+  "images": [{ "src": "/images/cafes/aguas-claras.svg", "alt": "Cerezas de café en la Finca Aguas Claras, Salgar, Antioquia", "width": 1200, "height": 900 }]
+}
