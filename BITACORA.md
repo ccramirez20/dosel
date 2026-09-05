@@ -53,6 +53,16 @@ la seguridad gratuita activa.
 5. **`pnpm audit` no es gate de CI.** Rompería el build por vulnerabilidades transitivas
    sin arreglo disponible; Dependabot ya cubre ese caso sin bloquear.
 
+6. **`pnpm typecheck` corre `next typegen` antes de `tsc`.** `PageProps` y `LayoutProps`
+   son globales que Next escribe en `.next/types`, que está gitignoreado. Sin el typegen,
+   el script pasa en local (por un build viejo) y falla en CI con el árbol limpio. Fue
+   exactamente lo que pasó en el primer run.
+
+7. **eslint 10 y TypeScript 7 quedan frenados en `dependabot.yml`.** Se probaron los dos:
+   `eslint-config-next@16` todavía trae `eslint-plugin-react` y `typescript-eslint`
+   incompatibles, y `pnpm lint` revienta con cualquiera de los dos. El ignore lleva escrita
+   la condición para quitarlo. `@types/node@26` sí entró.
+
 ### Diseño
 
 Dirección visual: el sitio se organiza por **estratos del bosque** (emergente, dosel,
@@ -73,6 +83,7 @@ Component. Lo demás responde a acciones. Todo se congela con `prefers-reduced-m
 | `pnpm test` (4 checks de proyección) | verde |
 | `pnpm build` | verde, 100% estático |
 | Las 6 rutas responden 200 | verde |
+| CI en GitHub Actions (`main`) | verde |
 | Revisión visual en navegador | **pendiente** (ver abajo) |
 
 ### Seguridad en GitHub (tier gratuito, repo público)
@@ -80,7 +91,12 @@ Component. Lo demás responde a acciones. Todo se congela con `prefers-reduced-m
 - Dependabot alerts — activado
 - Dependabot security updates — activado
 - Secret scanning + push protection — activado
-- CodeQL default setup (`javascript-typescript`, `actions`) — configurado
+- CodeQL default setup (`javascript-typescript`, `actions`, escaneo semanal) — configurado
+  y con su primer análisis en verde
+
+Alertas abiertas al cerrar la sesión: **0 de Dependabot, 0 de code scanning, 0 de secret
+scanning.** Los 4 PRs que Dependabot abrió al activarse se cerraron solos al aterrizar los
+cambios equivalentes en `main`.
 
 `security_and_analysis[secret_scanning_non_provider_patterns]` y `validity_checks`
 quedaron en `disabled`: la API acepta el PATCH pero no los activa en este plan.
