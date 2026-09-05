@@ -245,6 +245,22 @@ export interface Product {      // panadería
 - Priorizar SSG; usar `'use client'` solo donde haya interacción real.
 - Comentar solo lo no obvio (el *por qué*, no el *qué*).
 
+### Tests
+
+Sin frameworks: `node:test` + `node:assert`, archivos `*.test.mts` junto al código que
+prueban. `pnpm test` corre en CI y bloquea el merge.
+
+**Qué se prueba:** lógica con ramas o invariantes que un build en verde no atrapa —
+la proyección del mapa, los setters del store, los guardias sobre contenido escrito a
+mano. **Qué no:** componentes, estilos, y cualquier cosa que `tsc` o el build ya validen.
+Un test de más es deuda igual que código de más.
+
+Dos reglas para que sirvan:
+1. El archivo de test importa con rutas **relativas** con extensión (`./index.ts`), no con
+   el alias `@/`: `node --experimental-strip-types` no resuelve el alias.
+2. Un test que nunca falla no prueba nada. Al escribir uno, rompe a propósito la lógica y
+   confirma que se pone rojo antes de darlo por bueno.
+
 ---
 
 ## 11. Comandos

@@ -88,7 +88,7 @@ Component. Lo demás responde a acciones. Todo se congela con `prefers-reduced-m
 |---|---|
 | `pnpm lint` | verde |
 | `pnpm typecheck` | verde |
-| `pnpm test` (4 checks de proyección) | verde |
+| `pnpm test` (14 checks) | verde |
 | `pnpm build` | verde, 100% estático |
 | Las 6 rutas responden 200 | verde |
 | CI en GitHub Actions (`main`) | verde |
@@ -125,6 +125,22 @@ las 5 vistas apilan bien en móvil, consola sin errores.
 *Nota para la próxima sesión:* `resize_window` no baja de ~500 px en Chrome/Windows. Para
 ver anchos de móvil de verdad sirve un HTML con iframes del ancho deseado servido desde
 `public/`; las media queries evalúan contra el viewport del iframe.
+
+### Tests (ampliado al cierre)
+
+Al revisar la cobertura quedó claro que había un solo archivo, sobre la proyección del
+mapa. Se agregaron los dos puntos con lógica real que faltaban:
+
+- `useCafeMap` — la semántica de toggle de la bidireccionalidad. Si se rompe, la UI no
+  falla: simplemente deja de poderse deseleccionar, y eso no lo ve ningún build.
+- `assertKnownRegions` — el guardia de `regionId`. Se extrajo de `getCafes` para poder
+  probar el camino de error sin meter un JSON malo en `src/content/`.
+
+14 checks en total. Se verificaron por mutación: rompiendo el toggle a propósito, el test
+se pone rojo. La convención quedó escrita en el §10 del CLAUDE.md.
+
+`src/lib/data/index.ts` pasó a imports relativos: `node --experimental-strip-types` no
+resuelve el alias `@/`.
 
 ### Qué quedó abierto
 
