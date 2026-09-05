@@ -19,7 +19,7 @@ Café con temática de biología y divulgación científica. El nombre viene del
 | Framework | Next.js (App Router) + TypeScript | SEO/metadata para negocio local; SSG por defecto |
 | Estilos | Tailwind CSS | Velocidad + tokens de marca centralizados |
 | Animación | Framer Motion (paquete `motion`, `motion/react`) | Reveals, transiciones de mapa, microinteracciones |
-| Mapa | `react-simple-maps` (d3-geo + topojson) | Proyecta lat/lng→pin y maneja clics por geografía |
+| Mapa | `d3-geo` + `topojson-client` directo | `react-simple-maps` quedó descartado: su última publicación es de 2022 y sus peer deps topan en React 18, mientras Next 16 trae React 19. Lo que aportaba son ~60 líneas propias |
 | Estado UI | Zustand | Store compartido lista de cafés ↔ mapa; reutilizable en carrito futuro |
 | Contenido | Archivos locales JSON/MDX en `src/content/` | Sin backend en v1; el dueño no edita todavía |
 | Deploy | Vercel | SSG, imágenes optimizadas, previews |
@@ -193,9 +193,10 @@ export interface Product {      // panadería
 - Clic en **pin** → popover con `municipio` + `finca` + resumen del café + link a detalle.
 
 **Implementación:**
-- `ColombiaMap` es `'use client'`. Usa `react-simple-maps`.
-- Geografías: `public/geo/colombia-departments.topo.json`. **Asset a conseguir** (TopoJSON/GeoJSON de departamentos de Colombia, nivel DANE o fuente pública equivalente). El mapa muestra **solo departamentos**.
-- Proyección `geoMercator` centrada en Colombia. Los pines se colocan por `lat`/`lng` del `Origin` — no hardcodear píxeles.
+- La proyección corre en **build**, en `lib/geo.ts` (Server). `ColombiaMap` es `'use client'` pero solo recibe los `d` de los paths y los pines ya proyectados: d3-geo y el TopoJSON nunca llegan al bundle del navegador.
+- Geografías: `public/geo/colombia-departments.topo.json` — **ya está**. geoBoundaries COL ADM1 (32 departamentos + Bogotá D.C.), clave de join `shapeISO` (ISO 3166-2:CO), simplificado a 35 KB. Licencia **ODbL 1.0**: la atribución del footer es obligatoria, no se quita.
+- Proyección `geoMercator` ajustada al territorio continental. Los pines se colocan por `lat`/`lng` del `Origin` — no hardcodear píxeles. San Andrés queda a 700 km de la costa, así que se dibuja como recuadro con un transform calculado, no a ojo.
+- `pnpm test` verifica los invariantes de esta capa: 33 departamentos dibujables, las claves de `regions.json` existen en el TopoJSON, y todo café del contenido cae dentro del lienzo.
 - Estado compartido en `lib/store/useCafeMap.ts` (Zustand): `selectedCafeId`, `selectedRegionId`, setters. Lo consumen tanto la lista de `CafeCard` como el mapa. Esto es lo que habilita la bidireccionalidad.
 - Estética: minimalista, colores Dosel, departamento activo resaltado, transición suave (motion) al seleccionar.
 
@@ -262,7 +263,7 @@ pnpm typecheck
 - [ ] Marca (logo, hex, fuentes) — llega esta semana → reemplazar tokens §8.
 - [ ] Imágenes del sitio — llegan el lunes → reemplazar placeholders en `public/images/`.
 - [ ] Datos de ~6 cafés — llegan la semana entrante → poblar `content/cafes/`.
-- [ ] Conseguir TopoJSON de departamentos de Colombia → `public/geo/`.
+- [x] Conseguir TopoJSON de departamentos de Colombia → `public/geo/`. **Hecho** (geoBoundaries, ODbL).
 - [ ] Confirmar pasarela de pago (Fase 2) y canal de contacto v1 (asumido: WhatsApp/Instagram).
 
 <!-- BEGIN:nextjs-agent-rules -->
