@@ -1,11 +1,14 @@
-"use client";
-
-import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 
 /**
- * Aparición al entrar en viewport. Si el sistema pide menos movimiento no envuelve nada:
- * devuelve los hijos tal cual, sin nodo extra ni estilos residuales (CLAUDE.md §8).
+ * Aparición al entrar en viewport, con `animation-timeline: view()`.
+ *
+ * Es CSS puro y Server Component a propósito: la versión con Motion producía un
+ * desajuste de hidratación (el servidor no emitía los estilos de `initial` y el cliente
+ * sí). Además el contenido tiene que verse sin JS, y así se ve.
+ *
+ * Navegador sin soporte de scroll timelines: el `@supports` de globals.css no aplica nada
+ * y el contenido simplemente aparece visible. `prefers-reduced-motion` lo desactiva igual.
  */
 export default function Reveal({
   children,
@@ -13,21 +16,16 @@ export default function Reveal({
   className,
 }: {
   children: ReactNode;
+  /** escalona la entrada, en segundos; se traduce a un desfase del rango de scroll */
   delay?: number;
   className?: string;
 }) {
-  const reduced = useReducedMotion();
-  if (reduced) return <div className={className}>{children}</div>;
-
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.55, delay, ease: [0.22, 0.61, 0.36, 1] }}
+    <div
+      className={`reveal ${className ?? ""}`}
+      style={delay ? ({ "--reveal-delay": `${delay * 40}%` } as React.CSSProperties) : undefined}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

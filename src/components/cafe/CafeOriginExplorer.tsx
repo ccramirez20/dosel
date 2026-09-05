@@ -65,12 +65,17 @@ export default function CafeOriginExplorer({
 
       <div className="order-1 lg:order-2">
         <div className="lg:sticky lg:top-24">
-          <ColombiaMap
-            departments={departments}
-            pins={pins}
-            viewBox={viewBox}
-            island={island}
-          />
+          {/* El viewBox es 620x900: en una sola columna a 768px el mapa se iría a ~1100px
+              de alto y empujaría todo hacia abajo. Se le pone tope hasta que hay dos
+              columnas, donde la del mapa ya lo limita. */}
+          <div className="mx-auto w-full max-w-[26rem] lg:max-w-none">
+            <ColombiaMap
+              departments={departments}
+              pins={pins}
+              viewBox={viewBox}
+              island={island}
+            />
+          </div>
           <div className="mt-5">
             <CafeInfoPanel cafes={cafes} regions={regions} methodNames={methodNames} />
           </div>
