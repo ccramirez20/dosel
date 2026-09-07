@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { pickActive, STRATA, type StratumMark, type Tone } from "@/lib/strata";
+import { pickActive, STRATA } from "@/lib/strata";
 
 /**
  * El eje de estratos: un árbol de perfil, fijo en el margen derecho, cuya capa iluminada
@@ -15,10 +15,8 @@ import { pickActive, STRATA, type StratumMark, type Tone } from "@/lib/strata";
  * si no corre en Firefox y Safari, no hay diagrama.
  */
 
-const INITIAL: StratumMark = { id: "dosel", tone: "dark" };
-
 export default function ForestAxis() {
-  const [active, setActive] = useState<StratumMark>(INITIAL);
+  const [active, setActive] = useState<string>(STRATA[0].id);
 
   useEffect(() => {
     const sections = [...document.querySelectorAll<HTMLElement>("[data-stratum]")];
@@ -35,7 +33,6 @@ export default function ForestAxis() {
           pickActive(
             sections.map((el) => ({
               id: el.dataset.stratum!,
-              tone: (el.dataset.tone as Tone) ?? "light",
               visible: visible.get(el) ?? false,
             })),
             previous,
@@ -50,8 +47,6 @@ export default function ForestAxis() {
     return () => observer.disconnect();
   }, []);
 
-  const dark = active.tone === "dark";
-
   return (
     // El tamaño lo lleva la CAJA, no un `transform: scale()`. Con scale crecía todo por
     // igual, texto incluido: a 1920 las etiquetas salían a 21 px y en la banda angosta a
@@ -62,29 +57,46 @@ export default function ForestAxis() {
     //     disponible = (ancho - 1152) / 2 + 32 - right - respiro
     //                   \_ max-w-6xl _/    \_ px-8, vacío
     //
-    // menos la columna de etiquetas. Cada tramo se dimensiona para el ancho MÁS ANGOSTO de
-    // su banda. Por debajo de 1560 no se muestra: con las etiquetas al tamaño de interfaz
-    // del sitio (text-sm) el conjunto ya no cabe sin pisar las tarjetas, y un árbol de 60 px
-    // apretado contra el texto es peor que no ponerlo. Los nombres de los estratos siguen
-    // en la banda de cada sección, así que ahí no se pierde información.
+    // menos la columna de etiquetas cuando se muestra. Cada tramo se dimensiona para el
+    // ancho MÁS ANGOSTO de su banda:
+    //
+    //   1280 – 1400   árbol 100 px, sin etiquetas    96 px libres + 4 de right → 104
+    //   1400 – 1560   árbol 140 px, sin etiquetas   156 px libres, se usan 148
+    //   1560 – 1800   árbol 180 px, sin etiquetas   236 px libres, se usan 188
+    //   1800 – 1920   árbol 180 px + etiquetas      356 px libres, se usan 316
+    //   1920 +        árbol 198 px + etiquetas      416 px libres, se usan 334
+    //
+    // Las etiquetas son lo caro: 86 px de columna más el gap, casi tanto como el árbol
+    // entero en la banda angosta. Se quedan solo donde sobra sitio para las dos cosas, y
+    // por debajo el árbol se lleva todo el hueco. Perder los nombres no cuesta información:
+    // siguen apareciendo en la banda de cada sección («10 m, sotobosque»).
+    //
+    // En 1280 el árbol se mete 8 px en el `px-8` de la sección. Es padding, no texto: el
+    // glifo más a la derecha queda a 24 px. Abajo de 1280 ya no queda margen ni para eso.
+    // El corte estaba en 1560 y dejaba fuera 1920×1080 con el escalado de Windows al 125 %
+    // (1536 px CSS) y al 150 % (1280 px), que es media flota de portátiles.
     <div
       aria-label="Estratos del bosque"
-      className="pointer-events-none fixed right-2 top-1/2 z-30 hidden -translate-y-1/2 items-center gap-2.5 [--tree-w:110px] min-[1560px]:flex min-[1800px]:right-10 min-[1800px]:[--tree-w:165px] min-[1920px]:[--tree-w:198px]"
+      className="pointer-events-none fixed right-1 top-1/2 z-30 hidden -translate-y-1/2 items-center gap-2.5 [--tree-w:100px] min-[1280px]:flex min-[1400px]:right-2 min-[1400px]:[--tree-w:140px] min-[1560px]:[--tree-w:180px] min-[1800px]:right-10 min-[1920px]:[--tree-w:198px]"
     >
-      {/* el viewBox es 84×168, o sea 1:2, así que el alto sale del ancho */}
+      {/* El viewBox es 84×168, o sea 1:2, así que el alto sale del ancho. El tope en `vh`
+          es para la ventana ancha pero baja —un portátil de 1600×900, o cualquiera con la
+          consola abierta—: sin él, el árbol de la banda de 1560 mediría 360 px de alto en
+          una ventana de 560 y se comería la pantalla. 24vh de ancho = 48vh de alto, que es
+          la proporción que ya tenía a 1920 y no estorba. */}
       <div
-        className="relative shrink-0"
-        style={{ width: "var(--tree-w)", height: "calc(var(--tree-w) * 2)" }}
+        className="relative aspect-[1/2] shrink-0"
+        style={{ width: "min(var(--tree-w), 24vh)" }}
       >
-        <Tree active={active.id} dark={dark} />
+        <Tree active={active} />
       </div>
 
       {/* Cada etiqueta se ancla a la altura de su capa en el dibujo, no a un reparto
           uniforme: si "Sotobosque" no queda junto a los arbustos, el diagrama no explica
           nada. Los porcentajes salen de las coordenadas del SVG. */}
-      <ul className="relative w-[86px] self-stretch font-sans text-sm leading-none">
+      <ul className="relative hidden w-[86px] self-stretch font-sans text-sm leading-none min-[1800px]:block">
         {STRATA.map((s) => {
-          const on = s.id === active.id;
+          const on = s.id === active;
           return (
             <li
               key={s.id}
@@ -94,14 +106,14 @@ export default function ForestAxis() {
             >
               <span
                 className={`block transition-colors duration-500 ${
-                  on ? "text-accent" : dark ? "text-cream/45" : "text-ink/40"
+                  on ? "text-accent" : "text-fern"
                 }`}
               >
                 {s.name}
               </span>
               <span
                 className={`mt-1 block tabular-nums transition-colors duration-500 ${
-                  on ? (dark ? "text-cream/55" : "text-ink/45") : "text-transparent"
+                  on ? "text-fern" : "text-transparent"
                 }`}
               >
                 {s.height}
@@ -178,33 +190,31 @@ const SHRUBS = [
  * Un árbol de perfil en tres grupos, uno por estrato. El tronco y las ramas los cruzan y
  * nunca se apagan: son lo que le da estructura. La hojarasca del suelo sí se queda como
  * elipses planas — es hojarasca, no follaje, y ahí la diferencia de forma dice algo.
+ *
+ * Una sola paleta —helecho apagado, acento encendido— y no una por tono de sección. El
+ * dibujo mide el doble de su ancho y va fijo a media pantalla, así que en cada transición
+ * pasa varios cientos de píxeles de scroll partido entre el fondo crema y el verde dosel:
+ * pintado del color de la sección activa, la mitad que caía sobre el otro fondo se borraba.
+ * Helecho y acento son los dos tonos de la marca que se leen sobre ambos, así que el árbol
+ * ya no depende de lo que tenga detrás. Bajarlo o moverlo no era salida: el tono cambia
+ * cuando el borde entre secciones cruza el centro de la ventana, y ahí el dibujo siempre
+ * queda partido.
  */
-function Tree({ active, dark }: { active: string; dark: boolean }) {
-  const base = dark ? "#f4efe6" : "#1f3d2b";
-  const paint = (id: string) => {
-    const on = active === id;
-    return {
-      className: "transition-all duration-500",
-      style: { opacity: on ? 1 : dark ? 0.3 : 0.26 },
-      color: on ? "#e07a3f" : base,
-    };
-  };
-
-  const canopy = paint("dosel");
-  const understory = paint("sotobosque");
-  const floor = paint("suelo");
+function Tree({ active }: { active: string }) {
+  const paint = (id: string) =>
+    `transition-colors duration-500 ${active === id ? "text-accent" : "text-fern"}`;
 
   return (
     <svg
       aria-hidden
       viewBox="0 0 84 168"
-      className="absolute inset-0 h-full w-full"
+      className="absolute inset-0 h-full w-full text-fern"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
       {/* tronco y ramas: no pertenecen a ningún estrato, así que nunca se apagan */}
-      <g stroke={base} strokeOpacity={dark ? 0.5 : 0.4} fill="none">
+      <g stroke="currentColor" strokeOpacity={0.85} fill="none">
         <path d="M42 132V34" strokeWidth="2.6" />
         {BRANCHES.map(({ from, tip }) => (
           <path
@@ -216,7 +226,7 @@ function Tree({ active, dark }: { active: string; dark: boolean }) {
       </g>
 
       {/* dosel — la copa y los copetes de rama, que son follaje del mismo árbol */}
-      <g {...canopy}>
+      <g className={paint("dosel")}>
         <Foliage x={CANOPY_CENTER[0]} y={CANOPY_CENTER[1]} scale={1} />
         {BRANCHES.map(({ tip, scale }) => (
           <Foliage key={`${tip[0]}-${tip[1]}`} x={tip[0]} y={tip[1]} scale={scale} opacity={0.8} />
@@ -224,7 +234,7 @@ function Tree({ active, dark }: { active: string; dark: boolean }) {
       </g>
 
       {/* sotobosque — la misma silueta a ras de suelo, con sus tallos */}
-      <g {...understory}>
+      <g className={paint("sotobosque")}>
         <g stroke="currentColor" strokeWidth="1.2" fill="none">
           {SHRUBS.map(({ x, stemFrom }) => (
             <path key={x} d={`M${x} 132V${stemFrom}`} />
@@ -236,7 +246,7 @@ function Tree({ active, dark }: { active: string; dark: boolean }) {
       </g>
 
       {/* suelo — línea de hojarasca y las raíces que se abren debajo */}
-      <g {...floor}>
+      <g className={paint("suelo")}>
         <path d="M6 132h72" stroke="currentColor" strokeWidth="2" />
         <g stroke="currentColor" strokeWidth="1.2" fill="none">
           <path d="M42 132c-3 7-9 10-18 12M42 132c3 8 10 11 19 12M42 132v14" />

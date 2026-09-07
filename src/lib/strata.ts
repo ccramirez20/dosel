@@ -4,13 +4,6 @@
  * nombre del café es el dosel y el eje empieza ahí.
  */
 
-export type Tone = "light" | "dark";
-
-export interface StratumMark {
-  id: string;
-  tone: Tone;
-}
-
 export const STRATA = [
   { id: "dosel", name: "Dosel", height: "30 m" },
   { id: "sotobosque", name: "Sotobosque", height: "10 m" },
@@ -23,9 +16,8 @@ export const STRATA = [
  * conserva la anterior en vez de apagar el diagrama.
  */
 export function pickActive(
-  seen: { id: string; tone: Tone; visible: boolean }[],
-  previous: StratumMark,
-): StratumMark {
-  const active = seen.filter((s) => s.visible).at(-1);
-  return active ? { id: active.id, tone: active.tone } : previous;
+  seen: { id: string; visible: boolean }[],
+  previous: string,
+): string {
+  return seen.filter((s) => s.visible).at(-1)?.id ?? previous;
 }

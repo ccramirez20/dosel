@@ -38,13 +38,12 @@ export default async function Home() {
     <>
       <ForestAxis />
 
-      <div data-stratum="dosel" data-tone="dark">
+      <div data-stratum="dosel">
         <Hero />
       </div>
 
       <section
         data-stratum="dosel"
-        data-tone="light"
         className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28"
       >
         <Stratum
@@ -70,7 +69,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section data-stratum="sotobosque" data-tone="dark" className="bg-canopy text-cream">
+      <section data-stratum="sotobosque" className="bg-canopy text-cream">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
           <Stratum
             tone="dark"
@@ -107,7 +106,6 @@ export default async function Home() {
 
       <section
         data-stratum="suelo"
-        data-tone="light"
         className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24"
       >
         <Stratum band="0 m, suelo" title="Dónde estamos" />

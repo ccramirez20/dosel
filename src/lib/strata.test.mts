@@ -3,36 +3,36 @@ import { test } from "node:test";
 
 import { pickActive, STRATA } from "./strata.ts";
 
-const PREV = { id: "dosel", tone: "dark" } as const;
+const PREV = "dosel";
 
-test("pickActive toma la sección visible y su tono", () => {
+test("pickActive toma la sección visible", () => {
   const active = pickActive(
     [
-      { id: "dosel", tone: "light", visible: false },
-      { id: "sotobosque", tone: "dark", visible: true },
-      { id: "suelo", tone: "light", visible: false },
+      { id: "dosel", visible: false },
+      { id: "sotobosque", visible: true },
+      { id: "suelo", visible: false },
     ],
     PREV,
   );
-  assert.deepEqual(active, { id: "sotobosque", tone: "dark" });
+  assert.equal(active, "sotobosque");
 });
 
 test("pickActive conserva la anterior cuando ninguna cruza la banda", () => {
-  const seen = STRATA.map((s) => ({ id: s.id, tone: "light" as const, visible: false }));
-  assert.deepEqual(pickActive(seen, PREV), PREV);
-  assert.deepEqual(pickActive([], PREV), PREV);
+  const seen = STRATA.map((s) => ({ id: s.id, visible: false }));
+  assert.equal(pickActive(seen, PREV), PREV);
+  assert.equal(pickActive([], PREV), PREV);
 });
 
 test("con dos secciones visibles gana la de más abajo", () => {
   // Al bajar, la que entra por el fondo debe mandar sobre la que aún no sale por arriba.
   const active = pickActive(
     [
-      { id: "dosel", tone: "light", visible: true },
-      { id: "sotobosque", tone: "dark", visible: true },
+      { id: "dosel", visible: true },
+      { id: "sotobosque", visible: true },
     ],
     PREV,
   );
-  assert.equal(active.id, "sotobosque");
+  assert.equal(active, "sotobosque");
 });
 
 test("STRATA va de la copa al suelo y no incluye emergente", () => {
