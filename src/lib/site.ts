@@ -4,8 +4,15 @@
  * `node --experimental-strip-types`, que no parsea JSX.
  */
 
-/** Dominio de producción. Lo usan `metadataBase`, el sitemap y robots.txt. */
-export const SITE_URL = "https://dosel.co";
+/**
+ * Dominio de producción. Lo usan `metadataBase`, el sitemap y robots.txt.
+ *
+ * PROVISIONAL. Antes decía `dosel.co`, que resultó estar registrado y activo por otra
+ * empresa ("Dosel Studio"): el sitemap terminaba listando diez URLs bajo un dominio ajeno.
+ * Este de ahora está sin registrar, así que no interfiere con nadie. Cámbialo por el
+ * dominio real el día que lo compren — y ese mismo día quita el `Disallow` de robots.ts.
+ */
+export const SITE_URL = "https://doselcafeymetodo.com";
 
 // TODO(marca): número y dirección reales cuando el dueño confirme.
 export const CONTACT = {
