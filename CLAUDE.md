@@ -276,11 +276,44 @@ pnpm typecheck
 
 ## 12. Estado actual / pendientes
 
-- [ ] Marca (logo, hex, fuentes) — llega esta semana → reemplazar tokens §8.
-- [ ] Imágenes del sitio — llegan el lunes → reemplazar placeholders en `public/images/`.
-- [ ] Datos de ~6 cafés — llegan la semana entrante → poblar `content/cafes/`.
-- [x] Conseguir TopoJSON de departamentos de Colombia → `public/geo/`. **Hecho** (geoBoundaries, ODbL).
-- [ ] Confirmar pasarela de pago (Fase 2) y canal de contacto v1 (asumido: WhatsApp/Instagram).
+**El sitio está publicado en https://dosel.pages.dev (Cloudflare Pages), como borrador y
+cerrado a los buscadores.**
+
+### Checklist de lanzamiento
+
+Lo que hay que hacer para pasar de borrador a sitio público. En orden.
+
+- [ ] **Comprar el dominio.** `dosel.co` **está descartado**: existe y es de otra empresa
+      («Dosel Studio — Vox-Humana»). Verificados libres el 7-sep-2026: `doselcafeymetodo.com`
+      (el provisional que usa el código hoy), `doselcafeymetodo.co`, `doselcafe.co`,
+      `dosel.com.co`.
+- [ ] **Cambiar `SITE_URL` en `src/lib/site.ts`** por el dominio comprado. **Es la única línea
+      que hay que tocar:** `robots.txt` se abre solo a los buscadores en cuanto `SITE_URL` deje
+      de ser el provisional, porque `EN_BORRADOR` se deriva de ahí. Hay un test
+      (`src/lib/site.test.mts`) que se pone rojo si alguien rompe ese acoplamiento.
+- [ ] **Conectar el dominio en Cloudflare:** proyecto → *Custom domains* → *Set up a custom
+      domain*. Si se compra en Cloudflare se configura solo; si no, hay que apuntar los DNS.
+- [ ] **Número real de WhatsApp** en `src/lib/site.ts`. Hoy es `wa.me/570000000000`: el
+      formulario de reserva arma el mensaje y no le llega a nadie.
+- [ ] **Dirección del local** en `src/lib/site.ts` (hoy «Por confirmar»).
+- [ ] **Día y frecuencia reales de cada taller** → `schedule` en
+      `content/experiences/experiences.json`. Los de hoy son supuestos, y la regla no sabe de
+      festivos: con la programación actual ofrece el viernes 1 de enero.
+
+### Contenido pendiente del cliente
+
+- [ ] Marca (logo, hex, fuentes) → reemplazar tokens §8.
+- [ ] Imágenes del sitio → reemplazar placeholders en `public/images/`, hoy vacío. Al cambiar
+      el `src` de `.svg` a `.jpg` en los JSON, `Figure` pasa sola a `next/image`.
+- [ ] Datos reales de los 6 cafés → `content/cafes/`. Los de hoy son de relleno: las
+      coordenadas sí son de municipios cafeteros reales y están validadas contra su
+      departamento por test, pero fincas, perfiles e historias están inventados.
+- [ ] Descripciones reales de los 5 productos de panadería. Confirmar además si «Pasteles»
+      son de hojaldre relleno o repostería dulce.
+- [ ] Revisión de textos: se le pasó al cliente `textos-dosel-v1.csv` (123 filas, con columna
+      para el texto revisado). Al volver, se aplican de una pasada.
+- [x] TopoJSON de departamentos de Colombia → `public/geo/`. **Hecho** (geoBoundaries, ODbL).
+- [ ] Confirmar pasarela de pago (Fase 2).
 
 <!-- BEGIN:nextjs-agent-rules -->
 

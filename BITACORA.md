@@ -476,3 +476,74 @@ separarlas después habría sido reconstruir estados intermedios que nunca exist
 
 Sin cambios: número real de WhatsApp (`src/lib/site.ts`), días y frecuencia de los talleres,
 datos reales de los 4 cafés, marca, fotos (`public/images/` sigue vacío) y dirección del local.
+
+---
+
+## Sesión 5 — 7 de septiembre de 2026
+
+**Objetivo:** cerrar los últimos dos ajustes de la home, publicar en Cloudflare y sacar el CSV
+de textos para el cliente.
+
+### Qué quedó hecho
+
+- **El eje de estratos se dimensiona por caja, no por `transform`.** El diagrama seguía
+  sintiéndose pequeño, pero agrandarlo con `scale()` no servía: escala todo por igual, así que
+  a 1920 las etiquetas salían a 21 px, y bajarlas volvía a encoger el árbol. Ahora el SVG se
+  estira con su `viewBox` y el texto conserva su medida. El árbol pasó de 155 a 198 px (+28 %)
+  y las etiquetas quedaron en `text-sm`, el tamaño de interfaz del sitio.
+- **Las cifras del sotobosque** en una sola línea, con el botón solo debajo.
+- **Export estático** (`output: "export"`) y **publicado en Cloudflare Pages**:
+  https://dosel.pages.dev
+- **`textos-dosel-v1.csv`**: 123 filas con columna para el texto revisado, para el cliente.
+
+### Decisiones que conviene no deshacer
+
+24. **`EN_BORRADOR` se deriva de `SITE_URL`, no es un interruptor aparte.** Mientras el sitio
+    viva en su dominio provisional, `robots.txt` lo cierra a los buscadores: es un borrador
+    con textos de relleno, cafés inventados y un WhatsApp falso, y si Google lo indexa después
+    le compite al sitio real por el mismo nombre. Sacar algo del índice cuesta mucho más que
+    no meterlo. Se derivó en vez de dejar dos interruptores porque **dos cosas que hay que
+    acordarse de cambiar el mismo día son dos oportunidades de olvidar una**. Ahora solo hay
+    que cambiar `SITE_URL`, y `src/lib/site.test.mts` se pone rojo si alguien rompe el
+    acoplamiento.
+
+25. **`dosel.co` está descartado como dominio.** Existe, resuelve y es de otra empresa
+    («Dosel Studio — Vox-Humana»). El `SITE_URL` apuntaba ahí desde la sesión 1, así que el
+    sitemap en producción llegó a listar diez URLs bajo un dominio ajeno. Ahora apunta a
+    `doselcafeymetodo.com`, verificado sin registrar contra un resolutor público.
+
+26. **Cloudflare fusionó el botón «Create» y por defecto mete al flujo de Workers**, que
+    detecta Next.js, instala wrangler y termina en `wrangler deploy` — que falla con
+    `ERR_PNPM_IGNORED_BUILDS` porque pnpm 11 bloquea los scripts de instalación. Para un sitio
+    estático hay que ir a la **pestaña Pages** y usar el preset **«Next.js (Static HTML
+    Export)»**, con salida `out`. Ahí no aparece wrangler por ningún lado.
+
+27. **`output: "export"` exige `export const dynamic = "force-static"`** en `sitemap.ts` y
+    `robots.ts`. Sin esa línea el build falla al recolectar la página.
+
+### Un error de método que conviene recordar
+
+Al verificar disponibilidad de dominios, el DNS del router **devolvía su propia IP para
+cualquier nombre**, así que todo aparecía «en uso». Hay que consultar un resolutor público
+(`https://dns.google/resolve?name=...`) y mirar el `Status`: 3 es NXDOMAIN, o sea libre.
+
+### Verificación
+
+| Check | Estado |
+|---|---|
+| `pnpm lint`, `typecheck`, `test` (35), `build` | verde |
+| `pnpm audit` | sin vulnerabilidades |
+| Guardia del lanzamiento, por mutación | verde (desacoplar `EN_BORRADOR` y barra final en `SITE_URL`) |
+| Producción: 6 rutas 200, `/loquesea` 404 propio | verde, 0,2–0,4 s |
+| Producción: mapa con 6 pines, «Huila: 2 cafés», rango 1.350–2.050 msnm | verde |
+| Producción: `robots.txt` con `Disallow: /` y sitemap al dominio provisional | verde |
+
+### Qué se le entregó al cliente
+
+El link https://dosel.pages.dev y el `textos-dosel-v1.csv`. **Aviso que hay que darle:** el
+botón de WhatsApp no le llega a nadie todavía; si lo prueba va a parecer roto.
+
+### Qué sigue
+
+El checklist de lanzamiento vive en el §12 del CLAUDE.md, no acá, porque es una lista que se
+consulta y se tacha — no un registro de lo que pasó.
