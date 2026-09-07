@@ -3,6 +3,7 @@ import { Archivo, Newsreader } from "next/font/google";
 
 import Footer from "@/components/layout/Footer";
 import Nav from "@/components/layout/Nav";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -17,12 +18,10 @@ const archivo = Archivo({
   display: "swap",
 });
 
-const SITE_URL = "https://dosel.co";
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Dosel — café y bosque",
+    default: "Dosel café y método",
     template: "%s · Dosel",
   },
   description:
@@ -30,12 +29,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_CO",
-    siteName: "Dosel",
-    title: "Dosel — café y bosque",
+    siteName: "Dosel café y método",
+    title: "Dosel café y método",
     description:
       "Café de origen colombiano, métodos de preparación y talleres, contados por un biólogo.",
   },
-  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

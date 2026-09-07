@@ -63,6 +63,22 @@ export interface Session {
   booked: number;
 }
 
+/**
+ * Cuándo se dicta un taller. Es una regla, no una lista de fechas: el sitio es estático y
+ * una lista se queda vieja entre despliegues, mientras que la regla sigue produciendo las
+ * próximas fechas sola. No lleva cupos a propósito — eso es `Session`, y es Fase 3.
+ */
+export interface Schedule {
+  /** Día de la semana. 0 = domingo … 6 = sábado. */
+  weekday: number;
+  /** "week": cada semana. "month": una vez al mes. */
+  every: "week" | "month";
+  /** Con `every: "month"`, cuál ocurrencia de ese día. 1 = el primero del mes. */
+  nth?: number;
+  /** Horas de inicio que se ofrecen ese día, en "HH:MM". */
+  times: string[];
+}
+
 export interface Experience {
   id: string;
   slug: string;
@@ -70,8 +86,10 @@ export interface Experience {
   category: "taller" | "metodo" | "otro";
   description: string;
   images: ImageRef[];
-  // --- costura reservas (Fase 3), sin uso en v1 ---
+  /** Sin `schedule` no hay formulario: la tarjeta cae al enlace de WhatsApp. */
   bookable?: boolean;
+  schedule?: Schedule;
+  // --- costura reservas (Fase 3), sin uso en v1 ---
   price?: number;
   sessions?: Session[];
 }

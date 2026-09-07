@@ -87,7 +87,7 @@ public/
 - **`/` Home.** Hero con identidad Dosel (bosque/dosel), ubicación, qué hacen. Moderno, llamativo, con reveals al hacer scroll. Entradas a las tres secciones.
 - **`/quienes-somos`.** Narrativa visual bosque + café + aves. Qué es Dosel y cómo se diferencia. Tono editorial, no corporativo.
 - **`/experiencias`.** Talleres (galletas, pintura de esculturas) y **métodos de café**. En métodos: qué es, para qué se usa, de dónde viene, para qué perfil de café va mejor.
-- **`/productos`.** Panadería como secundario (grid simple). **Cafés como foco principal**: tarjetas clickeables que despliegan el mapa (ver §7).
+- **`/productos`.** Panadería y snacks ACAB como secundario, en un solo bloque «Para acompañar» (grid simple). **Cafés como foco principal**: tarjetas clickeables que despliegan el mapa (ver §7).
 
 ---
 

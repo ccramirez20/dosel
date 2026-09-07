@@ -1,0 +1,33 @@
+{
+  "id": "cafe-alto-de-la-niebla",
+  "slug": "alto-de-la-niebla",
+  "name": "Alto de la Niebla",
+  "origin": {
+    "regionId": "CO-HUI",
+    "municipio": "Garzón",
+    "finca": "Finca Alto de la Niebla",
+    "lat": 2.1959,
+    "lng": -75.6276,
+    "altitudeMasl": 1980
+  },
+  "variety": "Geisha",
+  "process": "Lavado",
+  "roastLevel": "Claro",
+  "profile": {
+    "description": "El más alto de la carta y se nota: acidez que corta, cuerpo liviano y un final largo que se queda en jazmín. Es un café para tomar sin leche y sin afán.",
+    "aromas": ["Jazmín", "Bergamota", "Durazno blanco"],
+    "tasting": ["Té de jazmín", "Lima", "Miel de flores"],
+    "body": "Liviano",
+    "acidity": "Alta, cítrica"
+  },
+  "recommendedMethods": ["v60", "chemex"],
+  "story": "La finca está en la ladera oriental del valle del Magdalena, donde la niebla sube en la tarde y baja la temperatura de golpe. Esa niebla es la razón del nombre y, en buena medida, del perfil: el grano se demora casi un mes más en madurar que el de las fincas de abajo.",
+  "images": [
+    {
+      "src": "/images/cafes/alto-de-la-niebla.svg",
+      "alt": "Cafetal cubierto de niebla en la ladera de Garzón",
+      "width": 1200,
+      "height": 900
+    }
+  ]
+}

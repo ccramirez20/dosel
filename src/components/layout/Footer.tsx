@@ -1,12 +1,6 @@
 import Link from "next/link";
 
-// TODO(marca): reemplazar por los datos reales cuando el dueño confirme canal y dirección.
-export const CONTACT = {
-  whatsapp: "https://wa.me/570000000000",
-  instagram: "https://instagram.com/dosel.cafe",
-  address: "Por confirmar",
-  hours: "Martes a domingo, 8:00 a 19:00",
-} as const;
+import { CONTACT } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -14,6 +8,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
         <div>
           <p className="font-display text-2xl leading-tight">Dosel</p>
+          <p className="mt-1 font-sans text-sm tracking-wide text-moss">café y método</p>
           <p className="mt-3 max-w-xs font-sans text-sm leading-relaxed text-cream/70">
             Un café que también es una excusa para hablar de bosques, aves y de dónde
             viene lo que estás tomando.
@@ -56,7 +51,7 @@ export default function Footer() {
 
       <div className="border-t border-cream/10">
         <p className="mx-auto max-w-6xl px-5 py-5 font-sans text-xs leading-relaxed text-cream/45 md:px-8">
-          © {new Date().getFullYear()} Dosel. Mapa de departamentos:{" "}
+          © {new Date().getFullYear()} Dosel café y método. Mapa de departamentos:{" "}
           <a
             className="underline underline-offset-2 hover:text-cream/70"
             href="https://www.geoboundaries.org/"

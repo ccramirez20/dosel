@@ -74,8 +74,8 @@ export default function ColombiaMap({
             />
           );
 
-          // Solo los departamentos con café entran al orden de tabulación: 33 paradas de
-          // teclado para llegar a dos que hacen algo sería peor accesibilidad, no mejor.
+          // Solo los departamentos con café entran al orden de tabulación: obligar a pasar
+          // por los 33 para llegar al puñado que hace algo sería peor accesibilidad, no mejor.
           if (!hasCafes) {
             return (
               <g key={dept.id} aria-hidden className="pointer-events-none">

@@ -26,7 +26,7 @@ export default function Nav() {
         >
           Dosel
           <span className="ml-2 hidden font-sans text-xs font-normal tracking-wide text-moss sm:inline">
-            café y bosque
+            café y método
           </span>
         </Link>
 

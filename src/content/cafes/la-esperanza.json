@@ -1,0 +1,33 @@
+{
+  "id": "cafe-la-esperanza",
+  "slug": "la-esperanza",
+  "name": "La Esperanza",
+  "origin": {
+    "regionId": "CO-NAR",
+    "municipio": "La Unión",
+    "finca": "Finca La Esperanza",
+    "lat": 1.6045,
+    "lng": -77.133,
+    "altitudeMasl": 2050
+  },
+  "variety": "Caturra",
+  "process": "Lavado",
+  "roastLevel": "Claro",
+  "profile": {
+    "description": "Nariño está tan al sur y tan alto que el café ahí madura a un ritmo que en otro lado sería imposible. Este es dulce y ácido a la vez, como una fruta que todavía no termina de estar madura.",
+    "aromas": ["Panela", "Manzana verde", "Almendra tostada"],
+    "tasting": ["Maracuyá", "Caña de azúcar", "Cacao con leche"],
+    "body": "Medio",
+    "acidity": "Alta, málica"
+  },
+  "recommendedMethods": ["v60", "aeropress"],
+  "story": "La Unión queda cerca del nudo de los Pastos, en la parte más alta de la zona cafetera de Nariño. Las fincas son pequeñas —esta tiene poco más de dos hectáreas— y casi todas trabajan por familias. La altura les da un café que se cotiza bien; el problema es sacarlo por esas carreteras.",
+  "images": [
+    {
+      "src": "/images/cafes/la-esperanza.svg",
+      "alt": "Terrazas de café en la montaña de La Unión, Nariño",
+      "width": 1200,
+      "height": 900
+    }
+  ]
+}

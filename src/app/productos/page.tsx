@@ -8,21 +8,27 @@ import { getProducts } from "@/lib/data";
 import { getMapView } from "@/lib/mapView";
 
 export const metadata: Metadata = {
-  title: "Cafés y panadería",
+  title: "Cafés y carta",
   description:
-    "Los cafés de Dosel con su origen exacto en el mapa de Colombia: finca, municipio, altura y perfil de taza. Más la panadería del día.",
+    "Los cafés de Dosel con su origen exacto en el mapa de Colombia: finca, municipio, altura y perfil de taza. Más la panadería y los snacks de fruta deshidratada de ACAB.",
 };
 
 export default async function ProductosPage() {
   const [view, products] = await Promise.all([getMapView(), getProducts()]);
 
+  const alturas = view.altitudeRange;
+  const rango = alturas
+    ? `entre ${alturas.min.toLocaleString("es-CO")} y ${alturas.max.toLocaleString("es-CO")} msnm`
+    : "a distintas alturas";
+  const departamentos = new Set(view.cafes.map((c) => c.origin.regionId)).size;
+
   return (
     <>
       <section className="mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
         <Stratum
-          band="1 600 – 2 000 m"
+          band="10 m, sotobosque"
           title="De dónde viene cada café."
-          lead="Toca un departamento para ver qué tenemos de ahí, o abre una ficha y el mapa te muestra la finca. Los datos de altura y proceso son los que nos da el productor."
+          lead={`El café es un arbusto de sotobosque: crece a la sombra de árboles más altos. Hoy tenemos ${view.cafes.length} orígenes de ${departamentos} departamentos, ${rango}. La altura no es un dato de adorno: entre más alto hace más frío, y con frío el grano madura más lento y acumula más azúcar. Toca un departamento para ver qué hay de ahí, o abre una ficha y el mapa te muestra la finca.`}
         />
         <CafeOriginExplorer
           cafes={view.cafes}
@@ -38,9 +44,9 @@ export default async function ProductosPage() {
       <section className="border-t border-rule bg-paper/50">
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
           <Stratum
-            band="0 m, mostrador"
-            title="Panadería del día"
-            lead="Se hornea en la mañana y se acaba cuando se acaba. No hay vitrina de ayer."
+            band="0 m, suelo"
+            title="Para acompañar"
+            lead="El suelo del bosque es la capa que sostiene todo lo demás; en la tienda es el mostrador. Ahí está la panadería y ACAB, nuestros snacks de fruta deshidratada."
           />
           <ul className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {products.map((product, i) => (

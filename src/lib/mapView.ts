@@ -1,6 +1,20 @@
 import type { MapDepartment, MapPin } from "@/components/map/ColombiaMap";
 import { getCafes, getMethods, getRegions } from "@/lib/data";
+import type { Cafe } from "@/types/domain";
 import { ISLAND_REGION_ID, MAP_VIEWBOX, getDepartments, getIslandInset, projectPoint } from "@/lib/geo";
+
+/**
+ * Franja de altitud del catálogo. Se deriva del contenido en vez de escribirse a mano: la
+ * banda que había antes decía "1 600 – 2 000 m" con cafés a 1620 y 1750, y cada café nuevo
+ * la volvía más falsa. Devuelve null si ningún café declara altura.
+ */
+export function altitudeRange(cafes: Cafe[]): { min: number; max: number } | null {
+  const alturas = cafes
+    .map((c) => c.origin.altitudeMasl)
+    .filter((a): a is number => typeof a === "number");
+  if (alturas.length === 0) return null;
+  return { min: Math.min(...alturas), max: Math.max(...alturas) };
+}
 
 /**
  * Arma el modelo de vista del mapa en build. Todo lo que cruza al cliente aquí es
@@ -49,6 +63,7 @@ export async function getMapView() {
     departments,
     pins,
     methodNames,
+    altitudeRange: altitudeRange(cafes),
     viewBox: { width: MAP_VIEWBOX.width, height: MAP_VIEWBOX.height },
     island: getIslandInset(),
   };

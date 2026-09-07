@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import Figure from "@/components/ui/Figure";
 import Stratum from "@/components/ui/Stratum";
+import { CONTACT } from "@/lib/site";
 import { getCafe, getCafes, getMethods, getRegions } from "@/lib/data";
 
 export async function generateStaticParams() {
@@ -38,7 +39,7 @@ export default async function CafeDetailPage({ params }: PageProps<"/cafes/[slug
     cafe.origin.finca && { term: "Finca", value: cafe.origin.finca },
     cafe.origin.altitudeMasl && {
       term: "Altura",
-      value: `${cafe.origin.altitudeMasl.toLocaleString("es-CO")} m s. n. m.`,
+      value: `${cafe.origin.altitudeMasl.toLocaleString("es-CO")} msnm`,
     },
     cafe.variety && { term: "Variedad", value: cafe.variety, taxon: true },
     cafe.process && { term: "Proceso", value: cafe.process },
@@ -138,6 +139,19 @@ export default async function CafeDetailPage({ params }: PageProps<"/cafes/[slug
               </p>
             </section>
           )}
+
+          <section className="mt-14 border-t border-rule pt-8">
+            <p className="max-w-[52ch] leading-relaxed text-ink/75">
+              ¿Lo quieres probar o llevar? Pregúntanos por disponibilidad de{" "}
+              {cafe.name} — te decimos cómo va la cosecha antes de que vengas.
+            </p>
+            <a
+              href={CONTACT.whatsapp}
+              className="mt-5 inline-block bg-accent px-6 py-3 font-sans text-sm text-canopy transition-colors hover:bg-canopy hover:text-cream"
+            >
+              Preguntar por este café
+            </a>
+          </section>
         </div>
       </div>
     </article>

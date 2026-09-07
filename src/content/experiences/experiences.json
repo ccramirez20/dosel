@@ -5,8 +5,23 @@
     "title": "Taller de galletas",
     "category": "taller",
     "description": "Amasamos, cortamos y horneamos. Cada quien se lleva lo que hizo y, de paso, entiende por qué la mantequilla fría cambia todo. Dos horas, para todas las edades, sin experiencia previa.",
-    "images": [{ "src": "/images/experiences/galletas.svg", "alt": "Manos amasando galletas sobre una mesa de madera", "width": 1200, "height": 900 }],
-    "bookable": false
+    "images": [
+      {
+        "src": "/images/experiences/galletas.svg",
+        "alt": "Manos amasando galletas sobre una mesa de madera",
+        "width": 1200,
+        "height": 900
+      }
+    ],
+    "bookable": true,
+    "schedule": {
+      "weekday": 3,
+      "every": "week",
+      "times": [
+        "14:00",
+        "16:00"
+      ]
+    }
   },
   {
     "id": "exp-esculturas",
@@ -14,8 +29,23 @@
     "title": "Pintura de esculturas",
     "category": "taller",
     "description": "Figuras de aves y hongos en yeso, pinceles, y el tiempo que haga falta. Antes de pintar hablamos de la especie: cómo es su plumaje real, dónde vive, por qué tiene esos colores. Se pinta mejor lo que se conoce.",
-    "images": [{ "src": "/images/experiences/esculturas.svg", "alt": "Esculturas de aves en yeso listas para pintar", "width": 1200, "height": 900 }],
-    "bookable": false
+    "images": [
+      {
+        "src": "/images/experiences/esculturas.svg",
+        "alt": "Esculturas de aves en yeso listas para pintar",
+        "width": 1200,
+        "height": 900
+      }
+    ],
+    "bookable": true,
+    "schedule": {
+      "weekday": 5,
+      "every": "month",
+      "nth": 1,
+      "times": [
+        "15:00"
+      ]
+    }
   },
   {
     "id": "exp-cata",
@@ -23,7 +53,21 @@
     "title": "Cata guiada",
     "category": "metodo",
     "description": "Tres orígenes, tres métodos, una mesa. Aprendes a separar aroma de sabor, a nombrar lo que sientes y a reconocer de dónde viene cada taza. Se termina sabiendo qué café pedir y por qué.",
-    "images": [{ "src": "/images/experiences/cata.svg", "alt": "Mesa de cata con tazas y molinillo", "width": 1200, "height": 900 }],
-    "bookable": false
+    "images": [
+      {
+        "src": "/images/experiences/cata.svg",
+        "alt": "Mesa de cata con tazas y molinillo",
+        "width": 1200,
+        "height": 900
+      }
+    ],
+    "bookable": true,
+    "schedule": {
+      "weekday": 5,
+      "every": "week",
+      "times": [
+        "16:00"
+      ]
+    }
   }
 ]

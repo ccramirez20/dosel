@@ -8,26 +8,20 @@ import Stratum from "@/components/ui/Stratum";
 export const metadata: Metadata = {
   title: "Quiénes somos",
   description:
-    "Dosel es un café montado por un biólogo. El nombre viene de la capa alta del bosque, y esa idea ordena todo lo demás: la carta, los talleres y lo que contamos.",
+    "Dosel tiene alma de biólogo. El nombre viene de la capa alta del bosque, y esa idea ordena todo lo demás: la carta, los talleres y lo que contamos.",
 };
 
-/** Las capas del bosque, de arriba abajo. Ordenan la narrativa de la página. */
+/**
+ * Las tres capas del bosque, de arriba abajo, y cada una amarrada a una parte del negocio:
+ * el dosel es el lugar, el sotobosque son los cafés, el suelo es la barra y quien atiende.
+ * "Emergente" salió del vocabulario del sitio; lo que contaba —los lotes que aparecen una
+ * cosecha y no vuelven— vive ahora en sotobosque, que es donde se habla de café.
+ */
 const LAYERS = [
   {
-    band: "45 m, emergente",
-    title: "Los árboles que se asoman",
-    body: "Por encima del dosel sobresalen unos pocos árboles gigantes. Reciben todo el sol y todo el viento. En un café eso serían los orígenes raros: los lotes pequeños que aparecen una cosecha y no vuelven. Cuando llega uno, lo anunciamos y dura lo que dure.",
-    image: {
-      src: "/images/quienes-somos/emergente.svg",
-      alt: "Copa de un árbol emergente sobresaliendo del bosque",
-      width: 1200,
-      height: 800,
-    },
-  },
-  {
     band: "30 m, dosel",
-    title: "Aquí es donde vivimos",
-    body: "El dosel es la capa continua de copas donde el bosque atrapa casi toda la luz. Es la parte más viva y la más ruidosa: allí están las aves, las bromelias y la mayoría de los insectos. También es la capa que le da sombra al café que crece abajo. Nos pareció el nombre correcto para un lugar que quiere ser eso: la capa donde pasan las cosas.",
+    title: "El lugar",
+    body: "El dosel es la capa continua de copas donde el bosque atrapa casi toda la luz. Es la parte más viva y la más ruidosa: allí están las aves, las bromelias y la mayoría de los insectos. También es la capa que le da sombra a lo que crece abajo. Nos pareció el nombre correcto para una tienda que quiere ser eso: la capa donde pasan las cosas, y desde la cual se sostiene el resto.",
     image: {
       src: "/images/quienes-somos/dosel.svg",
       alt: "Capa continua de copas de árboles vista desde arriba",
@@ -37,8 +31,8 @@ const LAYERS = [
   },
   {
     band: "10 m, sotobosque",
-    title: "Donde crece el café",
-    body: "El café es un arbusto de sotobosque: evolucionó bajo sombra y ahí es donde mejor se comporta. Un cafetal con árboles encima madura más lento, resiste mejor la sequía y sostiene aves que un monocultivo a pleno sol no sostiene. Compramos, cuando podemos, a fincas que lo hacen así. No siempre se puede, y cuando no, lo decimos.",
+    title: "Los cafés",
+    body: "El café es un arbusto de sotobosque: evolucionó bajo sombra y ahí es donde mejor se comporta. Un cafetal con árboles encima madura más lento, resiste mejor la sequía y sostiene aves que un monocultivo a pleno sol no sostiene. Compramos, cuando podemos, a fincas que lo hacen así. No siempre se puede, y cuando no, lo decimos. La carta rota con la cosecha, y de vez en cuando entra un lote pequeño que aparece una vez y no vuelve: cuando pasa, lo anunciamos y dura lo que dure.",
     image: {
       src: "/images/quienes-somos/sotobosque.svg",
       alt: "Arbustos de café creciendo bajo la sombra de árboles altos",
@@ -48,8 +42,8 @@ const LAYERS = [
   },
   {
     band: "0 m, suelo",
-    title: "Lo que queda",
-    body: "En el suelo del bosque casi no entra luz y todo se descompone rápido. Es la parte menos vistosa y la que sostiene el resto. En la tienda es la barra, el horno y la gente que atiende. Sin eso lo demás es un discurso.",
+    title: "La barra",
+    body: "En el suelo del bosque casi no entra luz y todo se descompone rápido. Es la parte menos vistosa y la que sostiene el resto. En la tienda es la barra, el horno y la gente que atiende: moler, pesar, servir y responder preguntas. Sin eso lo demás es un discurso.",
     image: {
       src: "/images/quienes-somos/suelo.svg",
       alt: "Suelo del bosque cubierto de hojarasca",
@@ -68,9 +62,10 @@ export default function QuienesSomosPage() {
             Un bosque no es una masa verde. Tiene pisos, y cada uno hace algo distinto.
           </p>
           <p className="mt-8 max-w-[62ch] text-lg leading-relaxed text-ink/75">
-            Dosel lo montó un biólogo, así que la tienda está organizada como se organiza un
-            bosque: por capas. Es una manera de contar qué hacemos sin sonar a folleto, y de
-            paso una excusa para explicar cómo funciona un ecosistema mientras te tomas algo.
+            Dosel tiene alma de biólogo, así que la tienda está organizada como se organiza un
+            bosque: por capas. Cada una es una parte de lo que hacemos. Es una manera de
+            contarlo sin sonar a folleto, y de paso una excusa para explicar cómo funciona un
+            ecosistema mientras te tomas algo.
           </p>
         </div>
       </section>
@@ -82,8 +77,11 @@ export default function QuienesSomosPage() {
         >
           <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
             <div
+              // El alternado apuntaba a `[&>figure]`, pero el hijo directo es el <div> que
+              // envuelve `Reveal`, así que el selector no casaba con nada y la imagen
+              // quedaba siempre a la derecha. Se apunta al último hijo, sea cual sea.
               className={`grid items-center gap-10 md:grid-cols-2 md:gap-16 ${
-                i % 2 === 1 ? "md:[&>figure]:order-2" : ""
+                i % 2 === 1 ? "md:[&>*:last-child]:order-first" : ""
               }`}
             >
               <div>
@@ -111,7 +109,7 @@ export default function QuienesSomosPage() {
           <p className="max-w-[46ch] font-display text-3xl leading-[1.12]">
             Si algo de esto te dio curiosidad, la carta es el mejor sitio para empezar.
           </p>
-          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 font-sans text-sm">
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 font-sans text-sm">
             <Link
               href="/productos"
               className="bg-accent px-6 py-3 text-canopy transition-colors hover:bg-cream"

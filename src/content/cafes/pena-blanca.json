@@ -1,0 +1,33 @@
+{
+  "id": "cafe-pena-blanca",
+  "slug": "pena-blanca",
+  "name": "Peña Blanca",
+  "origin": {
+    "regionId": "CO-CAU",
+    "municipio": "Inzá",
+    "finca": "Finca Peña Blanca",
+    "lat": 2.5497,
+    "lng": -76.0603,
+    "altitudeMasl": 1850
+  },
+  "variety": "Castillo",
+  "process": "Honey",
+  "roastLevel": "Medio",
+  "profile": {
+    "description": "El honey deja parte del mucílago pegado al grano mientras seca, y eso se traduce en dulzor. Este es el café más goloso de la carta sin volverse empalagoso.",
+    "aromas": ["Panela caliente", "Frutos rojos", "Vainilla"],
+    "tasting": ["Mora", "Azúcar morena", "Nuez moscada"],
+    "body": "Alto",
+    "acidity": "Media, dulce"
+  },
+  "recommendedMethods": ["aeropress", "prensa-francesa"],
+  "story": "Inzá está en la vertiente oriental de la cordillera Central, en territorio nasa. La finca seca en marquesina y voltea el grano a mano varias veces al día durante dos semanas: el honey no perdona el descuido, y si se hace mal el café sabe a fermento y no a fruta.",
+  "images": [
+    {
+      "src": "/images/cafes/pena-blanca.svg",
+      "alt": "Grano de café secando en marquesina en Inzá, Cauca",
+      "width": 1200,
+      "height": 900
+    }
+  ]
+}

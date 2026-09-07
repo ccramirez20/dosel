@@ -1,9 +1,10 @@
 import Link from "next/link";
 
+import ForestAxis from "@/components/home/ForestAxis";
 import Hero from "@/components/home/Hero";
 import Reveal from "@/components/ui/Reveal";
 import Stratum from "@/components/ui/Stratum";
-import { CONTACT } from "@/components/layout/Footer";
+import { CONTACT } from "@/lib/site";
 import { getCafes, getRegions } from "@/lib/data";
 
 const SECTIONS = [
@@ -22,7 +23,7 @@ const SECTIONS = [
   {
     href: "/quienes-somos",
     title: "Bosque y café",
-    body: "El dosel es la capa donde el bosque atrapa la luz. También es donde crece el café que vale la pena. De ahí el nombre.",
+    body: "El dosel es la capa donde el bosque atrapa la luz. La sombra que deja abajo es la que necesita el café para crecer. De ahí el nombre.",
     cta: "Conocer Dosel",
   },
 ] as const;
@@ -35,13 +36,21 @@ export default async function Home() {
 
   return (
     <>
-      <Hero />
+      <ForestAxis />
 
-      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div data-stratum="dosel" data-tone="dark">
+        <Hero />
+      </div>
+
+      <section
+        data-stratum="dosel"
+        data-tone="light"
+        className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28"
+      >
         <Stratum
           band="30 m, dosel"
           title="Un café que también explica de dónde viene el café."
-          lead="Servimos tres cosas: café de origen que podemos rastrear hasta la finca, panadería hecha el mismo día, y talleres para gente con curiosidad. Nada de eso es decorativo."
+          lead="Café de origen que podemos rastrear hasta la finca, los métodos con que lo preparamos, y talleres y experiencias para gente con curiosidad. Nada de eso es decorativo."
         />
 
         <div className="grid gap-px bg-rule md:grid-cols-3">
@@ -61,13 +70,13 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="bg-canopy text-cream">
+      <section data-stratum="sotobosque" data-tone="dark" className="bg-canopy text-cream">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
           <Stratum
             tone="dark"
-            band="1 600 – 2 000 m"
+            band="10 m, sotobosque"
             title="Cada taza tiene una dirección exacta."
-            lead="No decimos «café colombiano» y ya. Decimos el municipio, la finca y los metros sobre el nivel del mar, porque a esa altura pasa algo concreto: el grano madura más lento y acumula más azúcar."
+            lead="No decimos «café colombiano» y ya. Decimos el municipio, la finca y los metros sobre el nivel del mar, porque entre más alto hace más frío, y con frío el grano madura más lento y acumula más azúcar. Por eso la altura va en cada ficha."
           />
 
           <div className="mt-2 grid gap-10 md:grid-cols-[auto_1fr] md:gap-16">
@@ -94,7 +103,11 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+      <section
+        data-stratum="suelo"
+        data-tone="light"
+        className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24"
+      >
         <Stratum band="0 m, suelo" title="Dónde estamos" />
         <div className="grid gap-8 font-sans text-base leading-relaxed text-ink/80 md:grid-cols-2">
           <p>
@@ -102,7 +115,14 @@ export default async function Home() {
             <span className="mt-1 block text-ink/55">{CONTACT.address}</span>
           </p>
           <p>
-            Para reservar un taller o preguntar por un origen, escríbenos por{" "}
+            Los talleres se reservan desde{" "}
+            <Link
+              href="/experiencias"
+              className="text-moss underline underline-offset-4 hover:text-accent"
+            >
+              experiencias
+            </Link>
+            . Para cualquier otra cosa, escríbenos por{" "}
             <a
               href={CONTACT.whatsapp}
               className="text-moss underline underline-offset-4 hover:text-accent"

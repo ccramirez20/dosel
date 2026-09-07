@@ -30,7 +30,7 @@ export default function CafeCard({ cafe, region }: { cafe: Cafe; region?: Region
           <h3 className="font-display text-xl leading-tight text-canopy">{cafe.name}</h3>
           {cafe.origin.altitudeMasl && (
             <span className="shrink-0 font-sans text-xs tabular-nums text-moss">
-              {cafe.origin.altitudeMasl.toLocaleString("es-CO")} m
+              {cafe.origin.altitudeMasl.toLocaleString("es-CO")} msnm
             </span>
           )}
         </div>
