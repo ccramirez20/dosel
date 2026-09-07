@@ -79,27 +79,29 @@ export default async function Home() {
             lead="No decimos «café colombiano» y ya. Decimos el municipio, la finca y los metros sobre el nivel del mar, porque entre más alto hace más frío, y con frío el grano madura más lento y acumula más azúcar. Por eso la altura va en cada ficha."
           />
 
-          <div className="mt-2 grid gap-10 md:grid-cols-[auto_1fr] md:gap-16">
-            <dl className="font-sans text-sm">
+          {/* Los <div> dentro del <dl> son la forma válida de agrupar cada par
+              nombre-valor cuando la lista se maqueta en rejilla. */}
+          <dl className="mt-2 flex flex-wrap items-start gap-x-14 gap-y-10 font-sans text-sm">
+            <div>
               <dt className="text-cream/50">Orígenes en carta</dt>
               <dd className="mt-1 font-display text-4xl tabular-nums leading-none">
                 {cafes.length}
               </dd>
-              <dt className="mt-8 text-cream/50">Departamentos</dt>
-              <dd className="mt-2 max-w-[24ch] leading-relaxed text-cream/85">
+            </div>
+            <div>
+              <dt className="text-cream/50">Departamentos</dt>
+              <dd className="mt-2 max-w-[28ch] leading-relaxed text-cream/85">
                 {origins.join(", ")}
               </dd>
-            </dl>
-
-            <div className="self-end">
-              <Link
-                href="/productos"
-                className="inline-block bg-accent px-6 py-3 font-sans text-sm text-canopy transition-colors hover:bg-cream"
-              >
-                Abrir el mapa de orígenes
-              </Link>
             </div>
-          </div>
+          </dl>
+
+          <Link
+            href="/productos"
+            className="mt-12 inline-block bg-accent px-6 py-3 font-sans text-sm text-canopy transition-colors hover:bg-cream"
+          >
+            Abrir el mapa de orígenes
+          </Link>
         </div>
       </section>
 

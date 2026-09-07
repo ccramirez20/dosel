@@ -53,48 +53,63 @@ export default function ForestAxis() {
   const dark = active.tone === "dark";
 
   return (
-    // El diagrama vive en el margen libre, que es (ancho - 1152) / 2: 64 px a 1280, 144 a
-    // 1440, 384 a 1920. Por eso se oculta antes de 1440 —ahí pisaría la rejilla de tarjetas—
-    // y crece por tramos en vez de tener un solo tamaño que sobra o falta según la pantalla.
+    // El tamaño lo lleva la CAJA, no un `transform: scale()`. Con scale crecía todo por
+    // igual, texto incluido: a 1920 las etiquetas salían a 21 px y en la banda angosta a
+    // 7 px. Ahora el SVG se estira con su viewBox y las etiquetas conservan su tamaño.
+    //
+    // El ancho del árbol se dimensiona contra el margen libre a la derecha del contenido:
+    //
+    //     disponible = (ancho - 1152) / 2 + 32 - right - respiro
+    //                   \_ max-w-6xl _/    \_ px-8, vacío
+    //
+    // menos la columna de etiquetas. Cada tramo se dimensiona para el ancho MÁS ANGOSTO de
+    // su banda. Por debajo de 1560 no se muestra: con las etiquetas al tamaño de interfaz
+    // del sitio (text-sm) el conjunto ya no cabe sin pisar las tarjetas, y un árbol de 60 px
+    // apretado contra el texto es peor que no ponerlo. Los nombres de los estratos siguen
+    // en la banda de cada sección, así que ahí no se pierde información.
     <div
       aria-label="Estratos del bosque"
-      className="pointer-events-none fixed right-2 top-1/2 z-30 hidden -translate-y-1/2 origin-right scale-[0.62] min-[1440px]:block min-[1560px]:scale-[0.85] min-[1800px]:scale-125 min-[1800px]:right-10"
+      className="pointer-events-none fixed right-2 top-1/2 z-30 hidden -translate-y-1/2 items-center gap-2.5 [--tree-w:110px] min-[1560px]:flex min-[1800px]:right-10 min-[1800px]:[--tree-w:165px] min-[1920px]:[--tree-w:198px]"
     >
-      <div className="relative h-[248px] w-[214px]">
+      {/* el viewBox es 84×168, o sea 1:2, así que el alto sale del ancho */}
+      <div
+        className="relative shrink-0"
+        style={{ width: "var(--tree-w)", height: "calc(var(--tree-w) * 2)" }}
+      >
         <Tree active={active.id} dark={dark} />
-
-        {/* Cada etiqueta se ancla a la altura de su capa en el dibujo, no a un reparto
-            uniforme: si "Sotobosque" no queda junto a los arbustos, el diagrama no explica
-            nada. Los porcentajes salen de las coordenadas del SVG (168 px de alto). */}
-        <ul className="absolute inset-y-0 left-[124px] w-[90px] font-sans text-[11px] leading-none">
-          {STRATA.map((s) => {
-            const on = s.id === active.id;
-            return (
-              <li
-                key={s.id}
-                aria-current={on ? "true" : undefined}
-                className="absolute -translate-y-1/2"
-                style={{ top: LABEL_TOP[s.id] }}
-              >
-                <span
-                  className={`block transition-colors duration-500 ${
-                    on ? "text-accent" : dark ? "text-cream/45" : "text-ink/40"
-                  }`}
-                >
-                  {s.name}
-                </span>
-                <span
-                  className={`mt-1 block tabular-nums transition-colors duration-500 ${
-                    on ? (dark ? "text-cream/55" : "text-ink/45") : "text-transparent"
-                  }`}
-                >
-                  {s.height}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
       </div>
+
+      {/* Cada etiqueta se ancla a la altura de su capa en el dibujo, no a un reparto
+          uniforme: si "Sotobosque" no queda junto a los arbustos, el diagrama no explica
+          nada. Los porcentajes salen de las coordenadas del SVG. */}
+      <ul className="relative w-[86px] self-stretch font-sans text-sm leading-none">
+        {STRATA.map((s) => {
+          const on = s.id === active.id;
+          return (
+            <li
+              key={s.id}
+              aria-current={on ? "true" : undefined}
+              className="absolute -translate-y-1/2"
+              style={{ top: LABEL_TOP[s.id] }}
+            >
+              <span
+                className={`block transition-colors duration-500 ${
+                  on ? "text-accent" : dark ? "text-cream/45" : "text-ink/40"
+                }`}
+              >
+                {s.name}
+              </span>
+              <span
+                className={`mt-1 block tabular-nums transition-colors duration-500 ${
+                  on ? (dark ? "text-cream/55" : "text-ink/45") : "text-transparent"
+                }`}
+              >
+                {s.height}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
@@ -183,7 +198,7 @@ function Tree({ active, dark }: { active: string; dark: boolean }) {
     <svg
       aria-hidden
       viewBox="0 0 84 168"
-      className="absolute inset-y-0 left-0 h-full w-[124px]"
+      className="absolute inset-0 h-full w-full"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
