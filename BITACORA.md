@@ -434,8 +434,9 @@ arquitectura. Lo que faltará cuando se haga:
 - `output: "export"` en `next.config.ts`, hoy vacío.
 - `images: { unoptimized: true }` cuando lleguen las fotos, o el redimensionado de Cloudflare.
 - Actualizar el §2 del CLAUDE.md, que dice «Deploy: Vercel».
-- No hay API routes, middleware ni server actions que lo bloqueen; `sitemap.ts`, `robots.ts` y
-  `generateStaticParams` funcionan con export.
+- No hay API routes, middleware ni server actions que lo bloqueen. **Corrección:** `sitemap.ts`
+  y `robots.ts` sí necesitan una línea — `export const dynamic = "force-static"`—, sin la cual
+  el build falla al recolectar la página. `generateStaticParams` sí funciona tal cual.
 
 Ojo para la Fase 2: la pasarela de pago necesitará endpoints de servidor, y con export estático
 eso sale de Cloudflare Pages Functions o de otro lado. Se decide cuando llegue esa fase.

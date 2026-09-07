@@ -22,7 +22,7 @@ Café con temática de biología y divulgación científica. El nombre viene del
 | Mapa | `d3-geo` + `topojson-client` directo | `react-simple-maps` quedó descartado: su última publicación es de 2022 y sus peer deps topan en React 18, mientras Next 16 trae React 19. Lo que aportaba son ~60 líneas propias |
 | Estado UI | Zustand | Store compartido lista de cafés ↔ mapa; reutilizable en carrito futuro |
 | Contenido | Archivos locales JSON/MDX en `src/content/` | Sin backend en v1; el dueño no edita todavía |
-| Deploy | Vercel | SSG, imágenes optimizadas, previews |
+| Deploy | Cloudflare Pages (export estático) | El plan gratis de Vercel prohíbe el uso comercial y lista «advertising the sale of a product or service» como ejemplo. Cloudflare gratis sí lo permite, y el sitio no tenía nada de servidor. Ojo: la pasarela de pago de la Fase 2 necesitará endpoints, y eso saldrá de Pages Functions o de otro lado |
 
 **Sin backend ni base de datos en v1.** Todo se genera estático.
 
