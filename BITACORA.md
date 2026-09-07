@@ -447,6 +447,30 @@ Queda acordado y pendiente para después del check final: un **`.csv`** con las 
 Google Sheets. En esta máquina no hay `python-docx` ni `openpyxl`, así que un `.docx` de verdad
 exigiría instalar una dependencia; el CSV no exige nada y se lee de vuelta igual de fácil.
 
+### Cierre de la sesión
+
+El trabajo de las sesiones 2, 3 y 4 se subió en un solo commit (`a0f5754`). Van juntas porque
+los cambios se pisan entre sí —`ForestAxis` nace, se rediseña y se vuelve a rediseñar— y
+separarlas después habría sido reconstruir estados intermedios que nunca existieron.
+
+| Check | Estado |
+|---|---|
+| `pnpm lint`, `typecheck`, `test` (31), `build` (15 páginas) | verde |
+| `pnpm audit` | «No known vulnerabilities found» |
+| CI en GitHub Actions (`main`) | verde |
+| CodeQL | verde |
+| Alertas abiertas: Dependabot / code scanning / secret scanning | **0 / 0 / 0** |
+| Las 7 rutas responden en local, y `/no-existe` da 404 | verde |
+| Restos temporales y secretos en el árbol | ninguno |
+
+### Qué sigue, en orden
+
+1. Último feedback del dueño sobre esta versión.
+2. Despliegue a **Cloudflare Pages** (ver arriba: `output: "export"` y §2 del CLAUDE.md).
+3. Exportar el `.csv` de revisión de textos y pasarlo al cliente junto con el link provisional.
+4. Con la respuesta del cliente + logo, colores e imágenes: montar la V1 definitiva.
+5. Comprar el dominio con el cliente y apuntar el sitio.
+
 ### Qué quedó abierto
 
 Sin cambios: número real de WhatsApp (`src/lib/site.ts`), días y frecuencia de los talleres,
