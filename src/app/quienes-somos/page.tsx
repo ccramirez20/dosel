@@ -70,6 +70,15 @@ export default function QuienesSomosPage() {
         </div>
       </section>
 
+      <section className="border-b border-rule bg-paper/40">
+        <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+          <blockquote className="max-w-[56ch] font-display text-2xl italic leading-snug text-canopy md:text-3xl">
+            «El dosel de un bosque es el &ldquo;techo&rdquo; natural formado por las copas de los
+            árboles. Un espacio vivo que protege, conecta y da hogar a múltiples formas de vida.»
+          </blockquote>
+        </div>
+      </section>
+
       {LAYERS.map((layer, i) => (
         <section
           key={layer.band}
@@ -103,6 +112,19 @@ export default function QuienesSomosPage() {
           </div>
         </section>
       ))}
+
+      <section className="border-t border-rule">
+        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+          <p className="max-w-[60ch] font-display text-2xl leading-snug text-canopy md:text-3xl">
+            En Dosel Café &amp; Método creemos que el aprendizaje también se construye en los
+            pequeños momentos.
+          </p>
+          <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-ink/80">
+            Todos nuestros productos tienen historia: cuando pruebas, escuchas el eco de un
+            producto que dice Colombia. Hechos a mano, con amor y con intención.
+          </p>
+        </div>
+      </section>
 
       <section className="bg-canopy text-cream">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">

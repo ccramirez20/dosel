@@ -101,4 +101,12 @@ export interface Product {
   images: ImageRef[];
   price?: number;
   available?: boolean;
+  /** Agrupa el ítem en el menú de /productos. Debe existir en categories.json. */
+  category?: string;
+}
+
+export interface ProductCategory {
+  id: string;
+  label: string;
+  image: ImageRef;
 }

@@ -30,13 +30,23 @@
     "images": [{ "src": "/images/methods/prensa-francesa.svg", "alt": "Prensa francesa con café recién preparado", "width": 800, "height": 800 }]
   },
   {
-    "id": "aeropress",
-    "slug": "aeropress",
-    "name": "Aeropress",
-    "origin": "Estados Unidos, 2005. La diseñó Alan Adler, ingeniero de Stanford, que antes era conocido por fabricar frisbees de precisión.",
-    "usedFor": "Inmersión corta con presión manual. Un minuto y medio de principio a fin.",
-    "description": "Se empuja el agua a través del café con la mano, lo que acorta la extracción sin dejarla incompleta. Da una taza concentrada, de acidez suave y mucha claridad. Es el método más versátil que existe: cambiando molienda y tiempo, el mismo café puede saber a tres cosas distintas.",
-    "bestFor": ["Concentrados", "Acidez suave", "Experimentar recetas"],
-    "images": [{ "src": "/images/methods/aeropress.svg", "alt": "Aeropress sobre una taza", "width": 800, "height": 800 }]
+    "id": "sifon-japones",
+    "slug": "sifon-japones",
+    "name": "Sifón japonés",
+    "origin": "Inventado en Alemania a mediados del siglo XIX, pero fue en Japón donde marcas como Hario y Yama lo refinaron y lo convirtieron casi en un rito.",
+    "usedFor": "Inmersión al vacío. El vapor empuja el agua a la cámara superior, donde se mezcla con el café; al retirar el calor, el vacío la hace bajar ya filtrada.",
+    "description": "Es el método con más espectáculo: dos cámaras de vidrio, una llama y un momento exacto en que el café \"cae\" filtrado. El resultado es una taza limpia y de cuerpo ligero, parecida a un filtrado de goteo pero con una textura propia que da la temperatura sostenida durante la inmersión.",
+    "bestFor": ["Perfiles delicados", "Notas de té", "Una preparación para mirar"],
+    "images": [{ "src": "/images/methods/sifon-japones.svg", "alt": "Sifón japonés en preparación", "width": 800, "height": 800 }]
+  },
+  {
+    "id": "ninja-luxe",
+    "slug": "ninja-luxe",
+    "name": "Ninja Luxe",
+    "origin": "Cafetera de la marca estadounidense Ninja (SharkNinja).",
+    "usedFor": "Filtrado automático por goteo. Se programa la cantidad y la máquina hace el resto, taza tras taza.",
+    "description": "Es el método que usamos cuando lo que importa es la consistencia y el volumen, no la puesta en escena: mismo punto de molienda, misma temperatura, mismo resultado cada vez, sin intervención manual en el proceso.",
+    "bestFor": ["Volumen", "Consistencia", "Servicio rápido"],
+    "images": [{ "src": "/images/methods/ninja-luxe.svg", "alt": "Cafetera Ninja Luxe en la barra", "width": 800, "height": 800 }]
   }
 ]

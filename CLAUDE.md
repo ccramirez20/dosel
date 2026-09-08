@@ -67,7 +67,9 @@ src/
     cafes/*.json
     experiences/*.json
     methods/*.json
-    products/*.json
+    products/
+      products.json            # ítems, con `category` -> categories.json
+      categories.json          # secciones del menú (label + banner) en /productos
     regions.json
   types/
     domain.ts                  # ver §6
@@ -87,7 +89,7 @@ public/
 - **`/` Home.** Hero con identidad Dosel (bosque/dosel), ubicación, qué hacen. Moderno, llamativo, con reveals al hacer scroll. Entradas a las tres secciones.
 - **`/quienes-somos`.** Narrativa visual bosque + café + aves. Qué es Dosel y cómo se diferencia. Tono editorial, no corporativo.
 - **`/experiencias`.** Talleres (galletas, pintura de esculturas) y **métodos de café**. En métodos: qué es, para qué se usa, de dónde viene, para qué perfil de café va mejor.
-- **`/productos`.** Panadería y snacks ACAB como secundario, en un solo bloque «Para acompañar» (grid simple). **Cafés como foco principal**: tarjetas clickeables que despliegan el mapa (ver §7).
+- **`/productos`.** **Cafés como foco principal**: tarjetas clickeables que despliegan el mapa (ver §7). Debajo, «Para acompañar» es la carta completa agrupada por categoría (`categories.json`): bebidas calientes/frías, pastelería y panadería, dulces y snacks (incluye ACAB), tortas por encargo, mermeladas Honey Moon — cada categoría con su banner y sus ítems con precio.
 
 ---
 
@@ -171,13 +173,20 @@ export interface Experience {
   sessions?: Session[];
 }
 
-export interface Product {      // panadería
+export interface Product {
   id: string;
   name: string;
   description?: string;
   images: ImageRef[];
-  price?: number;               // costura e-commerce
+  price?: number;
   available?: boolean;
+  category?: string;             // -> ProductCategory.id, agrupa en /productos
+}
+
+export interface ProductCategory { // secciones del menú (categories.json)
+  id: string;
+  label: string;
+  image: ImageRef;                 // banner de la sección
 }
 ```
 
@@ -217,8 +226,9 @@ export interface Product {      // panadería
 }
 ```
 
-- **Tipografías (provisional):** una display con carácter (p. ej. Fraunces) + una sans legible (p. ej. Inter/Geist), vía `next/font`. Reemplazables cuando llegue la marca.
-- **Imágenes:** llegan el lunes. Configura `next/image` con placeholders de las proporciones correctas; al llegar fotos solo se reemplazan los archivos en `public/images/`.
+- **Tipografías: ya no son provisionales.** La oficial es **Poppins**, vía `next/font/google`, una sola familia para `--font-display` y `--font-sans` (así llegó de marca; no hay una segunda tipografía que combinar).
+- **Logo: parcialmente conectado.** Nav y footer usan `public/images/marca/logo-transparente-crop.png` — el JPEG con fondo blanco que mandó el cliente, con el fondo quitado a mano (recorte por color, no transparencia de diseño) y recortado al margen del isotipo. Sirve, pero es JPEG comprimido: no es nítido de cerca. El reemplazo real es un SVG o PNG grande con transparencia de verdad (ver `public/images/LEEME.md`).
+- **Imágenes:** ya no está vacío. `public/images/products/menu/` tiene los 5 banners de categoría reales de `/productos` (bebidas, pastelería, dulces y snacks, tortas por encargo, mermeladas). El resto —6 cafés, 3 experiencias, 5 métodos, foto individual por cada ítem del menú, 3 de quiénes-somos— sigue en placeholder `.svg`. Al llegar una foto, se reemplaza el archivo y se cambia solo la extensión en el JSON; `Figure` pasa sola a `next/image`.
 - **Movimiento y feedback (UX):** reveals al scroll, estados hover en tarjetas de café, transiciones del mapa, microinteracciones con tema café (vapor/pour) con moderación. Skeletons de carga, toasts para acciones futuras. **Respetar `prefers-reduced-motion`.**
 - **Accesibilidad:** alt en todas las imágenes, foco visible, contraste AA, navegación por teclado en el mapa.
 
@@ -302,14 +312,28 @@ Lo que hay que hacer para pasar de borrador a sitio público. En orden.
 
 ### Contenido pendiente del cliente
 
-- [ ] Marca (logo, hex, fuentes) → reemplazar tokens §8.
-- [ ] Imágenes del sitio → reemplazar placeholders en `public/images/`, hoy vacío. Al cambiar
-      el `src` de `.svg` a `.jpg` en los JSON, `Figure` pasa sola a `next/image`.
+- [x] Tipografía → **Poppins**, ya puesta en todo el sitio (§8).
+- [x] Logo → conectado en Nav y footer, pero con un recorte propio del JPEG que llegó, no
+      con un archivo de marca real. Sigue pendiente un SVG/PNG grande con transparencia de
+      verdad (`public/images/LEEME.md` → `marca/`).
+- [ ] Hex de la paleta → los colores de `tokens.css` siguen provisionales.
+- [x] Carta real de productos → `content/products/products.json` + `categories.json`, con
+      precios y agrupada por sección, extraída de las fotos de menú que mandó el cliente.
+      Confirmado con esto que «Pasteles» son de hojaldre.
+- [x] Métodos reales → `content/methods/methods.json`: Sifón japonés, V60, Chemex, Ninja
+      Luxe, Prensa francesa (se quitó Aeropress, que no se usa).
+- [x] Dos textos propios del dueño (definición de «dosel», misión/visión) → incorporados
+      como copy real en `/quienes-somos`.
+- [ ] Imágenes del sitio → `public/images/products/menu/` ya tiene fotos reales (los 5
+      banners de categoría de `/productos`). Todavía en placeholder `.svg`: los 6 cafés,
+      las 3 experiencias, los 5 métodos, la foto individual de cada ítem del menú, y las 3
+      de quiénes-somos. Al llegar una foto, se reemplaza el archivo y se cambia `.svg` →
+      `.jpg` en el JSON; `Figure` pasa sola a `next/image`.
 - [ ] Datos reales de los 6 cafés → `content/cafes/`. Los de hoy son de relleno: las
       coordenadas sí son de municipios cafeteros reales y están validadas contra su
-      departamento por test, pero fincas, perfiles e historias están inventados.
-- [ ] Descripciones reales de los 5 productos de panadería. Confirmar además si «Pasteles»
-      son de hojaldre relleno o repostería dulce.
+      departamento por test, pero fincas, perfiles e historias están inventados. El café
+      de origen en bolsa (Cafeísmo, Elena) que apareció en las fotos de menú queda en
+      standby: va al mapa, pero falta que el cliente mande sus datos completos.
 - [ ] Revisión de textos: se le pasó al cliente `textos-dosel-v1.csv` (123 filas, con columna
       para el texto revisado). Al volver, se aplican de una pasada.
 - [x] TopoJSON de departamentos de Colombia → `public/geo/`. **Hecho** (geoBoundaries, ODbL).

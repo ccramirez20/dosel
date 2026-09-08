@@ -20,7 +20,7 @@
     "body": "Alto, cremoso",
     "acidity": "Media, malica"
   },
-  "recommendedMethods": ["prensa-francesa", "aeropress"],
+  "recommendedMethods": ["prensa-francesa", "ninja-luxe"],
   "story": "Salgar está en la cuenca del río Barroso, en la vertiente occidental de la cordillera Central. Las fincas de la zona son minifundios de ladera: casi todo se recoge a mano porque una máquina no sube esa pendiente.",
   "images": [{ "src": "/images/cafes/aguas-claras.svg", "alt": "Cerezas de café en la Finca Aguas Claras, Salgar, Antioquia", "width": 1200, "height": 900 }]
 }

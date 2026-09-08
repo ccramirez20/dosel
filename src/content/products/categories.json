@@ -1,0 +1,62 @@
+[
+  {
+    "id": "bebidas-calientes",
+    "label": "Bebidas calientes",
+    "image": {
+      "src": "/images/products/menu/bebidas.jpg",
+      "alt": "Espresso recién servido en la barra de Dosel",
+      "width": 1131,
+      "height": 300
+    }
+  },
+  {
+    "id": "bebidas-frias",
+    "label": "Bebidas frías",
+    "image": {
+      "src": "/images/products/menu/bebidas.jpg",
+      "alt": "Bebidas frías de Dosel servidas en vaso",
+      "width": 1131,
+      "height": 300
+    }
+  },
+  {
+    "id": "pasteleria-panaderia",
+    "label": "Pastelería y panadería",
+    "image": {
+      "src": "/images/products/menu/pasteleria-panaderia.jpg",
+      "alt": "Pastelería y panadería recién horneada de Dosel",
+      "width": 1131,
+      "height": 300
+    }
+  },
+  {
+    "id": "dulces-snacks",
+    "label": "Dulces y snacks",
+    "image": {
+      "src": "/images/products/menu/dulces-snacks.jpg",
+      "alt": "Dulces y snacks de Dosel",
+      "width": 1131,
+      "height": 300
+    }
+  },
+  {
+    "id": "tortas-por-encargo",
+    "label": "Tortas por encargo",
+    "image": {
+      "src": "/images/products/menu/tortas-por-encargo.jpg",
+      "alt": "Tortas por encargo de Dosel",
+      "width": 1131,
+      "height": 300
+    }
+  },
+  {
+    "id": "honeymoon-mermeladas",
+    "label": "Mermeladas Honey Moon",
+    "image": {
+      "src": "/images/products/menu/honeymoon-mermeladas.jpg",
+      "alt": "Mermeladas artesanales Honey Moon",
+      "width": 830,
+      "height": 220
+    }
+  }
+]

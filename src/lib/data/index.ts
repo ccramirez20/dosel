@@ -1,7 +1,15 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
-import type { Cafe, Experience, Method, Product, Region } from "../../types/domain.ts";
+import type {
+  Cafe,
+  Experience,
+  Method,
+  Product,
+  ProductCategory,
+  Region,
+} from "../../types/domain.ts";
+import categoriesJson from "../../content/products/categories.json" with { type: "json" };
 import experiencesJson from "../../content/experiences/experiences.json" with { type: "json" };
 import methodsJson from "../../content/methods/methods.json" with { type: "json" };
 import productsJson from "../../content/products/products.json" with { type: "json" };
@@ -65,4 +73,8 @@ export async function getExperiences(): Promise<Experience[]> {
 
 export async function getProducts(): Promise<Product[]> {
   return productsJson as Product[];
+}
+
+export async function getProductCategories(): Promise<ProductCategory[]> {
+  return categoriesJson as ProductCategory[];
 }
