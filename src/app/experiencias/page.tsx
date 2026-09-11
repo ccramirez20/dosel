@@ -73,7 +73,12 @@ export default async function ExperienciasPage() {
             {methods.map((method) => (
               <li key={method.id} className="grid gap-6 py-9 md:grid-cols-[14rem_1fr] md:gap-12">
                 <div>
-                  <h3 className="font-display text-2xl leading-tight text-canopy">
+                  <Figure
+                    image={method.images[0]}
+                    sizes="(max-width: 768px) 40vw, 14rem"
+                    className="w-28 border border-rule md:w-full"
+                  />
+                  <h3 className="mt-4 font-display text-2xl leading-tight text-canopy">
                     {method.name}
                   </h3>
                   <p className="mt-2 max-w-[30ch] font-sans text-sm leading-relaxed text-ink/60">
