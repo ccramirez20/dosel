@@ -8,20 +8,19 @@ export default function Footer() {
     <footer className="border-t border-canopy/15 bg-canopy text-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="relative block h-14 aspect-[530/255]">
+          <div className="flex items-center">
+            <span className="relative block h-20 aspect-[530/255]">
               <Image
                 src="/images/marca/logo-transparente-crop.png"
-                alt="Dosel"
+                alt="Dosel café y método"
                 fill
                 className="object-contain"
               />
             </span>
-            <span className="font-sans text-sm tracking-wide text-moss">café y método</span>
           </div>
           <p className="mt-3 max-w-xs font-sans text-sm leading-relaxed text-cream/70">
-            Un café que también es una excusa para hablar de bosques, aves y de dónde
-            viene lo que estás tomando.
+            Un café que nos lleva a hablar de bosques, aves y de todo lo que hay detrás
+            de lo que estás tomando.
           </p>
         </div>
 

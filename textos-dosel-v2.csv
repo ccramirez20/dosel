@@ -1,0 +1,227 @@
+Página,Sección,Campo,Texto actual,Texto revisado,Notas
+Global,Barra superior,Nombre,Dosel,Dosel,
+Global,Barra superior,Bajante (texto junto al logo),,,ELIMINADO a pedido del cliente — el logo se agrandó y «café y método» ya se lee dentro de la imagen
+Global,Barra superior,Menú (versión móvil),Menú,Menú,Etiqueta del desplegable en pantallas chicas
+Global,Barra superior,Enlace de menú,Quiénes somos,Quiénes somos,
+Global,Barra superior,Enlace de menú,Experiencias,Experiencias,
+Global,Barra superior,Enlace de menú,Productos,Productos,
+Global,Accesibilidad,Enlace para saltar navegación,Saltar al contenido,Saltar al contenido,Solo visible navegando con teclado
+Global,Metadata,Título del sitio (pestaña y al compartir),Dosel café y método,Dosel café y método,
+Global,Metadata,Descripción del sitio (buscadores),"Café de origen colombiano, métodos de preparación y talleres, contados por un biólogo. Cada taza viene de un lugar concreto y aquí te decimos cuál.","Café de origen colombiano, métodos de preparación y talleres, desde la mirada de un biólogo. Cada taza viene de un lugar concreto y aquí te contamos cuál.",
+Global,Pie de página,Descripción,"Un café que también es una excusa para hablar de bosques, aves y de dónde viene lo que estás tomando.","Un café que nos lleva a hablar de bosques, aves y de todo lo que hay detrás de lo que estás tomando.",
+Global,Pie de página,Horario,"Lunes a jueves, 2:00 a 7:00 p. m.","Lunes a jueves, 2:00 a 7:00 p. m.",Confirmado por el dueño (2026-09-11); puede volver a cambiar más adelante
+Global,Pie de página,Dirección,Por confirmar,Por confirmar,PENDIENTE — falta la dirección real
+Global,Pie de página,WhatsApp,https://wa.me/570000000000,confirmado el celular de whatsapp es +57 320 2250098,PENDIENTE — número falso. El formulario de reserva no le llega a nadie hasta cambiarlo
+Global,Pie de página,Instagram,https://instagram.com/dosel.cafe,aún no tenemos pero dejamos el link provisional,Verificar que la cuenta exista
+Global,Pie de página,Atribución del mapa,"© <año> Dosel café y método. Mapa de departamentos: geoBoundaries, con datos de OpenStreetMap, licencia ODbL 1.0.","© <año> Dosel café y método. Mapa de departamentos: geoBoundaries, con datos de OpenStreetMap, licencia ODbL 1.0.",NO SE PUEDE QUITAR: es obligación de la licencia ODbL de los datos del mapa
+Inicio,Portada,Titular,El café bueno crece a la sombra.,Hay cafés que crecen mejor a la sombra.,
+Inicio,Portada,Párrafo,"Dosel es un café con coordenadas. Cada grano viene de una finca, una altura y un bosque concretos, y aquí te decimos cuáles. Lo atiende un biólogo, así que las preguntas son bienvenidas.","Dosel es un café con coordenadas. Cada grano viene de un lugar concreto: una finca, una región, una altura y una historia. Aquí te contamos cuál es la de cada café.",
+Inicio,Portada,Botón principal,Ver los cafés y su origen,Ver los cafés y su origen,
+Inicio,Portada,Enlace secundario,Qué es Dosel,Qué es Dosel,
+Inicio,Diagrama del bosque,Etiquetas,Dosel (30 m) · Sotobosque (10 m) · Suelo (0 m),Dosel (30 m) · Sotobosque (10 m) · Suelo (0 m),Se resaltan solas según la sección que estés leyendo
+Inicio,"30 m, dosel",Banda,"30 m, dosel","30 m, dosel",
+Inicio,"30 m, dosel",Título,Un café que también explica de dónde viene el café.,Un café que también cuenta la historia de dónde viene.,
+Inicio,"30 m, dosel",Bajada,"Café de origen que podemos rastrear hasta la finca, los métodos con que lo preparamos, y talleres y experiencias para gente con curiosidad. Nada de eso es decorativo.","Café de origen que podemos rastrear hasta la finca, métodos de preparación y talleres para gente curiosa. Queremos que conozcas lo que hay detrás de cada taza.",
+Inicio,Tarjetas de entrada,Título de tarjeta,Cafés de origen,Cafés de origen,
+Inicio,Tarjetas de entrada,Texto de tarjeta,"Orígenes que rotan con la cosecha. Cada uno con su finca, su altura y su departamento marcado en el mapa.","Orígenes que rotan con la cosecha. Cada uno con su finca, su altura y su departamento en el mapa.",
+Inicio,Tarjetas de entrada,Enlace de tarjeta,Ver los cafés,Ver los cafés,
+Inicio,Tarjetas de entrada,Título de tarjeta,Talleres y métodos,Talleres y métodos,
+Inicio,Tarjetas de entrada,Texto de tarjeta,"Galletas, pintura de esculturas y catas guiadas. Y una explicación honesta de por qué el mismo grano sabe distinto en V60 que en prensa.","Galletas, pintura de esculturas y catas guiadas. También hablamos de por qué el mismo grano puede saber tan distinto en V60 y en prensa.",
+Inicio,Tarjetas de entrada,Enlace de tarjeta,Ver experiencias,Ver experiencias,
+Inicio,Tarjetas de entrada,Título de tarjeta,Bosque y café,Bosque y café,
+Inicio,Tarjetas de entrada,Texto de tarjeta,El dosel es la capa donde el bosque atrapa la luz. La sombra que deja abajo es la que necesita el café para crecer. De ahí el nombre.,"El dosel es la parte del bosque donde las copas de los árboles se encuentran con la luz. Abajo queda la sombra, un lugar donde también puede crecer el café. De ahí viene el nombre.",
+Inicio,Tarjetas de entrada,Enlace de tarjeta,Conocer Dosel,Conocer Dosel,
+Inicio,"10 m, sotobosque",Banda,"10 m, sotobosque","10 m, sotobosque",
+Inicio,"10 m, sotobosque",Título,Cada taza tiene una dirección exacta.,Cada taza tiene una dirección exacta.,
+Inicio,"10 m, sotobosque",Bajada,"No decimos «café colombiano» y ya. Decimos el municipio, la finca y los metros sobre el nivel del mar, porque entre más alto hace más frío, y con frío el grano madura más lento y acumula más azúcar. Por eso la altura va en cada ficha.","No decimos «café colombiano» y ya. Decimos el municipio, la finca y los metros sobre el nivel del mar. A mayor altura, las temperaturas suelen ser más bajas y el café puede madurar más lentamente, lo que influye en el desarrollo de sus azúcares y sabores. Por eso la altura aparece en cada ficha.",
+Inicio,"10 m, sotobosque",Etiqueta de cifra,Orígenes en carta,Orígenes en carta,
+Inicio,"10 m, sotobosque",Etiqueta de cifra,Departamentos,Departamentos,
+Inicio,"10 m, sotobosque",Botón,Abrir el mapa de orígenes,Abrir el mapa de orígenes,
+Inicio,"0 m, suelo",Banda,"0 m, suelo","0 m, suelo",
+Inicio,"0 m, suelo",Título,Dónde estamos,Dónde estamos,
+Inicio,"0 m, suelo",Párrafo,"Los talleres se reservan desde experiencias. Para cualquier otra cosa, escríbenos por WhatsApp. Contestamos en horario de tienda.","Los talleres se reservan desde la sección de Experiencias. Para cualquier otra cosa, escríbenos por WhatsApp. Respondemos en horario de tienda.",El horario y la dirección que se muestran arriba de este párrafo son los mismos campos de «Pie de página > Horario/Dirección»
+Quiénes somos,Encabezado,Titular,"Un bosque no es una masa verde. Tiene pisos, y cada uno hace algo distinto.","Un bosque no es una masa verde. Tiene capas, y cada una cumple una función distinta.",
+Quiénes somos,Encabezado,Párrafo,"Dosel tiene alma de biólogo, así que la tienda está organizada como se organiza un bosque: por capas. Cada una es una parte de lo que hacemos. Es una manera de contarlo sin sonar a folleto, y de paso una excusa para explicar cómo funciona un ecosistema mientras te tomas algo.","Dosel está organizado como un bosque: por capas. Cada una reúne una parte de lo que hacemos, desde el café hasta los talleres y las experiencias. Una forma de contar lo que hay detrás de la tienda y, de paso, hablar de cómo funciona un ecosistema mientras te tomas algo.",
+Quiénes somos,Cita,Texto,"«El dosel de un bosque es el “techo” natural formado por las copas de los árboles. Un espacio vivo que protege, conecta y da hogar a múltiples formas de vida.»","El dosel de un bosque es su “techo” natural, formado por las copas de los árboles. Es una parte del bosque llena de vida, donde conviven y se relacionan muchas especies.",Texto propio del dueño — definición de dosel. NUEVO desde v1
+Quiénes somos,"30 m, dosel",Título,El lugar,El lugar,
+Quiénes somos,"30 m, dosel",Texto,"El dosel es la capa continua de copas donde el bosque atrapa casi toda la luz. Es la parte más viva y la más ruidosa: allí están las aves, las bromelias y la mayoría de los insectos. También es la capa que le da sombra a lo que crece abajo. Nos pareció el nombre correcto para una tienda que quiere ser eso: la capa donde pasan las cosas, y desde la cual se sostiene el resto.","El dosel es la capa continua de copas donde el bosque recibe gran parte de la luz. Es una de sus zonas más activas y ruidosas: allí están las aves, las bromelias y muchos de sus insectos. También es la capa que da sombra a lo que crece abajo.
+
+Nos pareció el nombre correcto para una tienda que quiere ser eso: la capa donde pasan las cosas y desde la que se sostiene el resto.",
+Quiénes somos,"10 m, sotobosque",Título,Los cafés,Los cafés,
+Quiénes somos,"10 m, sotobosque",Texto,"El café es un arbusto de sotobosque: evolucionó bajo sombra y ahí es donde mejor se comporta. Un cafetal con árboles encima madura más lento, resiste mejor la sequía y sostiene aves que un monocultivo a pleno sol no sostiene. Compramos, cuando podemos, a fincas que lo hacen así. No siempre se puede, y cuando no, lo decimos. La carta rota con la cosecha, y de vez en cuando entra un lote pequeño que aparece una vez y no vuelve: cuando pasa, lo anunciamos y dura lo que dure.","El café es un arbusto de sotobosque: evolucionó en ambientes de bosque y puede crecer bien bajo sombra. Un cafetal con árboles encima puede madurar más lentamente, ayudar a conservar la humedad y sostener aves y otros organismos que un monocultivo a pleno sol no suele sostener.
+
+Compramos, cuando podemos, a fincas que lo cultivan así. No siempre se puede, y cuando no, lo decimos.
+
+La carta rota con la cosecha y, de vez en cuando, aparece un lote pequeño que llega una vez y no vuelve. Cuando pasa, lo anunciamos y dura lo que dure.",
+Quiénes somos,"0 m, suelo",Título,La barra,La barra,
+Quiénes somos,"0 m, suelo",Texto,"En el suelo del bosque casi no entra luz y todo se descompone rápido. Es la parte menos vistosa y la que sostiene el resto. En la tienda es la barra, el horno y la gente que atiende: moler, pesar, servir y responder preguntas. Sin eso lo demás es un discurso.","En el suelo del bosque llega muy poca luz y ocurre gran parte del trabajo que mantiene vivo al ecosistema. Es una parte poco visible, pero sostiene todo lo que pasa arriba.
+
+En la tienda es la barra, el horno y la gente que atiende: moler, pesar, servir y responder preguntas. Sin eso, lo demás es discurso.",
+Quiénes somos,Misión y visión,Titular,En Dosel Café & Método creemos que el aprendizaje también se construye en los pequeños momentos.,En Dosel Café & Método creemos que el aprendizaje también se construye en los pequeños momentos.,Texto propio del dueño. NUEVO desde v1
+Quiénes somos,Misión y visión,Párrafo,"Todos nuestros productos tienen historia: cuando pruebas, escuchas el eco de un producto que dice Colombia. Hechos a mano, con amor y con intención.","Todos nuestros productos tienen una historia. Los hacemos a mano, con cuidado y con una intención clara: llevar un pedacito de Colombia a cada taza y a cada mesa.",Texto propio del dueño. NUEVO desde v1
+Quiénes somos,Cierre,Titular,"Si algo de esto te dio curiosidad, la carta es el mejor sitio para empezar.","Si algo de esto te dio curiosidad, la carta es el mejor sitio para empezar.",
+Quiénes somos,Cierre,Botón,Ver los cafés,Ver los cafés,
+Quiénes somos,Cierre,Enlace,Talleres y métodos,Talleres y métodos,
+Experiencias,Talleres,Banda,Talleres,Talleres,
+Experiencias,Talleres,Título,Cosas que se hacen con las manos.,Cosas que se hacen con las manos.,
+Experiencias,Talleres,Bajada,"Los talleres son en grupos pequeños y no hace falta saber nada de antes. Llenas el formulario, se abre WhatsApp con tu reserva escrita, y el cupo queda confirmado cuando te respondamos.",Los talleres son en grupos pequeños y no necesitas experiencia previa. Llenas el formulario y se abre WhatsApp con los datos de tu reserva. El cupo queda confirmado cuando te respondemos.,
+Experiencias,Talleres,Enlace alternativo (sin horario propio),Preguntar por cupos,Preguntar por cupos,Se muestra en vez del formulario cuando la experiencia no tiene horario programado
+Experiencias,Taller de galletas,Nombre,Taller de galletas,Taller de galletas,
+Experiencias,Taller de galletas,Descripción,"Amasamos, cortamos y horneamos. Cada quien se lleva lo que hizo y, de paso, entiende por qué la mantequilla fría cambia todo. Dos horas, para todas las edades, sin experiencia previa.","Amasamos, cortamos y horneamos. Cada quien se lleva lo que hizo y, de paso, entiende por qué la mantequilla fría cambia todo. Dos horas, para todas las edades y sin experiencia previa.",
+Experiencias,Taller de galletas,Cuándo se dicta,"miércoles, cada semana, a las 14:00 o 16:00","miércoles, cada semana, a las 14:00 o 16:00",PENDIENTE — día y frecuencia supuestos. Confirmar con el dueño
+Experiencias,Pintura de esculturas,Nombre,Pintura de esculturas,Pintura de esculturas,
+Experiencias,Pintura de esculturas,Descripción,"Figuras de aves y hongos en yeso, pinceles, y el tiempo que haga falta. Antes de pintar hablamos de la especie: cómo es su plumaje real, dónde vive, por qué tiene esos colores. Se pinta mejor lo que se conoce.","Figuras de animales, hongos, plantas y otras formas en yeso, pinceles y todo el tiempo que haga falta. Escoges una figura, la pintas a tu manera y, si quieres saber más sobre lo que estás pintando, hablamos de la especie: dónde vive, cómo es y por qué tiene esas formas y colores. Se pinta mejor lo que se conoce.",
+Experiencias,Pintura de esculturas,Cuándo se dicta,"viernes, una vez al mes (el 1º), a las 15:00","viernes, una vez al mes (el 1º), a las 15:00",PENDIENTE — día y frecuencia supuestos. Confirmar con el dueño
+Experiencias,Cata guiada,Nombre,Cata guiada,Cata guiada,
+Experiencias,Cata guiada,Descripción,"Tres orígenes, tres métodos, una mesa. Aprendes a separar aroma de sabor, a nombrar lo que sientes y a reconocer de dónde viene cada taza. Se termina sabiendo qué café pedir y por qué.","Tres orígenes, tres métodos, una mesa. Aprendes a separar aroma de sabor, a ponerle nombre a lo que sientes y a reconocer de dónde viene cada taza. Al final, sabes qué café pedir y por qué.",
+Experiencias,Cata guiada,Cuándo se dicta,"viernes, cada semana, a las 16:00","viernes, cada semana, a las 16:00",PENDIENTE — día y frecuencia supuestos. Confirmar con el dueño
+Experiencias,Formulario de reserva,Campo: fecha,Próximas fechas,Próximas fechas,
+Experiencias,Formulario de reserva,Campo: hora,Hora,Hora,
+Experiencias,Formulario de reserva,Campo: personas,Personas,Personas,
+Experiencias,Formulario de reserva,Campo: nombre,Tu nombre,Tu nombre,
+Experiencias,Formulario de reserva,Campo: nota opcional,Algo que debamos saber (opcional),Algo que debamos saber (opcional),
+Experiencias,Formulario de reserva,Botón,Enviar por WhatsApp,Enviar por WhatsApp,
+Experiencias,Formulario de reserva,Mensaje antes de enviar,Se abre WhatsApp con el mensaje escrito. El cupo queda confirmado cuando te respondamos.,Se abre WhatsApp con el mensaje escrito. El cupo queda confirmado cuando te respondamos.,
+Experiencias,Formulario de reserva,Mensaje después de enviar,Se abrió WhatsApp con tu reserva escrita. El cupo queda confirmado cuando te respondamos.,Se abrió WhatsApp con tu reserva escrita. El cupo queda confirmado cuando te respondamos.,NUEVO desde v1 — antes solo se documentaba el mensaje previo al envío
+Experiencias,Métodos,Banda,Mostrador,Mostrador,
+Experiencias,Métodos,Título,"Los métodos, sin misterio.","Los métodos, sin misterio.",
+Experiencias,Métodos,Bajada,Un método no es un capricho: cada uno extrae cosas distintas del mismo grano. Esto es lo que hace cada uno y cuándo lo escogemos.,Un método no es un capricho: cada uno resalta cosas distintas del mismo grano. Aquí te contamos qué hace cada uno y cuándo lo escogemos.,
+Experiencias,Método: V60,Nombre,V60,V60,
+Experiencias,Método: V60,De dónde viene,"Japón, 2004. Hario, una fábrica de vidrio de Tokio fundada en 1921, le puso ese nombre por el ángulo del cono: 60 grados.","Japón, 2004. Hario, una fábrica de vidrio de Tokio fundada en 1921, presentó el V60, llamado así por el ángulo de 60 grados de su cono.",
+Experiencias,Método: V60,Para qué se usa,"Filtrado por goteo, taza a taza. Es el método que más control le da a quien prepara: el agua cae donde uno la pone.","Filtrado por goteo, taza a taza. Es un método que le da mucho control a quien prepara: el agua cae donde uno la pone.",
+Experiencias,Método: V60,Descripción,"El cono de 60° y las estrías en espiral dejan que el aire escape mientras el agua baja. El resultado es una taza limpia, sin sedimento, donde los aromas se separan y se pueden nombrar uno por uno. Es el método que usamos cuando queremos que un café se explique solo.","El cono de 60° y sus estrías en espiral ayudan a que el agua fluya de una manera más controlada. El resultado es una taza limpia, con aromas y sabores que se pueden distinguir con claridad. Es el método que usamos cuando queremos que un café se explique solo.",
+Experiencias,Método: V60,Resalta,"Acidez cítrica alta, Perfiles florales, Lavados de altura",Acidez cítrica marcada · Perfiles florales · Cafés lavados de altura,
+Experiencias,Método: Chemex,Nombre,Chemex,Chemex,
+Experiencias,Método: Chemex,De dónde viene,"Estados Unidos, 1941. La inventó Peter Schlumbohm, un químico alemán, inspirado en un embudo de laboratorio y un matraz Erlenmeyer.","Estados Unidos, 1941. Peter Schlumbohm, un químico alemán, la creó inspirado en un embudo de laboratorio y un matraz Erlenmeyer.",
+Experiencias,Método: Chemex,Para qué se usa,Filtrado por goteo para varias tazas. El filtro es hasta 30% más grueso que uno común.,"Filtrado por goteo para varias tazas. Su filtro es más grueso que el de otros métodos, lo que ayuda a producir una taza limpia y sin sedimentos.",
+Experiencias,Método: Chemex,Descripción,"Ese filtro grueso retiene más aceites y sólidos que cualquier otro método de papel. Lo que queda es una taza casi transparente, de textura ligera y dulzor muy definido. Si un café tiene un defecto, la Chemex lo muestra; si es limpio, lo vuelve elegante.","Ese filtro grueso retiene más aceites y partículas que otros filtros de papel. El resultado es una taza muy limpia, de textura ligera y dulzor definido. Si un café tiene un defecto, la Chemex lo muestra; si es limpio, lo vuelve elegante.",
+Experiencias,Método: Chemex,Resalta,"Cafés delicados, Notas de té, Compartir en mesa",Cafés delicados · Notas de té · Para compartir,
+Experiencias,Método: Prensa francesa,Nombre,Prensa francesa,Prensa francesa,
+Experiencias,Método: Prensa francesa,De dónde viene,"Disputada entre Francia e Italia. La patente que más se cita es italiana: Attilio Calimani, 1929.","Francia e Italia se disputan su origen. La patente más citada es la de Attilio Calimani, registrada en Italia en 1929.",
+Experiencias,Método: Prensa francesa,Para qué se usa,Inmersión total. El café y el agua conviven cuatro minutos antes de separarse.,Inmersión total. El café y el agua conviven durante cuatro minutos antes de separarse.,
+Experiencias,Método: Prensa francesa,Descripción,"Al no haber papel, los aceites del café pasan enteros a la taza. Eso da cuerpo, peso y una sensación redonda en la boca, a cambio de algo de sedimento en el fondo. Es el método más indulgente: perdona errores de molienda y no exige técnica.","Al no haber papel, más aceites y partículas del café llegan a la taza. Eso da cuerpo, peso y una sensación más redonda en la boca, a cambio de algo de sedimento en el fondo. Es un método indulgente: tolera bastante bien los errores de molienda y no exige demasiada técnica.",
+Experiencias,Método: Prensa francesa,Resalta,"Cuerpo alto, Notas a chocolate y nuez, Tuestes medios y oscuros",Cuerpo alto · Notas de chocolate y nuez · Tuestes medios a oscuros,
+Experiencias,Método: Sifón japonés,Nombre,Sifón japonés,Sifón japonés,NUEVO desde v1
+Experiencias,Método: Sifón japonés,De dónde viene,"Inventado en Alemania a mediados del siglo XIX, pero fue en Japón donde marcas como Hario y Yama lo refinaron y lo convirtieron casi en un rito.","Europa, mediados del siglo XIX. El sifón se desarrolló en Europa y fue en Japón donde marcas como Hario y Yama lo perfeccionaron y lo convirtieron en todo un ritual.",
+Experiencias,Método: Sifón japonés,Para qué se usa,"Inmersión al vacío. El vapor empuja el agua a la cámara superior, donde se mezcla con el café; al retirar el calor, el vacío la hace bajar ya filtrada.","Inmersión al vacío. El vapor empuja el agua hacia la cámara superior, donde se mezcla con el café. Al retirar el calor, el vacío hace que vuelva a bajar, ya filtrada.",
+Experiencias,Método: Sifón japonés,Descripción,"Es el método con más espectáculo: dos cámaras de vidrio, una llama y un momento exacto en que el café ""cae"" filtrado. El resultado es una taza limpia y de cuerpo ligero, parecida a un filtrado de goteo pero con una textura propia que da la temperatura sostenida durante la inmersión.","Es el método con más espectáculo: dos cámaras de vidrio, una llama y ese momento exacto en que el café “cae” ya filtrado. El resultado es una taza limpia y de cuerpo ligero, parecida a un filtrado por goteo, pero con una textura propia gracias a la temperatura constante durante la inmersión.",
+Experiencias,Método: Sifón japonés,Resalta,"Perfiles delicados, Notas de té, Una preparación para mirar",Perfiles delicados · Notas de té · Una preparación para ver,
+Experiencias,Método: Ninja Luxe,Nombre,Ninja Luxe,Ninja Luxe,"NUEVO desde v1 — reemplaza a Aeropress, que se quitó de la carta"
+Experiencias,Método: Ninja Luxe,De dónde viene,Cafetera de la marca estadounidense Ninja (SharkNinja).,"Estados Unidos. Ninja, marca de SharkNinja, desarrolló la Ninja Luxe Café.",
+Experiencias,Método: Ninja Luxe,Para qué se usa,"Filtrado automático por goteo. Se programa la cantidad y la máquina hace el resto, taza tras taza.","Filtrado automático por goteo. Se ajusta la cantidad y la máquina hace el resto, taza tras taza.",
+Experiencias,Método: Ninja Luxe,Descripción,"Es el método que usamos cuando lo que importa es la consistencia y el volumen, no la puesta en escena: mismo punto de molienda, misma temperatura, mismo resultado cada vez, sin intervención manual en el proceso.","Es el método que usamos cuando lo que importa es la consistencia y el volumen, no la puesta en escena: misma molienda, misma temperatura y un resultado consistente, taza tras taza, sin intervención manual durante el proceso.",
+Experiencias,Método: Ninja Luxe,Resalta,"Volumen, Consistencia, Servicio rápido",Volumen · Consistencia · Servicio rápido,
+Productos,"10 m, sotobosque",Banda,"10 m, sotobosque","10 m, sotobosque",
+Productos,"10 m, sotobosque",Título,De dónde viene cada café.,De dónde viene cada café.,
+Productos,"10 m, sotobosque",Bajada,"El café es un arbusto de sotobosque: crece a la sombra de árboles más altos. Hoy tenemos [N] orígenes de [N] departamentos, entre [min] y [max] msnm. La altura no es un dato de adorno: entre más alto hace más frío, y con frío el grano madura más lento y acumula más azúcar. Toca un departamento para ver qué hay de ahí, o abre una ficha y el mapa te muestra la finca.","El café es un arbusto de sotobosque: crece a la sombra de árboles más altos. Hoy tenemos [N] orígenes de [N] departamentos, entre [min] y [max] msnm.
+
+La altura no es un dato de adorno: a mayor altura, las temperaturas suelen ser más bajas y el café puede madurar más lentamente. Eso influye en el desarrollo de sus azúcares y, con ellos, en el perfil de la taza.
+
+Toca un departamento para ver qué tenemos de ahí, o abre una ficha y el mapa te muestra la finca.",Las cifras entre corchetes se calculan solas desde el catálogo de cafés
+Productos,Mapa,Texto inicial del panel,"Toca un departamento verde para ver qué cafés vienen de ahí, o abre una ficha para ubicar su finca en el mapa.","Toca un departamento verde para ver qué cafés vienen de ahí, o abre una ficha para ubicar su finca en el mapa.",
+Productos,Panel del mapa (café seleccionado),Enlace,Ver la ficha completa,Ver la ficha completa,
+Productos,Panel del mapa (café seleccionado),Botón,Quitar selección,Quitar selección,
+Productos,Panel del mapa (café seleccionado),Texto adicional,Va mejor en [método].,Va mejor en [método].,Solo aparece si el café tiene métodos recomendados; [método] se rellena solo
+Productos,Panel del mapa (departamento seleccionado),Botón,Ver todos,Ver todos,
+Productos,Panel del mapa (departamento seleccionado),Texto (un solo café),"Un café de este departamento: [nombre]. Está en la lista, ábrelo para ver su origen.","Un café de este departamento: [nombre]. Está en la lista, ábrelo para ver su origen.",[nombre] se rellena solo
+Productos,Panel del mapa (departamento seleccionado),Texto (varios cafés),[N] cafés de este departamento. La lista de al lado ya está filtrada.,[N] cafés de este departamento. La lista de al lado ya está filtrada.,[N] se rellena solo
+Productos,Lista de cafés,Título (sin filtro),Todos los cafés,Todos los cafés,
+Productos,Lista de cafés,Título (filtrado por región),Cafés de [región],Cafés de [región],[región] se rellena solo
+Productos,Lista de cafés,Botón para quitar el filtro,Ver los [N],Ver los [N],[N] = total de cafés en carta
+Productos,"0 m, suelo",Banda,"0 m, suelo","0 m, suelo",
+Productos,"0 m, suelo",Título,Para acompañar,Para acompañar,
+Productos,"0 m, suelo",Bajada,"El suelo del bosque es la capa que sostiene todo lo demás; en la tienda es el mostrador. Ahí está la carta completa: bebidas, pastelería, dulces y snacks, tortas por encargo y las mermeladas de Honey Moon.","El suelo del bosque es la base de todo lo que ocurre arriba; en la tienda es el mostrador. Ahí está la carta completa: bebidas, pastelería, dulces y snacks, tortas por encargo y las mermeladas de Honey Moon.","Actualizado desde v1 — antes decía «la panadería y ACAB, nuestros snacks de fruta deshidratada»"
+Productos,Para acompañar — Bebidas calientes,Nombre de categoría,Bebidas calientes,Bebidas calientes,
+Productos,Para acompañar — Bebidas calientes,Nombre de producto,Espresso,Espresso,
+Productos,Para acompañar — Bebidas calientes,Precio,$4.00,$4.00,
+Productos,Para acompañar — Bebidas calientes,Nombre de producto,Tinto,Tinto,
+Productos,Para acompañar — Bebidas calientes,Precio,$4.50,$4.50,
+Productos,Para acompañar — Bebidas calientes,Nombre de producto,Capuchino,Capuchino,
+Productos,Para acompañar — Bebidas calientes,Precio,$7.00,$7.00,
+Productos,Para acompañar — Bebidas calientes,Nombre de producto,Café late,Café late,
+Productos,Para acompañar — Bebidas calientes,Precio,$7.00,$7.00,
+Productos,Para acompañar — Bebidas calientes,Nombre de producto,Aromática,Aromática,
+Productos,Para acompañar — Bebidas calientes,Descripción de producto,Frutos rojos o amarillos.,Frutos rojos o amarillos.,
+Productos,Para acompañar — Bebidas calientes,Precio,$6.00,$6.00,
+Productos,Para acompañar — Bebidas frías,Nombre de categoría,Bebidas frías,Bebidas frías,
+Productos,Para acompañar — Bebidas frías,Nombre de producto,Ice latte,Ice latte,
+Productos,Para acompañar — Bebidas frías,Precio,$7.00,$7.00,
+Productos,Para acompañar — Bebidas frías,Nombre de producto,Jugo natural,Jugo natural,
+Productos,Para acompañar — Bebidas frías,Precio,$9.00,$9.00,
+Productos,Para acompañar — Bebidas frías,Nombre de producto,Soda italiana,Soda italiana,
+Productos,Para acompañar — Bebidas frías,Descripción de producto,Frutos rojos o amarillos.,Frutos rojos o amarillos.,
+Productos,Para acompañar — Bebidas frías,Precio,$7.00,$7.00,
+Productos,Para acompañar — Bebidas frías,Nombre de producto,Kefir,Kefir,NUEVO — lo pidió el cliente el 2026-09-11
+Productos,Para acompañar — Bebidas frías,Descripción de producto,"Hecho de manera natural, por la casa.",Hecho de manera natural,
+Productos,Para acompañar — Bebidas frías,Precio,,,PENDIENTE — el dueño todavía no tiene el precio
+Productos,Para acompañar — Pastelería y panadería,Nombre de categoría,Pastelería y panadería,Pastelería y panadería,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Galletas,Galletas,Nombre confirmado por el dueño
+Productos,Para acompañar — Pastelería y panadería,Descripción de producto,"Hechas acá, con chocolate colombiano.","Hechas acá, con chocolate colombiano.","PLACEHOLDER — texto inventado, pendiente de reemplazar"
+Productos,Para acompañar — Pastelería y panadería,Precio,$3.50,$3.50,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Torta de la casa,Torta de la casa,Nombre confirmado por el dueño
+Productos,Para acompañar — Pastelería y panadería,Descripción de producto,"La de chocolate. Húmeda, sin adornos.",La de chocolate. Húmeda y deliciosa.,"PLACEHOLDER — texto inventado, pendiente de reemplazar"
+Productos,Para acompañar — Pastelería y panadería,Precio,$8.50,$8.50,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Torta de naranja,Torta de naranja,Nombre confirmado por el dueño
+Productos,Para acompañar — Pastelería y panadería,Descripción de producto,Con ralladura y jugo de naranja de verdad. También en porción de 250 g por $12.000.,Con ralladura y jugo de naranja de verdad. También en porción de 250 g por $12.000.,Actualizado desde v1 — se agregó la opción por porción
+Productos,Para acompañar — Pastelería y panadería,Precio,$8.50,$8.50,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Pasteles,Pasteles,Nombre confirmado por el dueño
+Productos,Para acompañar — Pastelería y panadería,Descripción de producto,"De hojaldre, para acompañar el café.","De hojaldre, para acompañar el café.",Confirmado por el dueño: son de hojaldre
+Productos,Para acompañar — Pastelería y panadería,Precio,$5.00,$5.00,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Deditos de queso,Deditos de queso,Nombre confirmado por el dueño
+Productos,Para acompañar — Pastelería y panadería,Descripción de producto,"Mejor recién hechos, y así los servimos.",Hechos para acompañar el café.,"PLACEHOLDER — texto inventado, pendiente de reemplazar"
+Productos,Para acompañar — Pastelería y panadería,Precio,,,PENDIENTE — sin precio en el sitio
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Alfajores,Alfajores,NUEVO desde v1
+Productos,Para acompañar — Pastelería y panadería,Precio,$2.50,$2.50,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Porción de chipá (x3),Porción de chipá (x3),NUEVO desde v1
+Productos,Para acompañar — Pastelería y panadería,Precio,$5.00,$5.00,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Pancakes (x5),Pancakes (x5),NUEVO desde v1
+Productos,Para acompañar — Pastelería y panadería,Precio,$8.00,$8.00,
+Productos,Para acompañar — Pastelería y panadería,Nombre de producto,Waffle de pan de bono,Waffle de pan de bono,NUEVO desde v1
+Productos,Para acompañar — Pastelería y panadería,Precio,$8.00,$8.00,
+Productos,Para acompañar — Dulces y snacks,Nombre de categoría,Dulces y snacks,Dulces y snacks,
+Productos,Para acompañar — Dulces y snacks,Nombre de producto,Capitana Piña,Capitana Piña,
+Productos,Para acompañar — Dulces y snacks,Descripción de producto,ACAB. Piña deshidratada con canela.,ACAB. Piña deshidratada con canela.,Confirmado por el dueño
+Productos,Para acompañar — Dulces y snacks,Precio,$6.00,$6.00,
+Productos,Para acompañar — Dulces y snacks,Nombre de producto,Capitán Banano,Capitán Banano,
+Productos,Para acompañar — Dulces y snacks,Descripción de producto,"ACAB. Banano deshidratado con chocolate al 70 %, endulzado con eritritol y stevia.","ACAB. Banano deshidratado con chocolate al 70 %, endulzado con eritritol y stevia.",Confirmado por el dueño
+Productos,Para acompañar — Dulces y snacks,Precio,$6.00,$6.00,
+Productos,Para acompañar — Dulces y snacks,Nombre de producto,Arroz con leche,Arroz con leche,NUEVO desde v1
+Productos,Para acompañar — Dulces y snacks,Precio,$8.00,$8.00,
+Productos,Para acompañar — Dulces y snacks,Nombre de producto,Tostadas francesas,Tostadas francesas,NUEVO desde v1
+Productos,Para acompañar — Dulces y snacks,Precio,$12.00,$12.00,
+Productos,Para acompañar — Tortas por encargo,Nombre de categoría,Tortas por encargo,Tortas por encargo,NUEVO desde v1 — categoría completa
+Productos,Para acompañar — Tortas por encargo,Nombre de producto,Torta por encargo (8 porciones),Torta por encargo (8 porciones),
+Productos,Para acompañar — Tortas por encargo,Descripción de producto,"Sabores: naranja con amapola, chocolate o combinada. Se pide con anticipación.","Sabores: naranja con amapola, chocolate o combinada. Se pide con anticipación.",
+Productos,Para acompañar — Tortas por encargo,Precio,$60.00,$60.00,
+Productos,Para acompañar — Mermeladas Honey Moon,Nombre de categoría,Mermeladas Honey Moon,Mermeladas Honey Moon,NUEVO desde v1 — categoría completa
+Productos,Para acompañar — Mermeladas Honey Moon,Nombre de producto,Mermeladas Honey Moon,Mermeladas Honey Moon,
+Productos,Para acompañar — Mermeladas Honey Moon,Descripción de producto,"130 g. 3 frascos por $25.000. Sabores: frutos rojos (fresa, mora y agraz), maracumango, kiwi lulo, piña lulo. Sin conservantes, 60 % menos azúcar. Disponibles en temporada o por encargo.","130 g. 3 frascos por $25.000. Sabores: frutos rojos (fresa, mora y agraz), maracumango, kiwi lulo, piña lulo. Sin conservantes, 60 % menos azúcar. Disponibles en temporada o por encargo.",
+Productos,Para acompañar — Mermeladas Honey Moon,Precio,$10.00,$10.00,
+Fichas de café,(las 6 fichas),AVISO,"Los 6 cafés del sitio tienen coordenadas reales de municipios cafeteros (validadas contra su departamento), pero la finca, el perfil y la historia siguen siendo inventados. No hace falta revisar su texto — se reemplazan enteros cuando lleguen los datos reales del cliente. Lo que sí sirve es ver QUÉ se necesita de cada café; los campos están abajo con un ejemplo.",,PLACEHOLDER — los 6 se reemplazan con los datos del cliente
+Fichas de café,(ejemplo: Aguas Claras),Nombre del café,Aguas Claras,,Dato a entregar por el cliente
+Fichas de café,(ejemplo: Aguas Claras),Municipio y departamento,"Salgar, del departamento con código CO-ANT",,Dato a entregar
+Fichas de café,(ejemplo: Aguas Claras),Finca,Finca Aguas Claras,,Dato a entregar
+Fichas de café,(ejemplo: Aguas Claras),Altura (msnm),1620,,Dato a entregar
+Fichas de café,(ejemplo: Aguas Claras),Variedad / proceso / tueste,Caturra / Honey / Medio-oscuro,,Dato a entregar
+Fichas de café,(ejemplo: Aguas Claras),Descripción de taza,"El suroeste antioqueño en su versión más reconocible: cuerpo redondo, dulzor de chocolate y un final largo. El proceso honey deja parte del mucílago en el grano al secar, y ese azúcar se queda en la taza.",,"PLACEHOLDER — texto inventado, pendiente de reemplazar"
+Fichas de café,(ejemplo: Aguas Claras),Qué oler (3 notas),"Cacao, Nuez tostada, Caramelo",,Dato a entregar
+Fichas de café,(ejemplo: Aguas Claras),Qué probar (3 notas),"Chocolate oscuro, Almendra, Ciruela",,Dato a entregar
+Fichas de café,(ejemplo: Aguas Claras),Historia del origen,"Salgar está en la cuenca del río Barroso, en la vertiente occidental de la cordillera Central. Las fincas de la zona son minifundios de ladera: casi todo se recoge a mano porque una máquina no sube esa pendiente.",,"PLACEHOLDER — texto inventado, pendiente de reemplazar"
+Fichas de café,(ejemplo: Aguas Claras),Llamado a la acción,¿Lo quieres probar o llevar? Pregúntanos por disponibilidad de Aguas Claras — te decimos cómo va la cosecha antes de que vengas.,,
+Fichas de café,(ejemplo: Aguas Claras),Botón,Preguntar por este café,Preguntar por este café,
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Enlace de vuelta,Volver a los cafés,Volver a los cafés,NUEVO desde v1
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Sección,Qué vas a sentir,Qué vas a sentir,Encabezado de la sección de aromas y sabores
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Etiqueta,Qué oler,Qué oler,
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Etiqueta,Qué probar,Qué probar,
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Sección,De dónde viene,De dónde viene,Solo aparece si el café tiene historia
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Sección,Cómo lo preparamos,Cómo lo preparamos,Solo aparece si hay métodos recomendados
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Enlace,Ver todos los métodos,Ver todos los métodos,
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Párrafo de cierre,¿Lo quieres probar o llevar? Pregúntanos por disponibilidad de [nombre del café] — te decimos antes de que vengas.,¿Lo quieres probar o llevar? Pregúntanos por disponibilidad de [nombre del café] — te decimos antes de que vengas.,[nombre del café] se rellena solo
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Botón,Preguntar por este café,Preguntar por este café,
+Ficha de café,Textos de interfaz (iguales para los 6 cafés),Enlace en la tarjeta de la lista,Leer la historia de [nombre del café],Leer la historia de [nombre del café],Aparece en cada tarjeta de /productos; [nombre del café] se rellena solo
+Página no encontrada,404,Título,Esta página no existe.,Esta página no existe.,
+Página no encontrada,404,Bajada,"Pasa: un enlace viejo, una dirección mal copiada. Lo que sí existe está acá abajo.","Un enlace viejo, una dirección mal copiada. Lo que sí existe está acá abajo.",
+Página no encontrada,404,Enlace de salida,Inicio,Inicio,
+Página no encontrada,404,Enlace de salida,Cafés y su origen,Cafés y su origen,
+Página no encontrada,404,Enlace de salida,Experiencias y métodos,Experiencias y métodos,
+Página no encontrada,404,Enlace de salida,Quiénes somos,Quiénes somos,

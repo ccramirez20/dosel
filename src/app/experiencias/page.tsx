@@ -22,7 +22,7 @@ export default async function ExperienciasPage() {
         <Stratum
           band="Talleres"
           title="Cosas que se hacen con las manos."
-          lead="Los talleres son en grupos pequeños y no hace falta saber nada de antes. Llenas el formulario, se abre WhatsApp con tu reserva escrita, y el cupo queda confirmado cuando te respondamos."
+          lead="Los talleres son en grupos pequeños y no necesitas experiencia previa. Llenas el formulario y se abre WhatsApp con los datos de tu reserva. El cupo queda confirmado cuando te respondemos."
         />
 
         <ul className="grid gap-10 md:grid-cols-3">
@@ -66,7 +66,7 @@ export default async function ExperienciasPage() {
           <Stratum
             band="Mostrador"
             title="Los métodos, sin misterio."
-            lead="Un método no es un capricho: cada uno extrae cosas distintas del mismo grano. Esto es lo que hace cada uno y cuándo lo escogemos."
+            lead="Un método no es un capricho: cada uno resalta cosas distintas del mismo grano. Aquí te contamos qué hace cada uno y cuándo lo escogemos."
           />
 
           <ul className="divide-y divide-rule border-y border-rule">
@@ -88,7 +88,7 @@ export default async function ExperienciasPage() {
                   {method.bestFor && method.bestFor.length > 0 && (
                     <dl className="mt-4 flex flex-wrap gap-x-3 gap-y-1 font-sans text-sm">
                       <dt className="text-moss">Resalta</dt>
-                      <dd className="text-ink/70">{method.bestFor.join(", ")}</dd>
+                      <dd className="text-ink/70">{method.bestFor.join(" · ")}</dd>
                     </dl>
                   )}
                 </div>

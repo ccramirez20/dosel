@@ -29,12 +29,12 @@ export default function Hero() {
       <div className="relative mx-auto flex min-h-[86svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24 md:pt-36">
         <div className="max-w-3xl">
           <h1 className="font-display text-5xl leading-[0.94] tracking-[-0.02em]">
-            El café bueno crece a la sombra.
+            Hay cafés que crecen mejor a la sombra.
           </h1>
           <p className="mt-8 max-w-[54ch] text-lg leading-relaxed text-cream/80">
-            Dosel es un café con coordenadas. Cada grano viene de una finca, una altura y un
-            bosque concretos, y aquí te decimos cuáles. Lo atiende un biólogo, así que las
-            preguntas son bienvenidas.
+            Dosel es un café con coordenadas. Cada grano viene de un lugar concreto: una
+            finca, una región, una altura y una historia. Aquí te contamos cuál es la de
+            cada café.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 font-sans text-sm">

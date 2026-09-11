@@ -11,19 +11,19 @@ const SECTIONS = [
   {
     href: "/productos",
     title: "Cafés de origen",
-    body: "Orígenes que rotan con la cosecha. Cada uno con su finca, su altura y su departamento marcado en el mapa.",
+    body: "Orígenes que rotan con la cosecha. Cada uno con su finca, su altura y su departamento en el mapa.",
     cta: "Ver los cafés",
   },
   {
     href: "/experiencias",
     title: "Talleres y métodos",
-    body: "Galletas, pintura de esculturas y catas guiadas. Y una explicación honesta de por qué el mismo grano sabe distinto en V60 que en prensa.",
+    body: "Galletas, pintura de esculturas y catas guiadas. También hablamos de por qué el mismo grano puede saber tan distinto en V60 y en prensa.",
     cta: "Ver experiencias",
   },
   {
     href: "/quienes-somos",
     title: "Bosque y café",
-    body: "El dosel es la capa donde el bosque atrapa la luz. La sombra que deja abajo es la que necesita el café para crecer. De ahí el nombre.",
+    body: "El dosel es la parte del bosque donde las copas de los árboles se encuentran con la luz. Abajo queda la sombra, un lugar donde también puede crecer el café. De ahí viene el nombre.",
     cta: "Conocer Dosel",
   },
 ] as const;
@@ -48,8 +48,8 @@ export default async function Home() {
       >
         <Stratum
           band="30 m, dosel"
-          title="Un café que también explica de dónde viene el café."
-          lead="Café de origen que podemos rastrear hasta la finca, los métodos con que lo preparamos, y talleres y experiencias para gente con curiosidad. Nada de eso es decorativo."
+          title="Un café que también cuenta la historia de dónde viene."
+          lead="Café de origen que podemos rastrear hasta la finca, métodos de preparación y talleres para gente curiosa. Queremos que conozcas lo que hay detrás de cada taza."
         />
 
         <div className="grid gap-px bg-rule md:grid-cols-3">
@@ -75,7 +75,7 @@ export default async function Home() {
             tone="dark"
             band="10 m, sotobosque"
             title="Cada taza tiene una dirección exacta."
-            lead="No decimos «café colombiano» y ya. Decimos el municipio, la finca y los metros sobre el nivel del mar, porque entre más alto hace más frío, y con frío el grano madura más lento y acumula más azúcar. Por eso la altura va en cada ficha."
+            lead="No decimos «café colombiano» y ya. Decimos el municipio, la finca y los metros sobre el nivel del mar. A mayor altura, las temperaturas suelen ser más bajas y el café puede madurar más lentamente, lo que influye en el desarrollo de sus azúcares y sabores. Por eso la altura aparece en cada ficha."
           />
 
           {/* Los <div> dentro del <dl> son la forma válida de agrupar cada par
@@ -115,12 +115,12 @@ export default async function Home() {
             <span className="mt-1 block text-ink/55">{CONTACT.address}</span>
           </p>
           <p>
-            Los talleres se reservan desde{" "}
+            Los talleres se reservan desde la sección de{" "}
             <Link
               href="/experiencias"
               className="text-moss underline underline-offset-4 hover:text-accent"
             >
-              experiencias
+              Experiencias
             </Link>
             . Para cualquier otra cosa, escríbenos por{" "}
             <a
@@ -129,7 +129,7 @@ export default async function Home() {
             >
               WhatsApp
             </a>
-            . Contestamos en horario de tienda.
+            . Respondemos en horario de tienda.
           </p>
         </div>
       </section>

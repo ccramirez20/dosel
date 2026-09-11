@@ -44,13 +44,15 @@ export default function Stratum({
         {title}
       </h2>
       {lead && (
-        <p
-          className={`mt-4 max-w-[62ch] text-lg leading-relaxed ${
+        <div
+          className={`mt-4 max-w-[62ch] space-y-3 text-lg leading-relaxed ${
             dark ? "text-cream/75" : "text-ink/75"
           }`}
         >
-          {lead}
-        </p>
+          {lead.split("\n\n").map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
       )}
       {children}
     </header>

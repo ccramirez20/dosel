@@ -33,8 +33,8 @@ export const EN_BORRADOR = esBorrador(SITE_URL);
 
 // TODO(marca): número y dirección reales cuando el dueño confirme.
 export const CONTACT = {
-  whatsapp: "https://wa.me/570000000000",
-  instagram: "https://instagram.com/dosel.cafe",
-  address: "Por confirmar",
-  hours: "Lunes a viernes, 2:00 a 6:00 p. m.",
+  whatsapp: "https://wa.me/573202250098",
+  instagram: "https://instagram.com/dosel_cafe71C",
+  address: "Cra. 71c #98-78 Casa 71C - Local 1, Bogotá",
+  hours: "Lunes a jueves, 2:00 a 7:00 p. m.",
 } as const;

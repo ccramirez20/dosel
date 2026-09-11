@@ -15,7 +15,7 @@ export default function NotFound() {
       <Stratum
         band="404"
         title="Esta página no existe."
-        lead="Pasa: un enlace viejo, una dirección mal copiada. Lo que sí existe está acá abajo."
+        lead="Un enlace viejo, una dirección mal copiada. Lo que sí existe está acá abajo."
       />
       <ul className="flex flex-wrap gap-x-8 gap-y-3 font-sans text-sm">
         {SALIDAS.map((s) => (

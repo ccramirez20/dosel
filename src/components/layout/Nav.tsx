@@ -21,18 +21,15 @@ export default function Nav() {
         aria-label="Principal"
         className="mx-auto flex max-w-6xl items-baseline justify-between gap-6 px-5 py-4 md:px-8"
       >
-        <Link href="/" className="flex shrink-0 items-center gap-2">
-          <span className="relative block h-10 aspect-[530/255]">
+        <Link href="/" className="flex shrink-0 items-center">
+          <span className="relative -my-2 block h-20 aspect-[530/255]">
             <Image
               src="/images/marca/logo-transparente-crop.png"
-              alt="Dosel"
+              alt="Dosel café y método"
               fill
               priority
               className="object-contain"
             />
-          </span>
-          <span className="hidden font-sans text-xs tracking-wide text-moss sm:inline">
-            café y método
           </span>
         </Link>
 

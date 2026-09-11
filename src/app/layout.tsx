@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · Dosel",
   },
   description:
-    "Café de origen colombiano, métodos de preparación y talleres, contados por un biólogo. Cada taza viene de un lugar concreto y aquí te decimos cuál.",
+    "Café de origen colombiano, métodos de preparación y talleres, desde la mirada de un biólogo. Cada taza viene de un lugar concreto y aquí te contamos cuál.",
   openGraph: {
     type: "website",
     locale: "es_CO",

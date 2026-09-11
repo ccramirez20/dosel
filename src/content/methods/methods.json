@@ -3,50 +3,50 @@
     "id": "v60",
     "slug": "v60",
     "name": "V60",
-    "origin": "Japón, 2004. Hario, una fábrica de vidrio de Tokio fundada en 1921, le puso ese nombre por el ángulo del cono: 60 grados.",
-    "usedFor": "Filtrado por goteo, taza a taza. Es el método que más control le da a quien prepara: el agua cae donde uno la pone.",
-    "description": "El cono de 60° y las estrías en espiral dejan que el aire escape mientras el agua baja. El resultado es una taza limpia, sin sedimento, donde los aromas se separan y se pueden nombrar uno por uno. Es el método que usamos cuando queremos que un café se explique solo.",
-    "bestFor": ["Acidez cítrica alta", "Perfiles florales", "Lavados de altura"],
-    "images": [{ "src": "/images/methods/v60.svg", "alt": "Cafetera V60 en preparación", "width": 800, "height": 800 }]
+    "origin": "Japón, 2004. Hario, una fábrica de vidrio de Tokio fundada en 1921, presentó el V60, llamado así por el ángulo de 60 grados de su cono.",
+    "usedFor": "Filtrado por goteo, taza a taza. Es un método que le da mucho control a quien prepara: el agua cae donde uno la pone.",
+    "description": "El cono de 60° y sus estrías en espiral ayudan a que el agua fluya de una manera más controlada. El resultado es una taza limpia, con aromas y sabores que se pueden distinguir con claridad. Es el método que usamos cuando queremos que un café se explique solo.",
+    "bestFor": ["Acidez cítrica marcada", "Perfiles florales", "Cafés lavados de altura"],
+    "images": [{ "src": "/images/methods/v60.jpg", "alt": "Cafetera V60 en preparación", "width": 800, "height": 800 }]
   },
   {
     "id": "chemex",
     "slug": "chemex",
     "name": "Chemex",
-    "origin": "Estados Unidos, 1941. La inventó Peter Schlumbohm, un químico alemán, inspirado en un embudo de laboratorio y un matraz Erlenmeyer.",
-    "usedFor": "Filtrado por goteo para varias tazas. El filtro es hasta 30% más grueso que uno común.",
-    "description": "Ese filtro grueso retiene más aceites y sólidos que cualquier otro método de papel. Lo que queda es una taza casi transparente, de textura ligera y dulzor muy definido. Si un café tiene un defecto, la Chemex lo muestra; si es limpio, lo vuelve elegante.",
-    "bestFor": ["Cafés delicados", "Notas de té", "Compartir en mesa"],
-    "images": [{ "src": "/images/methods/chemex.svg", "alt": "Chemex de vidrio con collar de madera", "width": 800, "height": 800 }]
+    "origin": "Estados Unidos, 1941. Peter Schlumbohm, un químico alemán, la creó inspirado en un embudo de laboratorio y un matraz Erlenmeyer.",
+    "usedFor": "Filtrado por goteo para varias tazas. Su filtro es más grueso que el de otros métodos, lo que ayuda a producir una taza limpia y sin sedimentos.",
+    "description": "Ese filtro grueso retiene más aceites y partículas que otros filtros de papel. El resultado es una taza muy limpia, de textura ligera y dulzor definido. Si un café tiene un defecto, la Chemex lo muestra; si es limpio, lo vuelve elegante.",
+    "bestFor": ["Cafés delicados", "Notas de té", "Para compartir"],
+    "images": [{ "src": "/images/methods/chemex.jpg", "alt": "Chemex de vidrio con collar de madera", "width": 800, "height": 800 }]
   },
   {
     "id": "prensa-francesa",
     "slug": "prensa-francesa",
     "name": "Prensa francesa",
-    "origin": "Disputada entre Francia e Italia. La patente que más se cita es italiana: Attilio Calimani, 1929.",
-    "usedFor": "Inmersión total. El café y el agua conviven cuatro minutos antes de separarse.",
-    "description": "Al no haber papel, los aceites del café pasan enteros a la taza. Eso da cuerpo, peso y una sensación redonda en la boca, a cambio de algo de sedimento en el fondo. Es el método más indulgente: perdona errores de molienda y no exige técnica.",
-    "bestFor": ["Cuerpo alto", "Notas a chocolate y nuez", "Tuestes medios y oscuros"],
-    "images": [{ "src": "/images/methods/prensa-francesa.svg", "alt": "Prensa francesa con café recién preparado", "width": 800, "height": 800 }]
+    "origin": "Francia e Italia se disputan su origen. La patente más citada es la de Attilio Calimani, registrada en Italia en 1929.",
+    "usedFor": "Inmersión total. El café y el agua conviven durante cuatro minutos antes de separarse.",
+    "description": "Al no haber papel, más aceites y partículas del café llegan a la taza. Eso da cuerpo, peso y una sensación más redonda en la boca, a cambio de algo de sedimento en el fondo. Es un método indulgente: tolera bastante bien los errores de molienda y no exige demasiada técnica.",
+    "bestFor": ["Cuerpo alto", "Notas de chocolate y nuez", "Tuestes medios a oscuros"],
+    "images": [{ "src": "/images/methods/prensa-francesa.jpg", "alt": "Prensa francesa con café recién preparado", "width": 800, "height": 800 }]
   },
   {
     "id": "sifon-japones",
     "slug": "sifon-japones",
     "name": "Sifón japonés",
-    "origin": "Inventado en Alemania a mediados del siglo XIX, pero fue en Japón donde marcas como Hario y Yama lo refinaron y lo convirtieron casi en un rito.",
-    "usedFor": "Inmersión al vacío. El vapor empuja el agua a la cámara superior, donde se mezcla con el café; al retirar el calor, el vacío la hace bajar ya filtrada.",
-    "description": "Es el método con más espectáculo: dos cámaras de vidrio, una llama y un momento exacto en que el café \"cae\" filtrado. El resultado es una taza limpia y de cuerpo ligero, parecida a un filtrado de goteo pero con una textura propia que da la temperatura sostenida durante la inmersión.",
-    "bestFor": ["Perfiles delicados", "Notas de té", "Una preparación para mirar"],
-    "images": [{ "src": "/images/methods/sifon-japones.svg", "alt": "Sifón japonés en preparación", "width": 800, "height": 800 }]
+    "origin": "Europa, mediados del siglo XIX. El sifón se desarrolló en Europa y fue en Japón donde marcas como Hario y Yama lo perfeccionaron y lo convirtieron en todo un ritual.",
+    "usedFor": "Inmersión al vacío. El vapor empuja el agua hacia la cámara superior, donde se mezcla con el café. Al retirar el calor, el vacío hace que vuelva a bajar, ya filtrada.",
+    "description": "Es el método con más espectáculo: dos cámaras de vidrio, una llama y ese momento exacto en que el café “cae” ya filtrado. El resultado es una taza limpia y de cuerpo ligero, parecida a un filtrado por goteo, pero con una textura propia gracias a la temperatura constante durante la inmersión.",
+    "bestFor": ["Perfiles delicados", "Notas de té", "Una preparación para ver"],
+    "images": [{ "src": "/images/methods/sifon-japones.jpg", "alt": "Sifón japonés en preparación", "width": 800, "height": 800 }]
   },
   {
     "id": "ninja-luxe",
     "slug": "ninja-luxe",
     "name": "Ninja Luxe",
-    "origin": "Cafetera de la marca estadounidense Ninja (SharkNinja).",
-    "usedFor": "Filtrado automático por goteo. Se programa la cantidad y la máquina hace el resto, taza tras taza.",
-    "description": "Es el método que usamos cuando lo que importa es la consistencia y el volumen, no la puesta en escena: mismo punto de molienda, misma temperatura, mismo resultado cada vez, sin intervención manual en el proceso.",
+    "origin": "Estados Unidos. Ninja, marca de SharkNinja, desarrolló la Ninja Luxe Café.",
+    "usedFor": "Filtrado automático por goteo. Se ajusta la cantidad y la máquina hace el resto, taza tras taza.",
+    "description": "Es el método que usamos cuando lo que importa es la consistencia y el volumen, no la puesta en escena: misma molienda, misma temperatura y un resultado consistente, taza tras taza, sin intervención manual durante el proceso.",
     "bestFor": ["Volumen", "Consistencia", "Servicio rápido"],
-    "images": [{ "src": "/images/methods/ninja-luxe.svg", "alt": "Cafetera Ninja Luxe en la barra", "width": 800, "height": 800 }]
+    "images": [{ "src": "/images/methods/ninja-luxe.jpg", "alt": "Cafetera Ninja Luxe en la barra", "width": 800, "height": 800 }]
   }
 ]

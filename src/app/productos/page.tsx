@@ -40,7 +40,7 @@ export default async function ProductosPage() {
         <Stratum
           band="10 m, sotobosque"
           title="De dónde viene cada café."
-          lead={`El café es un arbusto de sotobosque: crece a la sombra de árboles más altos. Hoy tenemos ${view.cafes.length} orígenes de ${departamentos} departamentos, ${rango}. La altura no es un dato de adorno: entre más alto hace más frío, y con frío el grano madura más lento y acumula más azúcar. Toca un departamento para ver qué hay de ahí, o abre una ficha y el mapa te muestra la finca.`}
+          lead={`El café es un arbusto de sotobosque: crece a la sombra de árboles más altos. Hoy tenemos ${view.cafes.length} orígenes de ${departamentos} departamentos, ${rango}.\n\nLa altura no es un dato de adorno: a mayor altura, las temperaturas suelen ser más bajas y el café puede madurar más lentamente. Eso influye en el desarrollo de sus azúcares y, con ellos, en el perfil de la taza.\n\nToca un departamento para ver qué tenemos de ahí, o abre una ficha y el mapa te muestra la finca.`}
         />
         <CafeOriginExplorer
           cafes={view.cafes}
@@ -58,7 +58,7 @@ export default async function ProductosPage() {
           <Stratum
             band="0 m, suelo"
             title="Para acompañar"
-            lead="El suelo del bosque es la capa que sostiene todo lo demás; en la tienda es el mostrador. Ahí está la carta completa: bebidas, pastelería, dulces y snacks, tortas por encargo y las mermeladas de Honey Moon."
+            lead="El suelo del bosque es la base de todo lo que ocurre arriba; en la tienda es el mostrador. Ahí está la carta completa: bebidas, pastelería, dulces y snacks, tortas por encargo y las mermeladas de Honey Moon."
           />
 
           <div className="space-y-14">

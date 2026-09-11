@@ -4,6 +4,11 @@ Aquí dentro van las fotos y el material de marca que mande el café. **Los nomb
 archivo no son libres**: el contenido del sitio ya apunta a estas rutas exactas. Si el
 archivo se llama distinto, la imagen no aparece.
 
+**Total pendiente: 24 fotos** — solo los productos individuales de la carta, uno por ítem.
+Experiencias, métodos y quiénes-somos ya tienen foto (de stock, mientras el dueño manda
+las propias). Los 6 cafés comparten por ahora una sola foto genérica
+(`cafes/generico.jpg`, bolsa de café) hasta que lleguen las fotos reales de cada finca.
+
 ## Cómo funciona el reemplazo
 
 Los JSON de `src/content/` apuntan hoy a un `.svg` que no existe. Mientras la ruta termine
@@ -27,45 +32,40 @@ que describe, corrige el `alt` — es lo que lee un lector de pantalla y lo que 
 
 ---
 
-## `cafes/` — 6 fotos, 4:3 (1200×900)
+## `cafes/` — resuelto con una foto genérica
 
-Una por origen. Cerezas, cafetal, secado, paisaje de la finca: lo que haya.
+Los 6 cafés (`el-mirador`, `aguas-claras`, `alto-de-la-niebla`, `la-esperanza`,
+`pena-blanca`, `rio-frio`) apuntan todos a `cafes/generico.jpg` (una bolsa de café, foto
+de stock) hasta que lleguen las fotos reales de cada finca. Cuando llegue la foto de una
+finca en concreto, se sube como `cafes/<slug>.jpg` y se cambia el `src` solo en ese JSON
+— no hace falta tocar los otros 5.
 
-| archivo | qué es |
-|---|---|
-| `el-mirador` | Finca El Mirador, Pitalito, Huila |
-| `aguas-claras` | Finca Aguas Claras, Salgar, Antioquia |
-| `alto-de-la-niebla` | Garzón, Huila |
-| `la-esperanza` | La Unión, Nariño |
-| `pena-blanca` | Inzá, Cauca |
-| `rio-frio` | Sierra Nevada de Santa Marta, Magdalena |
+## `experiences/` — resuelto (fotos de stock)
 
-## `experiences/` — 3 fotos, 4:3 (1200×900)
+`galletas.jpg`, `esculturas.jpg`, `cata.jpg` — de stock, mientras llegan fotos del taller
+real en curso.
 
-`galletas`, `esculturas`, `cata`. Del taller en curso, con manos y mesa; mejor gente
-trabajando que producto quieto.
+## `methods/` — resuelto (fotos de stock)
 
-## `methods/` — 5 fotos, cuadradas (800×800)
-
-`v60`, `chemex`, `sifon-japones`, `ninja-luxe`, `prensa-francesa`. El equipo en uso, no de
-catálogo.
+`v60.jpg`, `chemex.jpg`, `sifon-japones.jpg`, `ninja-luxe.jpg`, `prensa-francesa.jpg` —
+de stock, mientras llegan fotos del equipo real de la tienda.
 
 ## `products/` — fotos individuales por ítem, cuadradas (800×800)
 
 `galletas`, `pasteles`, `deditos`, `torta-casa`, `torta-naranja`, `acab-capitan-banano`,
 `acab-capitana-pina`, `alfajores`, `chipa`, `pancakes`, `waffle-pan-de-bono`,
 `arroz-con-leche`, `tostadas-francesas`, `espresso`, `tinto`, `capuchino`, `cafe-latte`,
-`aromatica`, `ice-latte`, `jugo-natural`, `soda-italiana`, `torta-por-encargo`,
+`aromatica`, `ice-latte`, `jugo-natural`, `soda-italiana`, `kefir`, `torta-por-encargo`,
 `honeymoon-mermeladas` — ver los nombres exactos en `src/content/products/products.json`.
 
 `products/menu/` ya tiene fotos reales (no son placeholder): son los 5 banners de
 categoría que se ven en `/productos` (bebidas, pastelería y panadería, dulces y snacks,
 tortas por encargo, mermeladas Honey Moon). No hace falta nada ahí por ahora.
 
-## `quienes-somos/` — 3 fotos, 3:2 (1200×800)
+## `quienes-somos/` — resuelto (fotos de stock)
 
-`dosel` (copas vistas desde abajo o desde arriba), `sotobosque` (café creciendo bajo
-sombra), `suelo` (hojarasca, o la barra y el horno de la tienda).
+`dosel.jpg`, `sotobosque.jpg`, `suelo.jpg` — de stock, mientras llegan fotos propias del
+lugar.
 
 ---
 
