@@ -4,7 +4,7 @@ Aquí dentro van las fotos y el material de marca que mande el café. **Los nomb
 archivo no son libres**: el contenido del sitio ya apunta a estas rutas exactas. Si el
 archivo se llama distinto, la imagen no aparece.
 
-**Total pendiente: 24 fotos** — solo los productos individuales de la carta, uno por ítem.
+**Total pendiente: 23 fotos** — solo los productos individuales de la carta, uno por ítem.
 Experiencias, métodos y quiénes-somos ya tienen foto (de stock, mientras el dueño manda
 las propias). Los 6 cafés comparten por ahora una sola foto genérica
 (`cafes/generico.jpg`, bolsa de café) hasta que lleguen las fotos reales de cada finca.
@@ -55,8 +55,12 @@ de stock, mientras llegan fotos del equipo real de la tienda.
 `galletas`, `pasteles`, `deditos`, `torta-casa`, `torta-naranja`, `acab-capitan-banano`,
 `acab-capitana-pina`, `alfajores`, `chipa`, `pancakes`, `waffle-pan-de-bono`,
 `arroz-con-leche`, `tostadas-francesas`, `espresso`, `tinto`, `capuchino`, `cafe-latte`,
-`aromatica`, `ice-latte`, `jugo-natural`, `soda-italiana`, `kefir`, `torta-por-encargo`,
+`aromatica`, `ice-latte`, `jugo-natural`, `kefir`, `torta-por-encargo`,
 `honeymoon-mermeladas` — ver los nombres exactos en `src/content/products/products.json`.
+
+`soda-italiana-frutos-rojos.jpg` y `soda-italiana-frutos-amarillos.jpg` ya están resueltas:
+el ítem único de menú se separó en dos (mismo patrón que `acab-capitan-banano` /
+`acab-capitana-pina`) porque llegó una foto real por cada sabor.
 
 `products/menu/` ya tiene fotos reales (no son placeholder): son los 5 banners de
 categoría que se ven en `/productos` (bebidas, pastelería y panadería, dulces y snacks,
@@ -71,11 +75,24 @@ lugar.
 
 ## `marca/` — logo e identidad
 
-El logo **ya está conectado** en Nav y footer (`logo-transparente-crop.png`): es el JPEG
-que llegó con fondo blanco, al que le quité el fondo a mano (no es transparencia real de
-diseño, es un recorte por color) y le corté el margen sobrante. Sirve para salir del paso,
-pero es JPEG comprimido, no vectorial — se ve algo blando de cerca. La tipografía oficial
-(Poppins) también ya está puesta en todo el sitio.
+El logo **ya está conectado** en Nav y footer. Es la segunda versión: el ícono pasó de una
+taza de café a un brote/hoja, siguiendo el racional del taller de identidad del cliente
+("un brote, un nuevo árbol que tomará tiempo en subir hasta el dosel"). Sigue siendo un
+recorte por color (color-key + autocrop) de la foto con fondo blanco que mandó el cliente,
+no transparencia real de diseño — sirve para salir del paso, pero no es vectorial. La
+tipografía oficial (Poppins) también ya está puesta en todo el sitio.
+
+Hay dos archivos porque el badge del logo en verde queda ilegible sobre el footer (que
+también es verde oscuro):
+
+- `logo-transparente-crop.png` — badge verde, ícono/texto crema. Úsalo sobre fondos claros
+  (Nav).
+- `logo-transparente-crop-footer.png` — recorte de `logo-rojo.jpg` (la versión en rojo
+  acerezado/bordo que también mandó el cliente, mismo diseño). El rojo sí se distingue del
+  verde del footer. Úsalo sobre fondos oscuros (Footer).
+
+`logo-rojo.jpg` es el tercer original en esta carpeta (junto a `logo-fondo-blanco.jpg` y
+`logo-fondo-plantas.jpg`): la versión del logo en el segundo color de marca.
 
 Lo que sigue faltando:
 

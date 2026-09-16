@@ -97,7 +97,7 @@ export default async function Home() {
 
           <Link
             href="/productos"
-            className="mt-12 inline-block bg-accent px-6 py-3 font-sans text-sm text-canopy transition-colors hover:bg-cream"
+            className="mt-12 inline-block bg-accent px-6 py-3 font-sans text-sm text-cream transition-colors hover:bg-cream hover:text-canopy"
           >
             Abrir el mapa de orígenes
           </Link>

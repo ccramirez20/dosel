@@ -22,7 +22,7 @@ export default function Nav() {
         className="mx-auto flex max-w-6xl items-baseline justify-between gap-6 px-5 py-4 md:px-8"
       >
         <Link href="/" className="flex shrink-0 items-center">
-          <span className="relative -my-2 block h-20 aspect-[530/255]">
+          <span className="relative -my-2 block h-20 aspect-[800/331]">
             <Image
               src="/images/marca/logo-transparente-crop.png"
               alt="Dosel café y método"

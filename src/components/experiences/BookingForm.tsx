@@ -128,7 +128,7 @@ export default function BookingForm({
       <button
         type="submit"
         disabled={dates.length === 0}
-        className="mt-4 bg-accent px-5 py-2.5 font-sans text-sm text-canopy transition-colors hover:bg-canopy hover:text-cream disabled:opacity-50"
+        className="mt-4 bg-accent px-5 py-2.5 font-sans text-sm text-cream transition-colors hover:bg-canopy hover:text-cream disabled:opacity-50"
       >
         Enviar por WhatsApp
       </button>

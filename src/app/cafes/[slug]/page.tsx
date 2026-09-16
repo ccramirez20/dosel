@@ -147,7 +147,7 @@ export default async function CafeDetailPage({ params }: PageProps<"/cafes/[slug
             </p>
             <a
               href={CONTACT.whatsapp}
-              className="mt-5 inline-block bg-accent px-6 py-3 font-sans text-sm text-canopy transition-colors hover:bg-canopy hover:text-cream"
+              className="mt-5 inline-block bg-accent px-6 py-3 font-sans text-sm text-cream transition-colors hover:bg-canopy hover:text-cream"
             >
               Preguntar por este café
             </a>

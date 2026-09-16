@@ -222,12 +222,12 @@ export interface ProductCategory { // secciones del menú (categories.json)
   --dosel-fern:    #7fa06b;  /* helecho claro */
   --dosel-bark:    #5b4230;  /* corteza */
   --dosel-cream:   #f4efe6;  /* fondo */
-  --dosel-accent:  #e07a3f;  /* acento cálido tipo ave */
+  --dosel-accent:  #9c2b3f;  /* rojo acerezado/bordo, del taller de identidad del cliente */
 }
 ```
 
 - **Tipografías: ya no son provisionales.** La oficial es **Poppins**, vía `next/font/google`, una sola familia para `--font-display` y `--font-sans` (así llegó de marca; no hay una segunda tipografía que combinar).
-- **Logo: parcialmente conectado.** Nav y footer usan `public/images/marca/logo-transparente-crop.png` — el JPEG con fondo blanco que mandó el cliente, con el fondo quitado a mano (recorte por color, no transparencia de diseño) y recortado al margen del isotipo. Sirve, pero es JPEG comprimido: no es nítido de cerca. El reemplazo real es un SVG o PNG grande con transparencia de verdad (ver `public/images/LEEME.md`).
+- **Logo: parcialmente conectado.** Nav y footer usan `public/images/marca/logo-transparente-crop.png` — recorte por color-key (no transparencia de diseño) de la segunda versión del logo que mandó el cliente, con el ícono cambiado de taza de café a brote/hoja (así lo pide el taller de identidad de marca del cliente: "un brote, un nuevo árbol que tomará tiempo en subir hasta el dosel"). Sirve, pero sigue siendo un recorte automático de una foto, no vectorial. El reemplazo real es un SVG o PNG grande con transparencia de verdad (ver `public/images/LEEME.md`).
 - **Imágenes:** ya no está vacío. `public/images/products/menu/` tiene los 5 banners de categoría reales de `/productos` (bebidas, pastelería, dulces y snacks, tortas por encargo, mermeladas). El resto —6 cafés, 3 experiencias, 5 métodos, foto individual por cada ítem del menú, 3 de quiénes-somos— sigue en placeholder `.svg`. Al llegar una foto, se reemplaza el archivo y se cambia solo la extensión en el JSON; `Figure` pasa sola a `next/image`.
 - **Movimiento y feedback (UX):** reveals al scroll, estados hover en tarjetas de café, transiciones del mapa, microinteracciones con tema café (vapor/pour) con moderación. Skeletons de carga, toasts para acciones futuras. **Respetar `prefers-reduced-motion`.**
 - **Accesibilidad:** alt en todas las imágenes, foco visible, contraste AA, navegación por teclado en el mapa.
@@ -313,10 +313,15 @@ Lo que hay que hacer para pasar de borrador a sitio público. En orden.
 ### Contenido pendiente del cliente
 
 - [x] Tipografía → **Poppins**, ya puesta en todo el sitio (§8).
-- [x] Logo → conectado en Nav y footer, pero con un recorte propio del JPEG que llegó, no
-      con un archivo de marca real. Sigue pendiente un SVG/PNG grande con transparencia de
+- [x] Logo → conectado en Nav y footer, ahora con el ícono de brote/hoja (segunda versión,
+      del taller de identidad), pero sigue siendo un recorte propio del JPEG que llegó, no
+      un archivo de marca real. Sigue pendiente un SVG/PNG grande con transparencia de
       verdad (`public/images/LEEME.md` → `marca/`).
-- [ ] Hex de la paleta → los colores de `tokens.css` siguen provisionales.
+- [ ] Hex de la paleta → el acento (`--dosel-accent`) ya se actualizó con la dirección real
+      del taller de identidad del cliente (rojo acerezado/bordo), pero el hex es mi
+      aproximación: falta el valor exacto del cliente. El verde/crema de `tokens.css` siguen
+      provisionales en tono, aunque el taller confirma que la familia (verde oliva / crema)
+      ya va por buen camino.
 - [x] Carta real de productos → `content/products/products.json` + `categories.json`, con
       precios y agrupada por sección, extraída de las fotos de menú que mandó el cliente.
       Confirmado con esto que «Pasteles» son de hojaldre.

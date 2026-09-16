@@ -139,7 +139,7 @@ export default function QuienesSomosPage() {
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 font-sans text-sm">
             <Link
               href="/productos"
-              className="bg-accent px-6 py-3 text-canopy transition-colors hover:bg-cream"
+              className="bg-accent px-6 py-3 text-cream transition-colors hover:bg-cream hover:text-canopy"
             >
               Ver los cafés
             </Link>

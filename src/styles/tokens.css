@@ -1,5 +1,7 @@
 /*
- * Tokens de marca — PROVISIONALES (CLAUDE.md §8).
+ * Tokens de marca (CLAUDE.md §8). El verde/crema siguen PROVISIONALES en tono exacto.
+ * El acento ya no lo es: viene del taller de identidad del cliente ("rojo acerezado/bordo"),
+ * este hex es mi aproximación a esa dirección, pendiente el hex exacto del cliente.
  * Cuando llegue la identidad real solo se tocan los hex de este archivo.
  * Los nombres semánticos de abajo son los que usa la UI; no renombrarlos.
  */
@@ -10,7 +12,7 @@
   --dosel-fern: #7fa06b;
   --dosel-bark: #5b4230;
   --dosel-cream: #f4efe6;
-  --dosel-accent: #e07a3f;
+  --dosel-accent: #9c2b3f;
 
   /* derivados: sombra bajo el dosel y papel de las fichas */
   --dosel-understory: #16291d;

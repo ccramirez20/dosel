@@ -9,9 +9,9 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
         <div>
           <div className="flex items-center">
-            <span className="relative block h-20 aspect-[530/255]">
+            <span className="relative block h-20 aspect-[800/334]">
               <Image
-                src="/images/marca/logo-transparente-crop.png"
+                src="/images/marca/logo-transparente-crop-footer.png"
                 alt="Dosel café y método"
                 fill
                 className="object-contain"
