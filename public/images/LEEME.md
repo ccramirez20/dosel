@@ -6,8 +6,7 @@ archivo se llama distinto, la imagen no aparece.
 
 **Total pendiente: 23 fotos** — solo los productos individuales de la carta, uno por ítem.
 Experiencias, métodos y quiénes-somos ya tienen foto (de stock, mientras el dueño manda
-las propias). Los 6 cafés comparten por ahora una sola foto genérica
-(`cafes/generico.jpg`, bolsa de café) hasta que lleguen las fotos reales de cada finca.
+las propias). Los 7 cafés ya tienen foto real y propia cada uno (ver `cafes/` abajo).
 
 ## Cómo funciona el reemplazo
 
@@ -32,13 +31,13 @@ que describe, corrige el `alt` — es lo que lee un lector de pantalla y lo que 
 
 ---
 
-## `cafes/` — resuelto con una foto genérica
+## `cafes/` — resuelto (7 fotos reales)
 
-Los 6 cafés (`el-mirador`, `aguas-claras`, `alto-de-la-niebla`, `la-esperanza`,
-`pena-blanca`, `rio-frio`) apuntan todos a `cafes/generico.jpg` (una bolsa de café, foto
-de stock) hasta que lleguen las fotos reales de cada finca. Cuando llegue la foto de una
-finca en concreto, se sube como `cafes/<slug>.jpg` y se cambia el `src` solo en ese JSON
-— no hace falta tocar los otros 5.
+Cada uno de los 7 cafés reales tiene su propia foto de empaque, en full calidad
+(1254×1254, 220–270 KB): `cafeismo-astral.jpeg`, `elena.jpeg`, `origenes-sidra.jpeg`,
+`origenes-sl28.jpeg`, `origenes-ombligon.jpeg`, `incognito-caturra.jpeg`,
+`recua-bourbon-rosado.jpeg`. Los nombres de archivo son slugs ASCII (sin tildes ni
+espacios) para que la URL no dependa de encoding.
 
 ## `experiences/` — resuelto (fotos de stock)
 

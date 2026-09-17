@@ -1,0 +1,33 @@
+{
+  "id": "cafe-cafeismo-astral",
+  "slug": "cafeismo-astral",
+  "name": "Cafeismo · Café Astral",
+  "origin": {
+    "regionId": "CO-TOL",
+    "municipio": "Norte del Tolima",
+    "lat": 4.9203,
+    "lng": -75.0631,
+    "altitudeMasl": 1700
+  },
+  "variety": "Castillo",
+  "process": "Secado natural",
+  "roastLevel": "Media",
+  "profile": {
+    "description": "Uno de nuestros cafés de la casa. Café Astral reúne notas de caramelo, panela y miel con matices cítricos, nueces y maracuyá. De variedad Castillo, tostión media y secado natural, es un recorrido por el lado dulce y frutal del café del norte del Tolima.",
+    "aromas": ["Caramelo", "Panela", "Miel", "Cítricos", "Nueces", "Maracuyá"],
+    "tasting": ["Caramelo", "Panela", "Miel", "Cítricos", "Nueces", "Maracuyá"]
+  },
+  "recommendedMethods": ["v60", "chemex"],
+  "story": "Café de la casa, disponible para llevar en bolsa de 500 g, en grano o molido. El origen exacto de la finca aún no está confirmado por la marca; lo que sí sabemos es que viene del norte del Tolima, una de las zonas cafeteras del centro del país.",
+  "images": [
+    {
+      "src": "/images/cafes/cafeismo-astral.jpeg",
+      "alt": "Empaque naranja de Cafeismo Café Astral de 500 g sobre fondo hueso.",
+      "width": 1254,
+      "height": 1254
+    }
+  ],
+  "price": 45000,
+  "currency": "COP",
+  "available": true
+}

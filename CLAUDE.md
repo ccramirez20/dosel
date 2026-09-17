@@ -190,7 +190,8 @@ export interface ProductCategory { // secciones del menú (categories.json)
 }
 ```
 
-**Estado del contenido:** los ~6 cafés llegan la semana entrante. Crea `content/cafes/*.json` con **1–2 ejemplos placeholder** que cumplan el tipo, para que la UI y el mapa funcionen ya. Igual para métodos y experiencias.
+**Estado del contenido:** los 7 cafés ya llegaron y están reales en `content/cafes/*.json`
+(§12). Métodos y experiencias también son reales.
 
 ---
 
@@ -228,7 +229,7 @@ export interface ProductCategory { // secciones del menú (categories.json)
 
 - **Tipografías: ya no son provisionales.** La oficial es **Poppins**, vía `next/font/google`, una sola familia para `--font-display` y `--font-sans` (así llegó de marca; no hay una segunda tipografía que combinar).
 - **Logo: parcialmente conectado.** Nav y footer usan `public/images/marca/logo-transparente-crop.png` — recorte por color-key (no transparencia de diseño) de la segunda versión del logo que mandó el cliente, con el ícono cambiado de taza de café a brote/hoja (así lo pide el taller de identidad de marca del cliente: "un brote, un nuevo árbol que tomará tiempo en subir hasta el dosel"). Sirve, pero sigue siendo un recorte automático de una foto, no vectorial. El reemplazo real es un SVG o PNG grande con transparencia de verdad (ver `public/images/LEEME.md`).
-- **Imágenes:** ya no está vacío. `public/images/products/menu/` tiene los 5 banners de categoría reales de `/productos` (bebidas, pastelería, dulces y snacks, tortas por encargo, mermeladas). El resto —6 cafés, 3 experiencias, 5 métodos, foto individual por cada ítem del menú, 3 de quiénes-somos— sigue en placeholder `.svg`. Al llegar una foto, se reemplaza el archivo y se cambia solo la extensión en el JSON; `Figure` pasa sola a `next/image`.
+- **Imágenes:** ya no está vacío. `public/images/products/menu/` tiene los 5 banners de categoría reales de `/productos` (bebidas, pastelería, dulces y snacks, tortas por encargo, mermeladas), y `public/images/cafes/` tiene foto real de empaque para los 7 cafés. El resto —3 experiencias, 5 métodos, foto individual por cada ítem del menú, 3 de quiénes-somos— sigue en placeholder `.svg`. Al llegar una foto, se reemplaza el archivo y se cambia solo la extensión en el JSON; `Figure` pasa sola a `next/image`.
 - **Movimiento y feedback (UX):** reveals al scroll, estados hover en tarjetas de café, transiciones del mapa, microinteracciones con tema café (vapor/pour) con moderación. Skeletons de carga, toasts para acciones futuras. **Respetar `prefers-reduced-motion`.**
 - **Accesibilidad:** alt en todas las imágenes, foco visible, contraste AA, navegación por teclado en el mapa.
 
@@ -329,16 +330,18 @@ Lo que hay que hacer para pasar de borrador a sitio público. En orden.
       Luxe, Prensa francesa (se quitó Aeropress, que no se usa).
 - [x] Dos textos propios del dueño (definición de «dosel», misión/visión) → incorporados
       como copy real en `/quienes-somos`.
-- [ ] Imágenes del sitio → `public/images/products/menu/` ya tiene fotos reales (los 5
-      banners de categoría de `/productos`). Todavía en placeholder `.svg`: los 6 cafés,
-      las 3 experiencias, los 5 métodos, la foto individual de cada ítem del menú, y las 3
-      de quiénes-somos. Al llegar una foto, se reemplaza el archivo y se cambia `.svg` →
-      `.jpg` en el JSON; `Figure` pasa sola a `next/image`.
-- [ ] Datos reales de los 6 cafés → `content/cafes/`. Los de hoy son de relleno: las
-      coordenadas sí son de municipios cafeteros reales y están validadas contra su
-      departamento por test, pero fincas, perfiles e historias están inventados. El café
-      de origen en bolsa (Cafeísmo, Elena) que apareció en las fotos de menú queda en
-      standby: va al mapa, pero falta que el cliente mande sus datos completos.
+- [x] Fotos y datos reales de los 7 cafés → `content/cafes/` y `public/images/cafes/`.
+      Cafeismo Astral, Elena, y los cinco de Orígenes/Incógnito/Recua, con foto propia de
+      cada empaque (ficha del cliente: `public/images/cafes/fichas-cafes-dosel.md`).
+      Coordenadas validadas contra su departamento por `geo.test.mts`. Pendiente solo lo que
+      el cliente mismo marcó sin confirmar en su ficha: el municipio exacto de Cafeismo
+      («norte del Tolima» a secas) y si las 60 h declaradas del proceso de Orígenes · Sidra
+      son de fermentación.
+- [ ] Imágenes del sitio → `public/images/products/menu/` y `public/images/cafes/` ya
+      tienen fotos reales. Todavía en placeholder `.svg`: las 3 experiencias, los 5
+      métodos, la foto individual de cada ítem del menú, y las 3 de quiénes-somos. Al
+      llegar una foto, se reemplaza el archivo y se cambia `.svg` → `.jpg` en el JSON;
+      `Figure` pasa sola a `next/image`.
 - [ ] Revisión de textos: se le pasó al cliente `textos-dosel-v1.csv` (123 filas, con columna
       para el texto revisado). Al volver, se aplican de una pasada.
 - [x] TopoJSON de departamentos de Colombia → `public/geo/`. **Hecho** (geoBoundaries, ODbL).

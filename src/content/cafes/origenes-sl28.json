@@ -1,0 +1,30 @@
+{
+  "id": "cafe-origenes-sl28",
+  "slug": "origenes-sl28",
+  "name": "Orígenes · SL-28",
+  "origin": {
+    "regionId": "CO-HUI",
+    "municipio": "Oporapa",
+    "finca": "Quebraditas Coffee Farm",
+    "lat": 1.9124,
+    "lng": -76.0069,
+    "altitudeMasl": 1680
+  },
+  "variety": "SL-28",
+  "process": "Natural",
+  "profile": {
+    "description": "Cultivado en Oporapa, Huila, por Edinson Argote en Quebraditas Coffee Farm, este SL-28 de proceso natural propone una experiencia para quienes disfrutan explorar. Su etiqueta lo describe como vibrante, complejo y «funky»: un café de carácter poco convencional.",
+    "aromas": ["Vibrante", "Complejo", "Funky"],
+    "tasting": ["Vibrante", "Complejo", "Funky"]
+  },
+  "recommendedMethods": ["v60", "prensa-francesa"],
+  "story": "Producido por Edinson Argote en Quebraditas Coffee Farm. El perfil «vibrante, complejo, funky» es el que declara la propia etiqueta; no tenemos aún notas de cata más específicas. Se disfruta directamente en Dosel.",
+  "images": [
+    {
+      "src": "/images/cafes/origenes-sl28.jpeg",
+      "alt": "Bolsa azul claro de Orígenes SL-28 de 125 g con etiqueta holográfica sobre fondo hueso.",
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

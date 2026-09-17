@@ -1,0 +1,30 @@
+{
+  "id": "cafe-incognito-caturra",
+  "slug": "incognito-caturra",
+  "name": "Incógnito · Caturra",
+  "origin": {
+    "regionId": "CO-QUI",
+    "municipio": "Pijao",
+    "lat": 4.3392,
+    "lng": -75.6997,
+    "altitudeMasl": 1500
+  },
+  "variety": "Caturra",
+  "process": "Lavado",
+  "roastLevel": "Media",
+  "profile": {
+    "description": "Un Caturra de Pijao, Quindío, que reúne notas de chocolate oscuro y vainilla con un matiz frutal de kiwi. Cultivado por Julián Trejos a 1.500 metros de altitud, combina proceso lavado y tostión media.",
+    "aromas": ["Chocolate oscuro", "Vainilla", "Kiwi"],
+    "tasting": ["Chocolate oscuro", "Vainilla", "Kiwi"]
+  },
+  "recommendedMethods": ["v60", "chemex"],
+  "story": "Cultivado por el caficultor Julián Trejos en Pijao, Quindío. Se disfruta directamente en Dosel.",
+  "images": [
+    {
+      "src": "/images/cafes/incognito-caturra.jpeg",
+      "alt": "Bolsa negra de Incógnito Caturra de 250 g con etiqueta azul sobre fondo hueso.",
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

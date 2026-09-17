@@ -1,0 +1,31 @@
+{
+  "id": "cafe-recua-bourbon-rosado",
+  "slug": "recua-bourbon-rosado",
+  "name": "Recua · Bourbon rosado",
+  "origin": {
+    "regionId": "CO-QUI",
+    "municipio": "Filandia",
+    "lat": 4.6739,
+    "lng": -75.6634
+  },
+  "variety": "Bourbon rosado (Pink Bourbon)",
+  "process": "Honey",
+  "roastLevel": "Media",
+  "profile": {
+    "description": "Desde Filandia, Quindío, este Bourbon rosado de proceso honey presenta una fragancia dulce y especiada, con aromas de frutas amarillas. Su acidez media-baja y cuerpo medio acompañan un perfil delicado y frutal.",
+    "aromas": ["Fragancia dulce y especiada", "Frutas amarillas"],
+    "tasting": ["Fragancia dulce y especiada", "Frutas amarillas"],
+    "body": "Medio",
+    "acidity": "Media-baja"
+  },
+  "recommendedMethods": ["v60", "chemex"],
+  "story": "Cultivado en Filandia, Quindío. Se disfruta directamente en Dosel.",
+  "images": [
+    {
+      "src": "/images/cafes/recua-bourbon-rosado.jpeg",
+      "alt": "Empaque negro de Recua Café Bourbon rosado de 340 g sobre fondo hueso.",
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

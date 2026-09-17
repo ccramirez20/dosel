@@ -1,0 +1,30 @@
+{
+  "id": "cafe-origenes-sidra",
+  "slug": "origenes-sidra",
+  "name": "Orígenes · Sidra",
+  "origin": {
+    "regionId": "CO-QUI",
+    "municipio": "Salento",
+    "finca": "Ocaso",
+    "lat": 4.6438,
+    "lng": -75.5713,
+    "altitudeMasl": 1850
+  },
+  "variety": "Sidra",
+  "process": "Natural",
+  "profile": {
+    "description": "Desde Salento, Quindío, este Sidra combina notas de arándanos y uvas pasas con un perfil floral. Producido por Santiago Patiño en la finca Ocaso, es una invitación a explorar los matices frutales del café colombiano.",
+    "aromas": ["Arándanos", "Uvas pasas", "Notas florales"],
+    "tasting": ["Arándanos", "Uvas pasas", "Notas florales"]
+  },
+  "recommendedMethods": ["v60", "sifon-japones"],
+  "story": "Producido por Santiago Patiño en la finca Ocaso. La etiqueta declara un proceso natural de 60 horas; no confirmamos aún si esas horas corresponden a la fermentación. Se disfruta directamente en Dosel.",
+  "images": [
+    {
+      "src": "/images/cafes/origenes-sidra.jpeg",
+      "alt": "Bolsa azul de Orígenes Sidra de 250 g con etiqueta holográfica sobre fondo hueso.",
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

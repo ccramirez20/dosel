@@ -1,0 +1,30 @@
+{
+  "id": "cafe-origenes-ombligon",
+  "slug": "origenes-ombligon",
+  "name": "Orígenes · Ombligón",
+  "origin": {
+    "regionId": "CO-HUI",
+    "municipio": "San Adolfo",
+    "finca": "La Vega",
+    "lat": 1.75,
+    "lng": -76.1,
+    "altitudeMasl": 1600
+  },
+  "variety": "Ombligón",
+  "process": "Natural",
+  "profile": {
+    "description": "Este Ombligón de San Adolfo, Huila, combina notas de nibs de cacao y frutos del bosque con un carácter especiado. Un café de proceso natural producido por Hugo Ferney Gualaco en la finca La Vega, a 1.600 metros de altitud.",
+    "aromas": ["Nibs de cacao", "Frutos del bosque", "Notas especiadas"],
+    "tasting": ["Nibs de cacao", "Frutos del bosque", "Notas especiadas"]
+  },
+  "recommendedMethods": ["prensa-francesa", "ninja-luxe"],
+  "story": "Producido por Hugo Ferney Gualaco en la finca La Vega. Se disfruta directamente en Dosel.",
+  "images": [
+    {
+      "src": "/images/cafes/origenes-ombligon.jpeg",
+      "alt": "Empaque blanco de Orígenes Ombligón de 125 g con etiqueta azul sobre fondo hueso.",
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

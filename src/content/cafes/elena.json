@@ -1,0 +1,33 @@
+{
+  "id": "cafe-elena",
+  "slug": "elena",
+  "name": "Elena · Café de especialidad",
+  "origin": {
+    "regionId": "CO-VAC",
+    "municipio": "Sevilla",
+    "lat": 4.2695,
+    "lng": -75.9313,
+    "altitudeMasl": 1612
+  },
+  "process": "Lavado",
+  "roastLevel": "Media",
+  "profile": {
+    "description": "Desde Sevilla, Valle del Cauca, Elena es uno de nuestros cafés de la casa: un perfil que combina notas de miel y caramelo con chocolate y frutos rojos. Su proceso lavado, tostión media y acidez balanceada invitan a descubrir sus matices en cada taza.",
+    "aromas": ["Miel", "Caramelo", "Chocolate", "Frutos rojos"],
+    "tasting": ["Miel", "Caramelo", "Chocolate", "Frutos rojos"],
+    "acidity": "Balanceada"
+  },
+  "recommendedMethods": ["chemex", "prensa-francesa"],
+  "story": "Café de la casa, 100 % arábico colombiano, fabricado por CAFEXCOOP S. A. Se vende por bolsa, en grano o molido, en presentaciones de 500 g y 250 g.",
+  "images": [
+    {
+      "src": "/images/cafes/elena.jpeg",
+      "alt": "Bolsa de Elena Café de 500 g con diseño de hojas y frutos sobre fondo hueso.",
+      "width": 1254,
+      "height": 1254
+    }
+  ],
+  "price": 45000,
+  "currency": "COP",
+  "available": true
+}
