@@ -86,13 +86,13 @@ export default function CafeInfoPanel({
             <p className="mt-3 max-w-[58ch] font-sans text-sm leading-relaxed text-ink/75">
               {inRegion.length === 1
                 ? `Un café de este departamento: ${inRegion[0].name}. Está en la lista, ábrelo para ver su origen.`
-                : `${inRegion.length} cafés de este departamento. La lista de al lado ya está filtrada.`}
+                : `${inRegion.length} cafés de este departamento.`}
             </p>
           </>
         ) : (
           <p className="max-w-[58ch] font-sans text-sm leading-relaxed text-ink/65">
-            Toca un departamento verde para ver qué cafés vienen de ahí, o abre una ficha
-            para ubicar su finca en el mapa.
+            Toca un departamento para ver qué cafés vienen de ahí, o abre una ficha para
+            ubicar su finca en el mapa.
           </p>
         )}
       </div>

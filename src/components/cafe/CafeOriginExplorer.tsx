@@ -28,7 +28,7 @@ export default function CafeOriginExplorer({
   island: { transform: string; box: { x: number; y: number; size: number } };
   methodNames: Record<string, string>;
 }) {
-  const { selectedRegionId, clear } = useCafeMap();
+  const { selectedRegionId, selectRegion, clear } = useCafeMap();
   const visible = selectedRegionId
     ? cafes.filter((c) => c.origin.regionId === selectedRegionId)
     : cafes;
@@ -50,6 +50,29 @@ export default function CafeOriginExplorer({
               Ver los {cafes.length}
             </button>
           )}
+        </div>
+
+        <div className="mb-5 flex flex-wrap gap-2">
+          {departments
+            .filter((d) => d.cafeCount > 0)
+            .map((d) => {
+              const active = selectedRegionId === d.id;
+              return (
+                <button
+                  key={d.id}
+                  type="button"
+                  onClick={() => selectRegion(d.id)}
+                  aria-pressed={active}
+                  className={`border px-3 py-1 font-sans text-xs transition-colors ${
+                    active
+                      ? "border-canopy bg-canopy text-cream"
+                      : "border-rule text-ink/70 hover:border-moss hover:text-canopy"
+                  }`}
+                >
+                  {d.name}
+                </button>
+              );
+            })}
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
