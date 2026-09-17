@@ -36,7 +36,7 @@ export default async function ProductosPage() {
 
   return (
     <>
-      <section className="mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-20 md:pt-24">
+      <section className="mx-auto max-w-6xl px-5 pb-16 pt-10 md:px-8 md:pb-20 md:pt-16">
         <Stratum
           band="10 m, sotobosque"
           title="De dónde viene cada café."
@@ -114,6 +114,15 @@ export default async function ProductosPage() {
               </div>
             ))}
           </div>
+
+          <p className="mt-14 font-sans text-sm">
+            <a
+              href="#contenido"
+              className="text-moss underline underline-offset-4 hover:text-accent"
+            >
+              Volver arriba
+            </a>
+          </p>
         </div>
       </section>
     </>

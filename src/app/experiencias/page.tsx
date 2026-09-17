@@ -18,7 +18,7 @@ export default async function ExperienciasPage() {
 
   return (
     <>
-      <section className="mx-auto max-w-6xl px-5 pb-16 pt-16 md:px-8 md:pb-24 md:pt-24">
+      <section className="mx-auto max-w-6xl px-5 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16">
         <Stratum
           band="Talleres"
           title="Cosas que se hacen con las manos."
@@ -61,7 +61,7 @@ export default async function ExperienciasPage() {
         </ul>
       </section>
 
-      <section className="border-t border-rule bg-paper/50">
+      <section id="metodos" className="scroll-mt-28 border-t border-rule bg-paper/50">
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
           <Stratum
             band="Mostrador"

@@ -23,7 +23,7 @@ const SECTIONS = [
   {
     href: "/quienes-somos",
     title: "Bosque y café",
-    body: "El dosel es la parte del bosque donde las copas de los árboles se encuentran con la luz. Abajo queda la sombra, un lugar donde también puede crecer el café. De ahí viene el nombre.",
+    body: "El dosel es la parte del bosque donde las copas de los árboles se encuentran con la luz. Abajo queda la sombra, un lugar donde también puede crecer el café.",
     cta: "Conocer Dosel",
   },
 ] as const;

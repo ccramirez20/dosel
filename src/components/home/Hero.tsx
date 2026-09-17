@@ -26,7 +26,7 @@ export default function Hero() {
       {HERO_BACKGROUND === "opaco" && <PhotoBackdrop src="/images/home/canopy-opaco.jpg" />}
       {HERO_BACKGROUND === "natural" && <PhotoBackdrop src="/images/home/canopy-natural.jpg" />}
 
-      <div className="relative mx-auto flex min-h-[86svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24 md:pt-36">
+      <div className="relative mx-auto flex min-h-[64svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24 md:pt-36">
         <div className="max-w-3xl">
           <h1 className="font-display text-5xl leading-[0.94] tracking-[-0.02em]">
             Hay cafés que crecen mejor a la sombra.

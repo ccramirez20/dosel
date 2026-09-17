@@ -4,7 +4,7 @@
     "slug": "v60",
     "name": "V60",
     "origin": "Japón, 2004. Hario, una fábrica de vidrio de Tokio fundada en 1921, presentó el V60, llamado así por el ángulo de 60 grados de su cono.",
-    "usedFor": "Filtrado por goteo, taza a taza. Es un método que le da mucho control a quien prepara: el agua cae donde uno la pone.",
+    "usedFor": "Filtrado por goteo, taza a taza. Es un método que le da mucho control a quien prepara.",
     "description": "El cono de 60° y sus estrías en espiral ayudan a que el agua fluya de una manera más controlada. El resultado es una taza limpia, con aromas y sabores que se pueden distinguir con claridad. Es el método que usamos cuando queremos que un café se explique solo.",
     "bestFor": ["Acidez cítrica marcada", "Perfiles florales", "Cafés lavados de altura"],
     "images": [{ "src": "/images/methods/v60.jpg", "alt": "Cafetera V60 en preparación", "width": 800, "height": 800 }]

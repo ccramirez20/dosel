@@ -57,7 +57,7 @@ export default function QuienesSomosPage() {
   return (
     <>
       <section className="border-b border-rule">
-        <div className="mx-auto max-w-6xl px-5 pb-14 pt-16 md:px-8 md:pb-20 md:pt-24">
+        <div className="mx-auto max-w-6xl px-5 pb-14 pt-10 md:px-8 md:pb-20 md:pt-16">
           <p className="max-w-[26ch] font-display text-4xl leading-[1.05] tracking-tight text-canopy">
             Un bosque no es una masa verde. Tiene capas, y cada una cumple una función
             distinta.

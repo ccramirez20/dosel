@@ -131,7 +131,7 @@ export default async function CafeDetailPage({ params }: PageProps<"/cafes/[slug
               </ul>
               <p className="mt-6 font-sans text-sm">
                 <Link
-                  href="/experiencias"
+                  href="/experiencias#metodos"
                   className="text-moss underline underline-offset-4 hover:text-accent"
                 >
                   Ver todos los métodos
