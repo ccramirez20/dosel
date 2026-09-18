@@ -20,6 +20,14 @@ export interface Origin {
   altitudeMasl?: number;
 }
 
+export interface Roaster {
+  id: string;
+  name: string;
+  location: string;
+  blurb: string;
+  instagram: string;
+}
+
 export interface Cafe {
   id: string;
   slug: string;
@@ -38,6 +46,10 @@ export interface Cafe {
   recommendedMethods: string[];
   story?: string;
   images: ImageRef[];
+  /** Café de la casa (contacto directo con el proveedor): acento visual en /productos. */
+  house?: boolean;
+  /** Tostadora externa que lo produce -> Roaster.id en roasters.json. Sin contacto directo. */
+  roasterId?: string;
   // --- costura e-commerce (Fase 2), sin uso en v1 ---
   price?: number;
   currency?: "COP";

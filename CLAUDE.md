@@ -32,7 +32,7 @@ Café con temática de biología y divulgación científica. El nombre viene del
 
 Estas reglas existen para que e-commerce y reservas entren después **sin reescribir**. Respétalas.
 
-1. **Los componentes nunca importan JSON directamente.** Todo dato pasa por `lib/data/` (`getCafes()`, `getExperiences()`, `getMethods()`, `getProducts()`, `getRegions()`). Hoy leen archivos locales; mañana pueden llamar a una API o CMS. La firma no cambia.
+1. **Los componentes nunca importan JSON directamente.** Todo dato pasa por `lib/data/` (`getCafes()`, `getExperiences()`, `getMethods()`, `getProducts()`, `getRegions()`, `getRoasters()`). Hoy leen archivos locales; mañana pueden llamar a una API o CMS. La firma no cambia.
 2. **Los tipos de dominio ya incluyen campos futuros** (`price`, `currency`, `sku`, `available`, `bookable`, `sessions`, `capacity`) marcados como opcionales. La UI de v1 los ignora, pero el modelo de datos no se migra después.
 3. **Frontera client/server explícita.** Las páginas son Server Components que obtienen datos vía `lib/data` en build (SSG). Solo lo interactivo (mapa, animaciones, carrusel) lleva `'use client'`.
 4. **Nada de lógica de negocio en componentes.** Cálculos y transformaciones viven en `lib/`.
@@ -71,6 +71,7 @@ src/
       products.json            # ítems, con `category` -> categories.json
       categories.json          # secciones del menú (label + banner) en /productos
     regions.json
+    roasters.json              # tostadoras externas, con `id` -> Cafe.roasterId
   types/
     domain.ts                  # ver §6
   styles/
@@ -117,6 +118,14 @@ export interface Origin {
   altitudeMasl?: number;
 }
 
+export interface Roaster {    // tostadora externa (Incógnito, Orígenes, Recua)
+  id: string;                 // -> Cafe.roasterId, en roasters.json
+  name: string;
+  location: string;
+  blurb: string;              // crédito corto en la ficha del café: quiénes son, dónde están
+  instagram: string;
+}
+
 export interface Cafe {
   id: string;
   slug: string;
@@ -135,6 +144,8 @@ export interface Cafe {
   recommendedMethods: string[]; // ids -> Method
   story?: string;               // de dónde viene
   images: ImageRef[];
+  house?: boolean;              // café de la casa (contacto directo con el proveedor)
+  roasterId?: string;           // -> Roaster.id, si lo tuesta una tostadora externa
   // --- costura e-commerce (futuro) ---
   price?: number;
   currency?: "COP";
@@ -345,6 +356,10 @@ Lo que hay que hacer para pasar de borrador a sitio público. En orden.
 - [ ] Revisión de textos: se le pasó al cliente `textos-dosel-v1.csv` (123 filas, con columna
       para el texto revisado). Al volver, se aplican de una pasada.
 - [x] TopoJSON de departamentos de Colombia → `public/geo/`. **Hecho** (geoBoundaries, ODbL).
+- [x] Acento de casa + crédito a tostadoras → `Cafe.house` (Cafeismo Astral, Elena) y
+      `Cafe.roasterId` + `content/roasters.json` (Incógnito, Orígenes, Recua). Blurb y link
+      de Instagram sacados del perfil oficial de cada tostadora (fuente que pidió el
+      cliente); redacción es primera pasada, ajustar si el cliente quiere otro tono.
 - [ ] Confirmar pasarela de pago (Fase 2).
 
 <!-- BEGIN:nextjs-agent-rules -->

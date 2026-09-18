@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import Figure from "@/components/ui/Figure";
 import Stratum from "@/components/ui/Stratum";
 import { CONTACT } from "@/lib/site";
-import { getCafe, getCafes, getMethods, getRegions } from "@/lib/data";
+import { getCafe, getCafes, getMethods, getRegions, getRoaster } from "@/lib/data";
 
 export async function generateStaticParams() {
   return (await getCafes()).map((cafe) => ({ slug: cafe.slug }));
@@ -32,6 +32,7 @@ export default async function CafeDetailPage({ params }: PageProps<"/cafes/[slug
 
   const region = regions.find((r) => r.id === cafe.origin.regionId);
   const recommended = methods.filter((m) => cafe.recommendedMethods.includes(m.id));
+  const roaster = cafe.roasterId ? await getRoaster(cafe.roasterId) : undefined;
 
   const facts = [
     region && { term: "Departamento", value: region.name },
@@ -110,6 +111,25 @@ export default async function CafeDetailPage({ params }: PageProps<"/cafes/[slug
               <Stratum band="Origen" title="De dónde viene" />
               <p className="max-w-[62ch] text-lg leading-relaxed text-ink/80">
                 {cafe.story}
+              </p>
+            </section>
+          )}
+
+          {roaster && (
+            <section className="mt-14">
+              <Stratum band="Tostadora" title={`Tostado por ${roaster.name}`} />
+              <p className="max-w-[62ch] text-lg leading-relaxed text-ink/80">
+                {roaster.blurb}
+              </p>
+              <p className="mt-4 font-sans text-sm">
+                <a
+                  href={roaster.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-moss underline underline-offset-4 hover:text-accent"
+                >
+                  Ver a {roaster.name} en Instagram
+                </a>
               </p>
             </section>
           )}

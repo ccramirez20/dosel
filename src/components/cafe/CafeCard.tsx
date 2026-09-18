@@ -18,7 +18,7 @@ export default function CafeCard({ cafe, region }: { cafe: Cafe; region?: Region
     <article
       className={`border transition-colors duration-300 ${
         active ? "border-accent bg-paper" : "border-rule bg-paper/60 hover:border-moss"
-      }`}
+      } ${cafe.house ? "border-l-4 border-l-accent" : ""}`}
     >
       <button
         type="button"

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "origenes",
+    "name": "Orígenes",
+    "location": "Salento, Quindío",
+    "blurb": "Tostadora local y barra de café especialidad con su propio laboratorio de catación (cupping lab), en Salento, Quindío.",
+    "instagram": "https://www.instagram.com/origenescol_"
+  },
+  {
+    "id": "incognito",
+    "name": "Incógnito",
+    "location": "Filandia, Quindío",
+    "blurb": "Micro-tostadora de café especial en Filandia, Quindío, premiada como mejor cappuccino de Filandia 2024. Envían a todo el país.",
+    "instagram": "https://www.instagram.com/incognito_cafeshop"
+  },
+  {
+    "id": "recua",
+    "name": "Recua",
+    "location": "Filandia, Quindío",
+    "blurb": "Coffee shop y exportadores de café especial colombiano, en Filandia, Quindío.",
+    "instagram": "https://www.instagram.com/recuacafe"
+  }
+]

@@ -8,12 +8,14 @@ import type {
   Product,
   ProductCategory,
   Region,
+  Roaster,
 } from "../../types/domain.ts";
 import categoriesJson from "../../content/products/categories.json" with { type: "json" };
 import experiencesJson from "../../content/experiences/experiences.json" with { type: "json" };
 import methodsJson from "../../content/methods/methods.json" with { type: "json" };
 import productsJson from "../../content/products/products.json" with { type: "json" };
 import regionsJson from "../../content/regions.json" with { type: "json" };
+import roastersJson from "../../content/roasters.json" with { type: "json" };
 
 /**
  * Única frontera con el origen de datos (CLAUDE.md §3.1). Hoy: archivos locales leídos en
@@ -44,6 +46,17 @@ export function assertKnownRegions(cafes: Cafe[], regionIds: Set<string>): void 
   }
 }
 
+/** Mismo guardia que `assertKnownRegions`, para el `roasterId` opcional de crédito a tostadoras. */
+export function assertKnownRoasters(cafes: Cafe[], roasterIds: Set<string>): void {
+  for (const cafe of cafes) {
+    if (cafe.roasterId && !roasterIds.has(cafe.roasterId)) {
+      throw new Error(
+        `Café "${cafe.slug}": roasterId "${cafe.roasterId}" no existe en roasters.json`,
+      );
+    }
+  }
+}
+
 export async function getCafes(): Promise<Cafe[]> {
   // readdir en vez de un índice: el dueño agrega un .json y aparece, sin tocar código.
   const cafes = readdirSync(CAFES_DIR)
@@ -52,11 +65,20 @@ export async function getCafes(): Promise<Cafe[]> {
     .sort((a, b) => a.name.localeCompare(b.name, "es"));
 
   assertKnownRegions(cafes, new Set((await getRegions()).map((r) => r.id)));
+  assertKnownRoasters(cafes, new Set((await getRoasters()).map((r) => r.id)));
   return cafes;
 }
 
 export async function getCafe(slug: string): Promise<Cafe | undefined> {
   return (await getCafes()).find((c) => c.slug === slug);
+}
+
+export async function getRoasters(): Promise<Roaster[]> {
+  return roastersJson as Roaster[];
+}
+
+export async function getRoaster(id: string): Promise<Roaster | undefined> {
+  return (await getRoasters()).find((r) => r.id === id);
 }
 
 export async function getMethods(): Promise<Method[]> {

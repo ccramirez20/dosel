@@ -27,6 +27,7 @@
       "height": 1254
     }
   ],
+  "house": true,
   "price": 45000,
   "currency": "COP",
   "available": true

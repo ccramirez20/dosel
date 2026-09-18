@@ -2,10 +2,19 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import type { Cafe } from "../../types/domain.ts";
-import { assertKnownRegions, getCafe, getCafes, getRegions } from "./index.ts";
+import {
+  assertKnownRegions,
+  assertKnownRoasters,
+  getCafe,
+  getCafes,
+  getRegions,
+} from "./index.ts";
 
 const cafeWith = (regionId: string): Cafe =>
   ({ slug: "prueba", origin: { regionId } }) as Cafe;
+
+const cafeWithRoaster = (roasterId?: string): Cafe =>
+  ({ slug: "prueba", origin: {}, roasterId }) as Cafe;
 
 test("un regionId desconocido revienta el build, con el slug en el mensaje", () => {
   assert.throws(
@@ -17,6 +26,23 @@ test("un regionId desconocido revienta el build, con el slug en el mensaje", () 
 
 test("un regionId conocido pasa sin ruido", () => {
   assert.doesNotThrow(() => assertKnownRegions([cafeWith("CO-HUI")], new Set(["CO-HUI"])));
+});
+
+test("un roasterId desconocido revienta el build, con el slug en el mensaje", () => {
+  assert.throws(
+    () => assertKnownRoasters([cafeWithRoaster("no-existe")], new Set(["origenes"])),
+    /prueba.*no-existe/,
+    "el error debe decir qué café y qué id, o no sirve para arreglarlo",
+  );
+});
+
+test("un roasterId conocido, o ausente, pasa sin ruido", () => {
+  assert.doesNotThrow(() =>
+    assertKnownRoasters(
+      [cafeWithRoaster("origenes"), cafeWithRoaster(undefined)],
+      new Set(["origenes"]),
+    ),
+  );
 });
 
 test("getCafes valida el contenido real y lo devuelve ordenado", async () => {
