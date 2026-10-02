@@ -1,38 +1,34 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { pickActive, STRATA } from "./strata.ts";
+import { readingAt, STRATA } from "./strata.ts";
 
-const PREV = "dosel";
+const ANCHORS = [100, 300, 400];
 
-test("pickActive toma la sección visible", () => {
-  const active = pickActive(
-    [
-      { id: "dosel", visible: false },
-      { id: "sotobosque", visible: true },
-      { id: "suelo", visible: false },
-    ],
-    PREV,
-  );
-  assert.equal(active, "sotobosque");
+test("en cada ancla la lectura es exactamente la del estrato", () => {
+  STRATA.forEach((s, i) => {
+    const r = readingAt(ANCHORS[i], ANCHORS);
+    assert.equal(r.id, s.id);
+    assert.equal(r.height, s.height);
+    assert.ok(Math.abs(r.light - s.light) < 1e-9);
+  });
 });
 
-test("pickActive conserva la anterior cuando ninguna cruza la banda", () => {
-  const seen = STRATA.map((s) => ({ id: s.id, visible: false }));
-  assert.equal(pickActive(seen, PREV), PREV);
-  assert.equal(pickActive([], PREV), PREV);
+test("fuera de las anclas se queda en el extremo", () => {
+  assert.equal(readingAt(0, ANCHORS).light, 100);
+  assert.equal(readingAt(9999, ANCHORS).height, 0);
 });
 
-test("con dos secciones visibles gana la de más abajo", () => {
-  // Al bajar, la que entra por el fondo debe mandar sobre la que aún no sale por arriba.
-  const active = pickActive(
-    [
-      { id: "dosel", visible: true },
-      { id: "sotobosque", visible: true },
-    ],
-    PREV,
-  );
-  assert.equal(active, "sotobosque");
+test("la luz cae en escala logarítmica, no lineal", () => {
+  // A mitad del tramo dosel–sotobosque: media geométrica de 100 y 10, no la aritmética.
+  const r = readingAt(200, ANCHORS);
+  assert.ok(Math.abs(r.light - Math.sqrt(1000)) < 1e-9);
+  assert.equal(r.height, 20);
+});
+
+test("el estrato activo cambia a mitad del tramo", () => {
+  assert.equal(readingAt(199, ANCHORS).id, "dosel");
+  assert.equal(readingAt(201, ANCHORS).id, "sotobosque");
 });
 
 test("STRATA va de la copa al suelo y no incluye emergente", () => {
