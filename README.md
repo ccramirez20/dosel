@@ -1,5 +1,10 @@
 # Dosel
 
+> Website for a Colombian specialty-coffee shop, built with permission for a third-party business.
+> Next.js (App Router) + TypeScript + Tailwind v4, fully static (SSG), with a department-level
+> origin map generated at build time from open geodata (geoBoundaries, ODbL 1.0).
+> Code: MIT. Brand assets belong to their owners. Spanish documentation below.
+
 Sitio del café Dosel: café de origen colombiano, métodos de preparación y talleres, con
 un mapa que ubica cada café en su departamento.
 
