@@ -22,13 +22,13 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/d3-geo": "^3.1.1",
-    "@types/node": "^26.4.1",
+    "@types/node": "^26.6.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/topojson-client": "^3.1.5",
     "@types/topojson-specification": "^1.0.5",
     "eslint": "^9.39.5",
-    "eslint-config-next": "16.3.4",
+    "eslint-config-next": "16.3.7",
     "tailwindcss": "^4",
     "typescript": "^5.9.3"
   },
